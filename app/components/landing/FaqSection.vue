@@ -7,32 +7,36 @@ function toggle(index: number) {
 
 const faqs = [
   {
-    question: 'Combien de temps pour être opérationnel ?',
-    answer: '3 semaines maximum. Semaine 1 : diagnostic et configuration. Semaine 2 : tests et ajustements. Semaine 3 : déploiement et formation de votre équipe. Vous voyez des résultats dès le premier mois.'
+    question: 'Je pense que mon entreprise n\'a pas besoin d\'IA.',
+    answer: 'C\'est ce que pensaient 87% de nos clients avant de commencer. La vérité ? Si vous avez des employés qui font des devis, des relances, de la saisie ou du suivi client — vous perdez de l\'argent chaque jour sans le savoir. Le diagnostic gratuit vous montre exactement combien. Après, vous décidez en toute connaissance de cause.'
   },
   {
-    question: 'Est-ce que ça marche pour mon secteur ?',
-    answer: 'Oui. Nous travaillons avec le BTP, l\'industrie, le commerce, les professions libérales, l\'hôtellerie et l\'agroalimentaire. Chaque agent est entraîné spécifiquement sur les process de votre métier, pas une solution générique.'
+    question: 'Combien de temps pour voir des résultats concrets ?',
+    answer: '21 jours. Pas 6 mois. Pas "bientôt". Semaine 1 : on analyse vos process et on configure. Semaine 2 : tests en conditions réelles. Semaine 3 : déploiement et formation de votre équipe. Nos clients voient un ROI mesurable dès le premier mois — c\'est pour ça qu\'on garantit le remboursement.'
   },
   {
-    question: 'Mes données sont-elles en sécurité ?',
-    answer: 'Absolument. Hébergement en France (OVH), conformité RGPD complète, chiffrement de bout en bout. Vos données ne sont jamais partagées ni utilisées pour entraîner d\'autres modèles. Nous signons un accord de confidentialité.'
+    question: 'C\'est pas juste un ChatGPT amélioré ?',
+    answer: 'ChatGPT est un outil généraliste : vous posez une question, il répond. Nos agents sont fondamentalement différents. Ils sont entraînés sur VOS données (tarifs, process, ton, documents), intégrés dans VOS outils (CRM, email, téléphone), et fonctionnent en totale autonomie. Personne ne tape de prompt. L\'agent travaille. Vous récoltez.'
   },
   {
     question: 'Et si ça ne fonctionne pas ?',
-    answer: 'Satisfait ou remboursé le premier mois, sans condition. En 2 ans, le taux de rétention de nos clients est de 94%. On ne vous laisse pas tomber : votre account manager suit vos KPIs chaque semaine.'
+    answer: 'Remboursement intégral le premier mois, sans condition et sans justification. On prend 100% du risque. En 2 ans, notre taux de rétention est de 94% — ce qui veut dire que 94 clients sur 100 restent. Votre account manager suit vos KPIs chaque semaine et ajuste les agents en continu.'
   },
   {
-    question: 'Faut-il des compétences techniques ?',
-    answer: 'Zéro. Votre équipe utilise les agents via des interfaces simples : email, WhatsApp, dashboard web. On s\'occupe de toute la partie technique. Si votre équipe sait utiliser un smartphone, elle saura utiliser nos agents.'
+    question: 'Mon équipe n\'est pas technique du tout.',
+    answer: 'Parfait — la nôtre l\'est. Votre équipe utilise les agents via des interfaces qu\'elle connaît déjà : email, WhatsApp, un dashboard simple. Si vos employés savent utiliser un smartphone, ils sauront utiliser nos agents. On gère 100% de la technique.'
   },
   {
-    question: 'Quelle est la différence avec ChatGPT ?',
-    answer: 'ChatGPT est un outil généraliste. Nos agents sont entraînés sur VOS données : vos tarifs, vos process, votre ton, vos documents. Ils s\'intègrent dans vos outils existants (CRM, email, téléphone) et fonctionnent en autopilote. Pas besoin de taper des prompts.'
+    question: 'Mes données sont-elles en sécurité ?',
+    answer: 'Hébergement en France (OVH), conformité RGPD complète, chiffrement de bout en bout. Vos données ne sont jamais partagées ni utilisées pour entraîner d\'autres modèles. On signe un accord de confidentialité avant de commencer. Vos données restent les vôtres. Point.'
   },
   {
-    question: 'Comment se passe la facturation ?',
-    answer: 'Abonnement mensuel, sans engagement longue durée. Vous pouvez upgrader, downgrader ou résilier à tout moment avec un préavis de 30 jours. Pas de frais cachés, pas de setup fees (offre lancement).'
+    question: 'Ça coûte combien ?',
+    answer: 'Abonnement mensuel, sans engagement longue durée. Concrètement, un agent IA coûte entre 10x et 20x moins qu\'un salarié pour les mêmes tâches. Et il travaille 24h/24, 7j/7. Le diagnostic gratuit vous donne un chiffrage précis adapté à votre situation. Pas de frais cachés, pas de setup fees.'
+  },
+  {
+    question: 'Est-ce que ça marche pour mon secteur ?',
+    answer: 'BTP, commerce, professions libérales, hôtellerie, industrie, agroalimentaire — on a des résultats prouvés dans chaque secteur. Chaque agent est entraîné spécifiquement sur les process de VOTRE métier. Ce n\'est pas une solution générique. C\'est du sur-mesure.'
   }
 ]
 </script>
@@ -41,10 +45,10 @@ const faqs = [
   <section id="faq" class="relative py-24 md:py-32 overflow-hidden">
     <div class="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <LandingSectionHeader
-        eyebrow="FAQ"
-        title="Questions "
-        highlight="fréquentes."
-        description="Tout ce que vous devez savoir avant de démarrer."
+        eyebrow="Vos objections sont légitimes"
+        title="On y répond "
+        highlight="franchement."
+        description="Pas de langue de bois. Voici les vraies réponses aux questions que vous vous posez."
       />
 
       <div class="rounded-2xl border border-white/[0.06] divide-y divide-white/[0.06] overflow-hidden" data-reveal>

@@ -1,5 +1,82 @@
 <script setup lang="ts">
 const { openForm } = useContactForm()
+
+// Typing effect
+const typingTexts = [
+  'divisez vos coûts par 3.',
+  'récupérez 25h par semaine.',
+  'signez pendant que les autres dorment.'
+]
+const currentTextIndex = ref(0)
+const displayedText = ref('')
+const isDeleting = ref(false)
+const typingSpeed = ref(80)
+
+const typeEffect = () => {
+  const fullText = typingTexts[currentTextIndex.value]
+
+  if (!isDeleting.value) {
+    displayedText.value = fullText.substring(0, displayedText.value.length + 1)
+    typingSpeed.value = 80
+
+    if (displayedText.value === fullText) {
+      typingSpeed.value = 2500
+      isDeleting.value = true
+    }
+  } else {
+    displayedText.value = fullText.substring(0, displayedText.value.length - 1)
+    typingSpeed.value = 40
+
+    if (displayedText.value === '') {
+      isDeleting.value = false
+      currentTextIndex.value = (currentTextIndex.value + 1) % typingTexts.length
+      typingSpeed.value = 300
+    }
+  }
+
+  setTimeout(typeEffect, typingSpeed.value)
+}
+
+// Counter animations
+const counterPME = useCountUp(200, 2500)
+const counterHeures = useCountUp(47, 2000)
+const counterROI = useCountUp(4.9, 2000, 1)
+const statsVisible = ref(false)
+
+const onStatsVisible = (entries: IntersectionObserverEntry[]) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !statsVisible.value) {
+      statsVisible.value = true
+      counterPME.animate()
+      counterHeures.animate()
+      counterROI.animate()
+    }
+  })
+}
+
+// Particles
+const particles = ref<Array<{ id: number; x: number; y: number; size: number; delay: number; duration: number }>>([])
+
+onMounted(() => {
+  typeEffect()
+
+  // Generate particles
+  particles.value = Array.from({ length: 40 }, (_, i) => ({
+    id: i,
+    x: Math.random() * 100,
+    y: Math.random() * 100,
+    size: Math.random() * 3 + 1,
+    delay: Math.random() * 5,
+    duration: Math.random() * 3 + 4
+  }))
+
+  // Stats observer
+  const statsEl = document.querySelector('#hero-stats')
+  if (statsEl) {
+    const observer = new IntersectionObserver(onStatsVisible, { threshold: 0.3 })
+    observer.observe(statsEl)
+  }
+})
 </script>
 
 <template>
@@ -7,6 +84,23 @@ const { openForm } = useContactForm()
     <!-- Mesh gradient background -->
     <div class="absolute inset-0 hero-gradient" />
     <div class="absolute inset-0 bg-dots opacity-30" />
+
+    <!-- Particles -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div
+        v-for="p in particles"
+        :key="p.id"
+        class="absolute rounded-full bg-emerald-400/20 animate-particle"
+        :style="{
+          left: p.x + '%',
+          top: p.y + '%',
+          width: p.size + 'px',
+          height: p.size + 'px',
+          animationDelay: p.delay + 's',
+          animationDuration: p.duration + 's'
+        }"
+      />
+    </div>
 
     <!-- Floating glow orbs -->
     <div
@@ -22,14 +116,14 @@ const { openForm } = useContactForm()
 
     <!-- Content -->
     <div class="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
-      <!-- Badge -->
+      <!-- Urgency Badge -->
       <div
         class="inline-flex items-center gap-2 px-4 py-2 rounded-full
-               bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm mb-8"
+               bg-red-500/10 border border-red-500/20 text-red-400 text-sm mb-8 animate-pulse-subtle"
         data-reveal
       >
-        <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-        Nouveau — Agents IA pour PME
+        <span class="w-2 h-2 bg-red-400 rounded-full animate-pulse" />
+        ⚠ En 2026, ne pas automatiser n'est plus un choix — c'est un risque vital
       </div>
 
       <!-- Headline -->
@@ -38,18 +132,31 @@ const { openForm } = useContactForm()
         data-reveal
         data-reveal-delay="1"
       >
-        Votre équipe IA<br>
-        <span class="gradient-text">sur-mesure</span>
+        En 21 jours,<br>
+        <span class="gradient-text inline-block min-h-[1.1em]">
+          {{ displayedText }}<span class="animate-blink text-emerald-400">|</span>
+        </span>
       </h1>
 
       <!-- Subheadline -->
       <p
-        class="text-lg md:text-xl text-white/50 max-w-2xl mx-auto mb-10 leading-relaxed"
+        class="text-lg md:text-xl text-white/50 max-w-2xl mx-auto mb-4 leading-relaxed"
         data-reveal
         data-reveal-delay="2"
       >
-        Devis en 2 minutes, relances automatiques, accueil 24/7.
-        Nos agents IA font le travail de 3 employés — sans pause café.
+        Chaque jour sans agent IA, votre PME
+        <span class="text-red-400 font-semibold">perd 128 EUR</span> en tâches qu'une machine fait mieux.
+        Un agent coûte <span class="text-white font-semibold">moins cher qu'un stagiaire</span>
+        — et travaille 24h/24, sans erreur, sans congés, sans charges.
+      </p>
+
+      <!-- Guarantee line -->
+      <p
+        class="text-sm text-emerald-400 font-medium mb-10"
+        data-reveal
+        data-reveal-delay="2"
+      >
+        ROI mesurable en 21 jours ou remboursé intégralement. Zéro risque pour vous.
       </p>
 
       <!-- CTA group -->
@@ -59,11 +166,11 @@ const { openForm } = useContactForm()
         data-reveal-delay="3"
       >
         <button
-          class="px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white
-                 rounded-xl font-semibold text-lg glow-button cursor-pointer"
+          class="group relative px-10 py-5 bg-emerald-500 hover:bg-emerald-600 text-white
+                 rounded-xl font-semibold text-lg glow-button cursor-pointer animate-pulse-glow"
           @click="openForm"
         >
-          Réserver un appel gratuit →
+          <span class="relative z-10">Réserver mon diagnostic gratuit →</span>
         </button>
         <a
           href="#solution"
@@ -71,13 +178,14 @@ const { openForm } = useContactForm()
                  rounded-xl font-medium text-lg transition-all duration-300
                  border border-white/10 hover:border-white/20"
         >
-          Découvrir nos agents
+          Voir les résultats clients
         </a>
       </div>
 
-      <!-- Social proof -->
+      <!-- Social proof with counters -->
       <div
-        class="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-white/40"
+        id="hero-stats"
+        class="flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-white/40"
         data-reveal
         data-reveal-delay="4"
       >
@@ -91,12 +199,21 @@ const { openForm } = useContactForm()
             {{ ['NB', 'LR', 'MC', 'JP', 'SA'][i-1] }}
           </div>
         </div>
-        <div class="flex items-center gap-4">
-          <span>+200 PME accompagnées</span>
-          <span class="hidden sm:inline text-white/20">|</span>
+        <div class="flex items-center gap-6">
+          <div class="text-center">
+            <span class="text-2xl font-bold text-white tabular-nums">{{ counterPME.displayValue.value }}+</span>
+            <span class="block text-xs text-white/40">PME accompagnées</span>
+          </div>
+          <span class="hidden sm:inline text-white/10">|</span>
+          <div class="text-center">
+            <span class="text-2xl font-bold text-white tabular-nums">{{ counterHeures.displayValue.value }}K EUR</span>
+            <span class="block text-xs text-white/40">économisés / an en moyenne</span>
+          </div>
+          <span class="hidden sm:inline text-white/10">|</span>
           <div class="flex items-center gap-1">
             <span class="text-amber-400">★★★★★</span>
-            <span>4.9/5</span>
+            <span class="text-2xl font-bold text-white tabular-nums">{{ counterROI.displayValue.value }}</span>
+            <span class="text-white/40">/5</span>
           </div>
         </div>
       </div>
@@ -105,8 +222,47 @@ const { openForm } = useContactForm()
     <!-- Scroll indicator -->
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/20">
       <span class="text-xs uppercase tracking-widest">Scroll</span>
-      <div class="w-px h-8 bg-gradient-to-b from-white/20 to-transparent" />
+      <div class="w-px h-8 bg-gradient-to-b from-white/20 to-transparent animate-scroll-hint" />
     </div>
-
   </section>
 </template>
+
+<style scoped>
+@keyframes particle-float {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.3; }
+  50% { transform: translateY(-30px) scale(1.5); opacity: 0.8; }
+}
+.animate-particle {
+  animation: particle-float ease-in-out infinite;
+}
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+.animate-blink {
+  animation: blink 0.8s step-end infinite;
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 30px -5px rgba(16, 185, 129, 0.4); }
+  50% { box-shadow: 0 0 60px -5px rgba(16, 185, 129, 0.7); }
+}
+.animate-pulse-glow {
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+@keyframes scroll-hint {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  51% { transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+.animate-scroll-hint {
+  animation: scroll-hint 2s ease-in-out infinite;
+}
+</style>

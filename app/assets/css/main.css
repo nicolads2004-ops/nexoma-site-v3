@@ -150,6 +150,19 @@ body {
 [data-reveal-delay="3"] { transition-delay: 0.3s; }
 [data-reveal-delay="4"] { transition-delay: 0.4s; }
 [data-reveal-delay="5"] { transition-delay: 0.5s; }
+[data-reveal-delay="6"] { transition-delay: 0.6s; }
+
+/* ─── Stagger Reveal (parent-based) ─── */
+[data-reveal-stagger] [data-reveal-child] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+[data-reveal-stagger] [data-reveal-child].revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* ─── Animations ─── */
 @keyframes float {

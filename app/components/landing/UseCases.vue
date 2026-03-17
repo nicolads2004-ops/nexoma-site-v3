@@ -67,10 +67,10 @@ const useCases = [
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <LandingSectionHeader
-        eyebrow="Cas d'usage"
-        title="Des résultats concrets "
+        eyebrow="Vous vous reconnaissez ?"
+        title="Des résultats prouvés "
         highlight="dans votre secteur."
-        description="Chaque PME est unique. Voici comment nos agents s'adaptent à votre métier."
+        description="Peu importe votre métier : si vous avez des tâches répétitives, vous perdez de l'argent. Voici ce qui se passe quand on arrête."
       />
 
       <!-- Tabs -->
