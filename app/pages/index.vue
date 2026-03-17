@@ -8,7 +8,6 @@
     <LandingStatsSection />
     <LandingUseCases />
     <LandingTestimonialsSection />
-    <LandingPricingSection />
     <LandingFaqSection />
     <LandingCtaSection />
   </div>

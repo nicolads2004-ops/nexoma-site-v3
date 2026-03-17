@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const logos = [
-  'BTP Ouest', 'Laurent Bâtiment', 'Garage Martin', 'Cabinet Dupont',
-  'Hôtel Le Futuroscope', 'SARL Mécanique 86', 'Boulangerie Artisan', 'Plomberie Express'
+  'Atelier Rivaud', 'Groupe Valoris', 'Maison Clairac', 'LK Industries',
+  'Studio Hélios', 'Côté Jardin', 'NovaBat', 'Comptoir Belharra'
 ]
 </script>
 

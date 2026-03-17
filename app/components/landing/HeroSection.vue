@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { openCalendly } = useCalendly()
+const { openForm } = useContactForm()
 </script>
 
 <template>
@@ -61,7 +61,7 @@ const { openCalendly } = useCalendly()
         <button
           class="px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white
                  rounded-xl font-semibold text-lg glow-button cursor-pointer"
-          @click="openCalendly"
+          @click="openForm"
         >
           Réserver un appel gratuit →
         </button>

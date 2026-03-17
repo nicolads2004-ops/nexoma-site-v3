@@ -1,0 +1,25 @@
+const showForm = ref(false)
+const formSubmitted = ref(false)
+
+export const useContactForm = () => {
+  function openForm() {
+    showForm.value = true
+    formSubmitted.value = false
+  }
+
+  function closeForm() {
+    showForm.value = false
+  }
+
+  function markSubmitted() {
+    formSubmitted.value = true
+  }
+
+  return {
+    showForm,
+    formSubmitted,
+    openForm,
+    closeForm,
+    markSubmitted
+  }
+}

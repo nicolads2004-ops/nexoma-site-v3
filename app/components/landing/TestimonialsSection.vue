@@ -2,44 +2,44 @@
 const testimonials = [
   {
     quote: 'On a doublé notre volume de devis sans embaucher. Les prospects sont impressionnés par notre réactivité.',
-    author: 'Laurent M.',
-    role: 'Gérant — Laurent Bâtiment',
-    initials: 'LM',
+    author: 'Thomas R.',
+    role: 'Gérant — NovaBat',
+    initials: 'TR',
     rating: 5
   },
   {
     quote: 'Le chatbot gère 80% des questions basiques. Je me concentre enfin sur le conseil et le terrain.',
-    author: 'Marie C.',
-    role: 'Gérante — Cave du Futuroscope',
-    initials: 'MC',
+    author: 'Sophie L.',
+    role: 'Gérante — Comptoir Belharra',
+    initials: 'SL',
     rating: 5
   },
   {
     quote: 'Nos clients pensent qu\'on a embauché une assistante. C\'est notre agent IA qui répond 24/7.',
-    author: 'Maître Dupont',
-    role: 'Avocat — Cabinet Dupont',
-    initials: 'MD',
+    author: 'Maître Clairac',
+    role: 'Avocat — Cabinet Rivaud',
+    initials: 'AC',
     rating: 5
   },
   {
-    quote: 'ROI visible dès le premier mois. On économise 18K€/an en commissions Booking grâce aux réservations directes.',
-    author: 'Philippe R.',
-    role: 'Directeur — Hôtel Le Clos',
-    initials: 'PR',
+    quote: 'ROI visible dès le premier mois. On économise 18K€/an en commissions grâce aux réservations directes.',
+    author: 'Marc V.',
+    role: 'Directeur — Maison Hélios',
+    initials: 'MV',
     rating: 5
   },
   {
     quote: 'J\'étais sceptique sur l\'IA. Après 2 mois, je ne peux plus m\'en passer. Les relances se font toutes seules.',
-    author: 'Jean-Pierre S.',
-    role: 'Gérant — SARL Mécanique 86',
-    initials: 'JS',
+    author: 'Pierre D.',
+    role: 'Gérant — LK Industries',
+    initials: 'PD',
     rating: 5
   },
   {
     quote: 'L\'équipe Nexoma comprend nos problèmes de terrain. Pas du jargon tech, des solutions concrètes.',
-    author: 'Nathalie B.',
-    role: 'DG — Plomberie Express',
-    initials: 'NB',
+    author: 'Claire M.',
+    role: 'DG — Groupe Valoris',
+    initials: 'CM',
     rating: 5
   }
 ]

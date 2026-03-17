@@ -5,7 +5,7 @@ const useCases = [
   {
     sector: 'BTP & Artisanat',
     icon: 'i-lucide-hard-hat',
-    title: 'Laurent Bâtiment — Poitiers',
+    title: 'NovaBat — Entreprise BTP',
     problem: 'Devis manuels sur Excel, 4h par devis, prospects qui signent ailleurs.',
     solution: 'Agent Devis Express + Relance automatique',
     results: [
@@ -14,12 +14,12 @@ const useCases = [
       { label: 'CA additionnel', before: '', after: '+120K€/an' }
     ],
     quote: 'On a doublé notre volume de devis sans embaucher. Les prospects sont impressionnés par notre réactivité.',
-    author: 'Laurent M., Gérant'
+    author: 'Thomas R., Gérant'
   },
   {
     sector: 'Commerce & Retail',
     icon: 'i-lucide-store',
-    title: 'Cave du Futuroscope — Chasseneuil',
+    title: 'Comptoir Belharra — Commerce',
     problem: 'Pas de suivi client, relances manuelles, stock géré sur papier.',
     solution: 'Agent Accueil 24/7 + Relance & Recouvrement',
     results: [
@@ -28,12 +28,12 @@ const useCases = [
       { label: 'Temps admin/semaine', before: '15h', after: '4h' }
     ],
     quote: 'Le chatbot gère 80% des questions basiques. Je me concentre enfin sur le conseil.',
-    author: 'Marie C., Gérante'
+    author: 'Sophie L., Gérante'
   },
   {
     sector: 'Professions libérales',
     icon: 'i-lucide-scale',
-    title: 'Cabinet Dupont & Associés — Poitiers',
+    title: 'Cabinet Rivaud & Associés',
     problem: 'Secrétariat débordé, RDV manqués, dossiers qui traînent.',
     solution: 'Agent Accueil 24/7 + RH & Onboarding',
     results: [
@@ -42,12 +42,12 @@ const useCases = [
       { label: 'Satisfaction client', before: '7.2/10', after: '9.4/10' }
     ],
     quote: 'Nos clients pensent qu\'on a embauché une assistante de plus. C\'est notre agent IA.',
-    author: 'Maître Dupont, Avocat associé'
+    author: 'Maître Clairac, Avocat associé'
   },
   {
     sector: 'Hôtellerie',
     icon: 'i-lucide-bed',
-    title: 'Hôtel Le Clos — Vivonne',
+    title: 'Maison Hélios — Hôtellerie',
     problem: 'Réservations par téléphone, pas de suivi post-séjour, avis non gérés.',
     solution: 'Agent Accueil 24/7 + Veille & Relance',
     results: [
@@ -56,7 +56,7 @@ const useCases = [
       { label: 'Commission OTA économisée', before: '', after: '18K€/an' }
     ],
     quote: 'L\'agent répond en 4 langues, 24h/24. On a réduit notre dépendance à Booking de 50%.',
-    author: 'Philippe R., Directeur'
+    author: 'Marc V., Directeur'
   }
 ]
 </script>

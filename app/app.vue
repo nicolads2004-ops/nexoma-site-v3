@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useScrollReveal()
-const { showCalendly, openCalendly, closeCalendly } = useCalendly()
+const { showForm, formSubmitted, openForm, closeForm, markSubmitted } = useContactForm()
 
 const title = 'Nexoma | Votre équipe IA sur-mesure — Poitiers & Vienne (86)'
 const description = 'Nexoma automatise vos devis, relances et accueil client grâce à des agents IA sur-mesure. +200 PME accompagnées dans la Vienne (86). Résultats en 3 semaines.'
@@ -17,9 +17,26 @@ const navLinks = [
   { label: 'Problème', to: '#probleme' },
   { label: 'Solution', to: '#solution' },
   { label: 'Cas d\'usage', to: '#cas' },
-  { label: 'Tarifs', to: '#tarifs' },
   { label: 'FAQ', to: '#faq' }
 ]
+
+// Form state
+const form = reactive({
+  firstName: '',
+  lastName: '',
+  company: '',
+  phone: '',
+  email: ''
+})
+const formLoading = ref(false)
+
+async function submitForm() {
+  formLoading.value = true
+  // Simulate submission (replace with real endpoint later)
+  await new Promise(resolve => setTimeout(resolve, 1200))
+  formLoading.value = false
+  markSubmitted()
+}
 </script>
 
 <template>
@@ -28,12 +45,10 @@ const navLinks = [
     <header class="fixed top-0 left-0 right-0 z-50 navbar-blur">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
-          <!-- Logo -->
           <NuxtLink to="/" class="flex-shrink-0">
             <AppLogo />
           </NuxtLink>
 
-          <!-- Nav links (desktop) -->
           <nav class="hidden md:flex items-center gap-8">
             <a
               v-for="link in navLinks"
@@ -45,7 +60,6 @@ const navLinks = [
             </a>
           </nav>
 
-          <!-- CTA -->
           <div class="flex items-center gap-3">
             <button
               class="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white text-sm
@@ -53,9 +67,9 @@ const navLinks = [
                      shadow-[0_0_20px_-5px_rgba(16,185,129,0.4)]
                      hover:shadow-[0_0_30px_-5px_rgba(16,185,129,0.6)]
                      hover:-translate-y-0.5 cursor-pointer"
-              @click="openCalendly"
+              @click="openForm"
             >
-              Réserver un appel
+              Nous contacter
             </button>
           </div>
         </div>
@@ -71,14 +85,12 @@ const navLinks = [
     <footer class="relative border-t border-white/[0.06] bg-[#030303]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-          <!-- Brand -->
           <div class="md:col-span-1">
             <AppLogo class="mb-4" />
             <p class="text-sm text-white/40 leading-relaxed mb-6">
               Votre équipe IA sur-mesure.<br>
               Poitiers & Vienne (86).
             </p>
-            <!-- Social -->
             <div class="flex items-center gap-3">
               <a
                 href="#"
@@ -97,7 +109,6 @@ const navLinks = [
             </div>
           </div>
 
-          <!-- Links -->
           <div>
             <h4 class="text-sm font-semibold text-white mb-4">Solutions</h4>
             <ul class="space-y-3">
@@ -127,16 +138,15 @@ const navLinks = [
               <li>
                 <button
                   class="text-sm text-emerald-400 hover:text-emerald-300 transition-colors cursor-pointer"
-                  @click="openCalendly"
+                  @click="openForm"
                 >
-                  Réserver un appel →
+                  Nous contacter →
                 </button>
               </li>
             </ul>
           </div>
         </div>
 
-        <!-- Bottom bar -->
         <div class="pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4">
           <p class="text-xs text-white/30">
             © {{ new Date().getFullYear() }} Nexoma. Tous droits réservés.
@@ -149,7 +159,6 @@ const navLinks = [
         </div>
       </div>
 
-      <!-- SEO Local -->
       <div class="bg-[#020202] py-6">
         <div class="max-w-7xl mx-auto px-4 text-center">
           <p class="text-xs text-white/15 leading-relaxed">
@@ -160,24 +169,137 @@ const navLinks = [
       </div>
     </footer>
 
-    <!-- Calendly Modal -->
-    <UModal v-model:open="showCalendly">
+    <!-- Contact Form Modal -->
+    <UModal v-model:open="showForm">
       <template #content>
-        <div class="p-2 bg-[#0a0a0f] rounded-2xl">
-          <div class="flex items-center justify-between px-4 py-3 mb-2">
-            <h3 class="text-lg font-semibold text-white">Réserver votre diagnostic gratuit</h3>
+        <div class="bg-[#0a0a0f] rounded-2xl p-6 sm:p-8 w-full max-w-lg">
+          <!-- Header -->
+          <div class="flex items-center justify-between mb-8">
+            <div>
+              <h3 class="text-xl font-bold text-white">Parlons de votre projet</h3>
+              <p class="text-sm text-white/40 mt-1">Réponse sous 24h — Diagnostic gratuit</p>
+            </div>
             <button
-              class="text-white/40 hover:text-white transition-colors cursor-pointer"
-              @click="closeCalendly"
+              class="text-white/40 hover:text-white transition-colors cursor-pointer p-1"
+              @click="closeForm"
             >
               <UIcon name="i-lucide-x" class="text-xl" />
             </button>
           </div>
-          <div
-            class="calendly-inline-widget"
-            data-url="https://calendly.com/nexoma-ia/30min"
-            style="min-width: 320px; height: 630px;"
-          />
+
+          <!-- Success state -->
+          <div v-if="formSubmitted" class="text-center py-12">
+            <div class="w-16 h-16 rounded-full bg-emerald-500/10 flex items-center justify-center mx-auto mb-6">
+              <UIcon name="i-lucide-check" class="text-emerald-400 text-3xl" />
+            </div>
+            <h4 class="text-xl font-semibold text-white mb-2">Message envoyé !</h4>
+            <p class="text-white/50 mb-8">Nous vous recontactons sous 24h pour un diagnostic gratuit de vos process.</p>
+            <button
+              class="px-6 py-3 bg-white/5 hover:bg-white/10 text-white rounded-xl
+                     font-medium transition-all duration-300 border border-white/10 cursor-pointer"
+              @click="closeForm"
+            >
+              Fermer
+            </button>
+          </div>
+
+          <!-- Form -->
+          <form v-else class="space-y-5" @submit.prevent="submitForm">
+            <!-- Nom / Prénom -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs text-white/50 uppercase tracking-wider mb-2 font-medium">Prénom</label>
+                <input
+                  v-model="form.firstName"
+                  type="text"
+                  required
+                  placeholder="Jean"
+                  class="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08]
+                         text-white placeholder-white/25 text-sm
+                         focus:outline-none focus:border-emerald-500/50 focus:bg-white/[0.06]
+                         transition-all duration-300"
+                >
+              </div>
+              <div>
+                <label class="block text-xs text-white/50 uppercase tracking-wider mb-2 font-medium">Nom</label>
+                <input
+                  v-model="form.lastName"
+                  type="text"
+                  required
+                  placeholder="Dupont"
+                  class="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08]
+                         text-white placeholder-white/25 text-sm
+                         focus:outline-none focus:border-emerald-500/50 focus:bg-white/[0.06]
+                         transition-all duration-300"
+                >
+              </div>
+            </div>
+
+            <!-- Entreprise -->
+            <div>
+              <label class="block text-xs text-white/50 uppercase tracking-wider mb-2 font-medium">Entreprise</label>
+              <input
+                v-model="form.company"
+                type="text"
+                required
+                placeholder="Nom de votre entreprise"
+                class="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08]
+                       text-white placeholder-white/25 text-sm
+                       focus:outline-none focus:border-emerald-500/50 focus:bg-white/[0.06]
+                       transition-all duration-300"
+              >
+            </div>
+
+            <!-- Téléphone -->
+            <div>
+              <label class="block text-xs text-white/50 uppercase tracking-wider mb-2 font-medium">Téléphone</label>
+              <input
+                v-model="form.phone"
+                type="tel"
+                required
+                placeholder="06 12 34 56 78"
+                class="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08]
+                       text-white placeholder-white/25 text-sm
+                       focus:outline-none focus:border-emerald-500/50 focus:bg-white/[0.06]
+                       transition-all duration-300"
+              >
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label class="block text-xs text-white/50 uppercase tracking-wider mb-2 font-medium">Email professionnel</label>
+              <input
+                v-model="form.email"
+                type="email"
+                required
+                placeholder="jean@entreprise.fr"
+                class="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08]
+                       text-white placeholder-white/25 text-sm
+                       focus:outline-none focus:border-emerald-500/50 focus:bg-white/[0.06]
+                       transition-all duration-300"
+              >
+            </div>
+
+            <!-- Submit -->
+            <button
+              type="submit"
+              :disabled="formLoading"
+              class="w-full py-4 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl
+                     font-semibold text-base glow-button cursor-pointer
+                     disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none
+                     transition-all duration-300 mt-2"
+            >
+              <span v-if="formLoading" class="flex items-center justify-center gap-2">
+                <UIcon name="i-lucide-loader-2" class="animate-spin" />
+                Envoi en cours...
+              </span>
+              <span v-else>Demander mon diagnostic gratuit →</span>
+            </button>
+
+            <p class="text-xs text-white/25 text-center mt-3">
+              Gratuit & sans engagement — Vos données restent confidentielles
+            </p>
+          </form>
         </div>
       </template>
     </UModal>

@@ -51,7 +51,7 @@ const plans = [
   }
 ]
 
-const { openCalendly } = useCalendly()
+const { openForm } = useContactForm()
 </script>
 
 <template>
@@ -123,7 +123,7 @@ const { openCalendly } = useCalendly()
             :class="plan.featured
               ? 'bg-emerald-500 hover:bg-emerald-600 text-white glow-button'
               : 'bg-white/5 hover:bg-white/10 text-white border border-white/10 hover:border-white/20'"
-            @click="openCalendly()"
+            @click="openForm()"
           >
             {{ plan.cta }} →
           </button>
