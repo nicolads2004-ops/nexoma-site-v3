@@ -128,7 +128,7 @@ onMounted(() => {
 
       <!-- Headline -->
       <h1
-        class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold tracking-tight leading-[0.9] text-white mb-6"
+        class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight leading-[1] text-white mb-6"
         data-reveal
         data-reveal-delay="1"
       >
