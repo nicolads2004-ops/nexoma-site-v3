@@ -6,10 +6,10 @@ const logos = [
 </script>
 
 <template>
-  <section class="relative py-16 overflow-hidden border-y border-white/[0.04]" data-reveal>
+  <section class="relative py-16 overflow-hidden border-y border-white/[0.08]" data-reveal>
     <div class="max-w-7xl mx-auto px-4 mb-8">
-      <p class="text-center text-xs uppercase tracking-[0.2em] text-white/30 font-medium">
-        Ils nous font confiance dans la Vienne (86)
+      <p class="text-center text-xs uppercase tracking-[0.2em] text-white/50 font-medium">
+        Ils nous font confiance
       </p>
     </div>
 
@@ -23,9 +23,11 @@ const logos = [
         <div
           v-for="(logo, i) in [...logos, ...logos]"
           :key="i"
-          class="flex-shrink-0 mx-8 px-8 py-4 rounded-xl bg-white/[0.03] border border-white/[0.06]
-                 text-white/30 font-semibold text-sm whitespace-nowrap
-                 hover:bg-white/[0.06] hover:text-white/50 transition-all duration-300"
+          class="flex-shrink-0 mx-6 px-7 py-3.5 rounded-xl
+                 bg-white/[0.06] border border-white/[0.10]
+                 text-white/60 font-semibold text-sm whitespace-nowrap
+                 hover:bg-white/[0.10] hover:text-white/80 hover:border-white/[0.18]
+                 transition-all duration-300"
         >
           {{ logo }}
         </div>
