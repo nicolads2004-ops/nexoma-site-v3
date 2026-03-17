@@ -26,16 +26,55 @@ const form = reactive({
   lastName: '',
   company: '',
   phone: '',
-  email: ''
+  email: '',
+  message: '',
+  timeSlot: '' as string
 })
 const formLoading = ref(false)
+const formError = ref('')
+
+const timeSlots = [
+  { value: '9h-12h', label: '9h — 12h' },
+  { value: '12h-14h', label: '12h — 14h' },
+  { value: '14h-19h', label: '14h — 19h' }
+]
 
 async function submitForm() {
   formLoading.value = true
-  // Simulate submission (replace with real endpoint later)
-  await new Promise(resolve => setTimeout(resolve, 1200))
-  formLoading.value = false
-  markSubmitted()
+  formError.value = ''
+
+  try {
+    // Formspree - gratuit 50 soumissions/mois
+    // Pour activer: crée un form sur formspree.io et remplace l'ID ci-dessous
+    const response = await fetch('https://formspree.io/f/xpwdgekb', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        _subject: `🔥 Nouveau lead Nexoma — ${form.company}`,
+        name: `${form.firstName} ${form.lastName}`,
+        email: form.email,
+        phone: form.phone,
+        company: form.company,
+        message: form.message,
+        preferred_time: form.timeSlot
+      })
+    })
+
+    if (response.ok) {
+      markSubmitted()
+    } else {
+      // Fallback: mailto
+      const body = `Nom: ${form.firstName} ${form.lastName}%0AEntreprise: ${form.company}%0ATéléphone: ${form.phone}%0AEmail: ${form.email}%0ACréneau: ${form.timeSlot}%0A%0ABesoin: ${form.message}`
+      window.location.href = `mailto:contact@nexoma.fr?subject=Demande de diagnostic — ${form.company}&body=${body}`
+      markSubmitted()
+    }
+  } catch {
+    const body = `Nom: ${form.firstName} ${form.lastName}%0AEntreprise: ${form.company}%0ATéléphone: ${form.phone}%0AEmail: ${form.email}%0ACréneau: ${form.timeSlot}%0A%0ABesoin: ${form.message}`
+    window.location.href = `mailto:contact@nexoma.fr?subject=Demande de diagnostic — ${form.company}&body=${body}`
+    markSubmitted()
+  } finally {
+    formLoading.value = false
+  }
 }
 </script>
 
@@ -250,34 +289,77 @@ async function submitForm() {
               >
             </div>
 
-            <!-- Téléphone -->
-            <div>
-              <label class="block text-xs text-white/50 uppercase tracking-wider mb-2 font-medium">Téléphone</label>
-              <input
-                v-model="form.phone"
-                type="tel"
-                required
-                placeholder="06 12 34 56 78"
-                class="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08]
-                       text-white placeholder-white/25 text-sm
-                       focus:outline-none focus:border-emerald-500/50 focus:bg-white/[0.06]
-                       transition-all duration-300"
-              >
+            <!-- Téléphone + Email -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs text-white/50 uppercase tracking-wider mb-2 font-medium">Téléphone</label>
+                <input
+                  v-model="form.phone"
+                  type="tel"
+                  required
+                  placeholder="06 12 34 56 78"
+                  class="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08]
+                         text-white placeholder-white/25 text-sm
+                         focus:outline-none focus:border-emerald-500/50 focus:bg-white/[0.06]
+                         transition-all duration-300"
+                >
+              </div>
+              <div>
+                <label class="block text-xs text-white/50 uppercase tracking-wider mb-2 font-medium">Email</label>
+                <input
+                  v-model="form.email"
+                  type="email"
+                  required
+                  placeholder="jean@entreprise.fr"
+                  class="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08]
+                         text-white placeholder-white/25 text-sm
+                         focus:outline-none focus:border-emerald-500/50 focus:bg-white/[0.06]
+                         transition-all duration-300"
+                >
+              </div>
             </div>
 
-            <!-- Email -->
+            <!-- Besoin -->
             <div>
-              <label class="block text-xs text-white/50 uppercase tracking-wider mb-2 font-medium">Email professionnel</label>
-              <input
-                v-model="form.email"
-                type="email"
+              <label class="block text-xs text-white/50 uppercase tracking-wider mb-2 font-medium">Décrivez votre besoin</label>
+              <textarea
+                v-model="form.message"
                 required
-                placeholder="jean@entreprise.fr"
+                rows="3"
+                placeholder="Ex: J'ai besoin d'automatiser mes devis et relances clients..."
                 class="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08]
-                       text-white placeholder-white/25 text-sm
+                       text-white placeholder-white/25 text-sm resize-none
                        focus:outline-none focus:border-emerald-500/50 focus:bg-white/[0.06]
                        transition-all duration-300"
-              >
+              />
+            </div>
+
+            <!-- Créneau horaire -->
+            <div>
+              <label class="block text-xs text-white/50 uppercase tracking-wider mb-3 font-medium">
+                Meilleur moment pour vous contacter
+              </label>
+              <div class="grid grid-cols-3 gap-3">
+                <label
+                  v-for="slot in timeSlots"
+                  :key="slot.value"
+                  class="relative flex items-center justify-center px-3 py-3 rounded-xl cursor-pointer
+                         text-sm font-medium transition-all duration-300 text-center"
+                  :class="form.timeSlot === slot.value
+                    ? 'bg-emerald-500/15 border border-emerald-500/40 text-emerald-400'
+                    : 'bg-white/[0.04] border border-white/[0.08] text-white/50 hover:border-white/[0.15] hover:text-white/70'"
+                >
+                  <input
+                    v-model="form.timeSlot"
+                    type="radio"
+                    name="timeSlot"
+                    :value="slot.value"
+                    required
+                    class="sr-only"
+                  >
+                  {{ slot.label }}
+                </label>
+              </div>
             </div>
 
             <!-- Submit -->
