@@ -65,12 +65,12 @@ async function submitForm() {
     } else {
       // Fallback: mailto
       const body = `Nom: ${form.firstName} ${form.lastName}%0AEntreprise: ${form.company}%0ATéléphone: ${form.phone}%0AEmail: ${form.email}%0ACréneau: ${form.timeSlot}%0A%0ABesoin: ${form.message}`
-      window.location.href = `mailto:contact@nexoma.fr?subject=Demande de diagnostic — ${form.company}&body=${body}`
+      window.location.href = `mailto:contact@poitiers.digital?subject=Demande de diagnostic — ${form.company}&body=${body}`
       markSubmitted()
     }
   } catch {
     const body = `Nom: ${form.firstName} ${form.lastName}%0AEntreprise: ${form.company}%0ATéléphone: ${form.phone}%0AEmail: ${form.email}%0ACréneau: ${form.timeSlot}%0A%0ABesoin: ${form.message}`
-    window.location.href = `mailto:contact@nexoma.fr?subject=Demande de diagnostic — ${form.company}&body=${body}`
+    window.location.href = `mailto:contact@poitiers.digital?subject=Demande de diagnostic — ${form.company}&body=${body}`
     markSubmitted()
   } finally {
     formLoading.value = false
@@ -173,7 +173,7 @@ async function submitForm() {
             <h4 class="text-sm font-semibold text-white mb-4">Contact</h4>
             <ul class="space-y-3">
               <li class="text-sm text-white/40">Poitiers, Vienne (86)</li>
-              <li><a href="mailto:contact@nexoma.fr" class="text-sm text-white/40 hover:text-emerald-400 transition-colors">contact@nexoma.fr</a></li>
+              <li><a href="mailto:contact@poitiers.digital" class="text-sm text-white/40 hover:text-emerald-400 transition-colors">contact@nexoma.fr</a></li>
               <li>
                 <button
                   class="text-sm text-emerald-400 hover:text-emerald-300 transition-colors cursor-pointer"
