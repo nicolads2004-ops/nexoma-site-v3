@@ -3,9 +3,9 @@ const { openForm } = useContactForm()
 
 // Typing effect
 const typingTexts = [
-  'divisez vos coûts par 3.',
-  'récupérez 25h par semaine.',
-  'signez pendant que les autres dorment.'
+  'on optimise ce qui vous ralentit.',
+  'on automatise ce qui vous coûte.',
+  'on libère ce qui vous bloque.'
 ]
 const currentTextIndex = ref(0)
 const displayedText = ref('')
@@ -123,7 +123,7 @@ onMounted(() => {
         data-reveal
       >
         <span class="w-2 h-2 bg-red-400 rounded-full animate-pulse" />
-        ⚠ En 2026, ne pas automatiser n'est plus un choix — c'est un risque vital
+        ⚠ En 2026, les PME qui n'optimisent pas disparaissent
       </div>
 
       <!-- Headline -->
@@ -132,7 +132,7 @@ onMounted(() => {
         data-reveal
         data-reveal-delay="1"
       >
-        En 21 jours,<br>
+        Votre entreprise, mais en mieux :<br>
         <span class="gradient-text inline-block min-h-[1.1em]">
           {{ displayedText }}<span class="animate-blink text-emerald-400">|</span>
         </span>
@@ -144,10 +144,9 @@ onMounted(() => {
         data-reveal
         data-reveal-delay="2"
       >
-        Chaque jour sans agent IA, votre PME
-        <span class="text-red-400 font-semibold">perd 128 EUR</span> en tâches qu'une machine fait mieux.
-        Un agent coûte <span class="text-white font-semibold">moins cher qu'un stagiaire</span>
-        — et travaille 24h/24, sans erreur, sans congés, sans charges.
+        On analyse votre entreprise, on identifie ce qui vous coûte du temps et de l'argent,
+        et on met en place <span class="text-white font-semibold">des solutions IA sur-mesure</span>
+        qui travaillent pour vous — <span class="text-red-400 font-semibold">24h/24</span>, sans erreur, sans congés.
       </p>
 
       <!-- Guarantee line -->
@@ -156,7 +155,7 @@ onMounted(() => {
         data-reveal
         data-reveal-delay="2"
       >
-        ROI mesurable en 21 jours ou remboursé intégralement. Zéro risque pour vous.
+        Résultats mesurables en 21 jours ou remboursé intégralement. Zéro risque.
       </p>
 
       <!-- CTA group -->
@@ -178,7 +177,7 @@ onMounted(() => {
                  rounded-xl font-medium text-lg transition-all duration-300
                  border border-white/10 hover:border-white/20"
         >
-          Voir les résultats clients
+          Voir ce qu'on a fait pour d'autres
         </a>
       </div>
 
@@ -202,7 +201,7 @@ onMounted(() => {
         <div class="flex items-center gap-6">
           <div class="text-center">
             <span class="text-2xl font-bold text-white tabular-nums">{{ counterPME.displayValue.value }}+</span>
-            <span class="block text-xs text-white/40">PME accompagnées</span>
+            <span class="block text-xs text-white/40">entreprises optimisées</span>
           </div>
           <span class="hidden sm:inline text-white/10">|</span>
           <div class="text-center">

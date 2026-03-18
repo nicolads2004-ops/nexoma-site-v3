@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const testimonials = [
   {
-    quote: 'On était à 2 mois de mettre la clé sous la porte. Personne ne nous avait dit que 60% de nos impayés pouvaient être récupérés automatiquement. En 3 semaines, +23K EUR de trésorerie. Aujourd\'hui, on embauche.',
+    quote: 'On était à 2 mois de mettre la clé sous la porte. Nexoma a analysé nos process et automatisé nos relances. En 3 semaines, +23K EUR de trésorerie récupérée. Aujourd\'hui, on embauche.',
     author: 'Thomas R.',
     role: 'Gérant — NovaBat (BTP)',
     initials: 'TR',
@@ -11,7 +11,7 @@ const testimonials = [
     metric: 'CA +35%'
   },
   {
-    quote: 'Je ne voyais plus mes enfants grandir. 70h/semaine. J\'ai failli tout plaquer. Depuis que les agents gèrent 80% des demandes, je travaille 45h et j\'ai retrouvé une vie. C\'est con à dire, mais l\'IA m\'a sauvé mon couple.',
+    quote: 'Je ne voyais plus mes enfants grandir. 70h/semaine. J\'ai failli tout plaquer. Nexoma a automatisé 80% des demandes qui me bouffaient. Je travaille 45h et j\'ai retrouvé une vie. Honnêtement, ça m\'a sauvé.',
     author: 'Sophie L.',
     role: 'Gérante — Comptoir Belharra (Commerce)',
     initials: 'SL',
@@ -21,7 +21,7 @@ const testimonials = [
     metric: '-25h/sem'
   },
   {
-    quote: 'Nos clients pensent qu\'on a embauché 3 personnes. C\'est notre agent IA qui répond 24/7, qualifie les leads et prend les RDV. On a doublé nos consultations en 2 mois.',
+    quote: 'Nos clients pensent qu\'on a embauché 3 personnes. En réalité, Nexoma a mis en place un accueil intelligent qui gère les demandes 24/7. On a doublé nos consultations en 2 mois.',
     author: 'Maître Clairac',
     role: 'Avocat — Cabinet Rivaud',
     initials: 'AC',
@@ -31,7 +31,7 @@ const testimonials = [
     metric: 'x2 RDV'
   },
   {
-    quote: 'ROI visible dès le premier mois. On économise 18K EUR/an en commissions OTA grâce aux réservations directes. L\'agent connaît nos chambres mieux que ma réceptionniste.',
+    quote: 'ROI visible dès le premier mois. On économise 18K EUR/an en commissions OTA grâce à la gestion automatique des réservations directes. Ça gère mieux que ce qu\'on faisait à la main.',
     author: 'Marc V.',
     role: 'Directeur — Maison Hélios (Hôtellerie)',
     initials: 'MV',
@@ -51,7 +51,7 @@ const testimonials = [
     metric: '+45pts'
   },
   {
-    quote: 'L\'équipe Nexoma parle notre langue, pas du jargon tech. En 3 semaines, nos devis partent en 2 minutes au lieu de 4 heures. Mes commerciaux vendent enfin au lieu de remplir des tableaux.',
+    quote: 'L\'équipe Nexoma parle notre langue, pas du jargon tech. En 3 semaines, nos devis partent en 2 minutes au lieu de 4 heures. Mes commerciaux vendent enfin au lieu de faire de l\'admin.',
     author: 'Claire M.',
     role: 'DG — Groupe Valoris (Services)',
     initials: 'CM',

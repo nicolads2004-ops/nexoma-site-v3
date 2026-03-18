@@ -5,9 +5,9 @@ const useCases = [
   {
     sector: 'BTP & Artisanat',
     icon: 'i-lucide-hard-hat',
-    title: 'NovaBat — Entreprise BTP',
-    problem: 'Devis manuels sur Excel, 4h par devis, prospects qui signent ailleurs.',
-    solution: 'Agent Devis Express + Relance automatique',
+    title: 'Une entreprise BTP dans le 86',
+    problem: 'Devis manuels sur Excel, 4h par devis, prospects qui signaient chez les concurrents plus rapides.',
+    solution: 'Automatisation des devis + suivi commercial',
     results: [
       { label: 'Temps par devis', before: '4 heures', after: '35 min' },
       { label: 'Taux de conversion', before: '15%', after: '38%' },
@@ -19,43 +19,43 @@ const useCases = [
   {
     sector: 'Commerce & Retail',
     icon: 'i-lucide-store',
-    title: 'Comptoir Belharra — Commerce',
-    problem: 'Pas de suivi client, relances manuelles, stock géré sur papier.',
-    solution: 'Agent Accueil 24/7 + Relance & Recouvrement',
+    title: 'Un commerce multi-sites',
+    problem: 'Aucun suivi client structuré, relances manuelles oubliées, 15h/semaine d\'admin.',
+    solution: 'Accueil automatisé + suivi des impayés',
     results: [
       { label: 'Réponse client', before: '24-48h', after: 'Instantané' },
       { label: 'Impayés récupérés', before: '30%', after: '78%' },
       { label: 'Temps admin/semaine', before: '15h', after: '4h' }
     ],
-    quote: 'Le chatbot gère 80% des questions basiques. Je me concentre enfin sur le conseil.',
+    quote: '80% des questions clients se traitent toutes seules maintenant. Je me concentre enfin sur le conseil.',
     author: 'Sophie L., Gérante'
   },
   {
     sector: 'Professions libérales',
     icon: 'i-lucide-scale',
-    title: 'Cabinet Rivaud & Associés',
-    problem: 'Secrétariat débordé, RDV manqués, dossiers qui traînent.',
-    solution: 'Agent Accueil 24/7 + RH & Onboarding',
+    title: 'Un cabinet d\'avocats',
+    problem: 'Secrétariat débordé, 35% d\'appels manqués, prise de RDV chaotique.',
+    solution: 'Accueil intelligent + gestion des RDV',
     results: [
       { label: 'Appels manqués', before: '35%', after: '2%' },
       { label: 'Prise de RDV', before: 'Manuelle', after: 'Automatique' },
       { label: 'Satisfaction client', before: '7.2/10', after: '9.4/10' }
     ],
-    quote: 'Nos clients pensent qu\'on a embauché une assistante de plus. C\'est notre agent IA.',
-    author: 'Maître Clairac, Avocat associé'
+    quote: 'Nos clients pensent qu\'on a embauché une assistante de plus. En réalité, c\'est de l\'IA.',
+    author: 'Maître C., Avocat associé'
   },
   {
     sector: 'Hôtellerie',
     icon: 'i-lucide-bed',
-    title: 'Maison Hélios — Hôtellerie',
-    problem: 'Réservations par téléphone, pas de suivi post-séjour, avis non gérés.',
-    solution: 'Agent Accueil 24/7 + Veille & Relance',
+    title: 'Un hôtel indépendant',
+    problem: 'Réservations 100% par téléphone et OTA, pas de suivi post-séjour, avis non gérés.',
+    solution: 'Réservation directe + relation client automatisée',
     results: [
       { label: 'Réservations directes', before: '25%', after: '58%' },
       { label: 'Note Google', before: '3.8/5', after: '4.6/5' },
       { label: 'Commission OTA économisée', before: '', after: '18K€/an' }
     ],
-    quote: 'L\'agent répond en 4 langues, 24h/24. On a réduit notre dépendance à Booking de 50%.',
+    quote: 'On répond en 4 langues, 24h/24. On a réduit notre dépendance à Booking de 50%.',
     author: 'Marc V., Directeur'
   }
 ]
@@ -68,9 +68,9 @@ const useCases = [
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <LandingSectionHeader
         eyebrow="Vous vous reconnaissez ?"
-        title="Des résultats prouvés "
-        highlight="dans votre secteur."
-        description="Peu importe votre métier : si vous avez des tâches répétitives, vous perdez de l'argent. Voici ce qui se passe quand on arrête."
+        title="Ce qu'on a fait pour des entreprises "
+        highlight="comme la vôtre."
+        description="Chaque secteur a ses spécificités. Voici des exemples concrets de ce qu'on a mis en place — et les résultats obtenus."
       />
 
       <!-- Tabs -->

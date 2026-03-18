@@ -3,7 +3,7 @@ useScrollReveal()
 const { showForm, formSubmitted, openForm, closeForm, markSubmitted } = useContactForm()
 
 const title = 'Nexoma | Votre équipe IA sur-mesure — Poitiers & Vienne (86)'
-const description = 'Nexoma installe des agents IA sur-mesure dans votre PME : devis en 2 min, relances automatiques, accueil 24/7. 207+ PME transformées dans la Vienne (86). ROI en 21 jours ou remboursé.'
+const description = 'Nexoma optimise votre entreprise avec l\'IA sur-mesure. On automatise ce qui vous coûte du temps et de l\'argent. 207+ entreprises transformées dans la Vienne (86). Résultats en 21 jours ou remboursé.'
 
 useSeoMeta({
   title,

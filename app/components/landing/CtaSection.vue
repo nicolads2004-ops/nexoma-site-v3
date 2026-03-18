@@ -58,8 +58,8 @@ onUnmounted(() => {
       </h2>
 
       <p class="text-lg text-white/50 max-w-2xl mx-auto mb-6 leading-relaxed">
-        Imaginez : dans 21 jours, vos devis partent en 2 minutes, vos factures se relancent toutes seules,
-        et vous récupérez 25 heures par semaine. C'est exactement ce que vivent nos clients aujourd'hui.
+        Imaginez : dans 21 jours, les tâches qui vous bouffaient 4h par jour tournent toutes seules.
+        Votre équipe se concentre sur ce qui compte. Votre trésorerie respire. C'est ce que vivent nos clients.
         <span class="text-white/70 font-medium">La seule question : combien de temps allez-vous encore attendre ?</span>
       </p>
 

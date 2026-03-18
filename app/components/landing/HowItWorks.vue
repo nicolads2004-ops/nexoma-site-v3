@@ -3,15 +3,15 @@ const steps = [
   {
     number: '01',
     title: 'Diagnostic offert (30 min)',
-    description: 'En 30 minutes, on identifie les 3 tâches qui brûlent votre argent. Vous repartez avec un chiffrage précis de ce que l\'IA peut vous faire économiser. Gratuit, sans engagement — et vous gardez le plan d\'action même si vous ne signez pas.',
+    description: 'On analyse vos process, vos outils, votre organisation. On identifie où vous perdez du temps et de l\'argent. Vous repartez avec un plan d\'action concret — gratuit, sans engagement, et il est à vous même si vous ne signez pas.',
     icon: 'i-lucide-scan',
     detail: 'Audit complet de vos flux de travail',
     duration: 'Jour 1'
   },
   {
     number: '02',
-    title: 'Configuration sur-mesure',
-    description: 'On entraîne vos agents IA sur VOS documents, VOS process, VOTRE ton. Pas de solution copier-coller. Chaque agent parle comme vous, connaît vos tarifs, vos CGV, votre façon de travailler.',
+    title: 'Mise en place sur-mesure',
+    description: 'On construit les solutions adaptées à votre entreprise : vos données, vos process, votre façon de travailler. Pas de solution générique. Tout est calibré sur votre réalité métier.',
     icon: 'i-lucide-settings',
     detail: 'Entraînement sur vos données métier',
     duration: 'Semaine 1-2'
@@ -19,7 +19,7 @@ const steps = [
   {
     number: '03',
     title: 'Résultats garantis',
-    description: 'Déploiement, formation de votre équipe en 1h, et suivi des KPIs en temps réel. Quand vous verrez vos premiers devis partir en 2 minutes et vos factures se relancer seules — vous comprendrez pourquoi 94% de nos clients restent.',
+    description: 'Déploiement, formation de votre équipe en 1h, et suivi en temps réel. Vous voyez les résultats dès les premières semaines. Et si ce n\'est pas le cas, on vous rembourse.',
     icon: 'i-lucide-rocket',
     detail: 'ROI mesurable garanti',
     duration: 'Semaine 3'
@@ -61,10 +61,10 @@ onMounted(() => {
   <section id="comment" class="relative py-24 md:py-32 overflow-hidden">
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <LandingSectionHeader
-        eyebrow="Vous n'avez rien à faire — on s'occupe de tout"
-        title="Opérationnel en "
+        eyebrow="On s'occupe de tout"
+        title="De l'analyse aux résultats en "
         highlight="21 jours."
-        description="Pas de projet IT de 6 mois. Pas de développeur à embaucher. Pas de formation de 3 jours. On installe, on configure, on forme votre équipe en 1h. Vous, vous récoltez les résultats."
+        description="Pas de projet IT de 6 mois. Pas de développeur à embaucher. On vient, on comprend votre métier, on met en place les solutions et on forme votre équipe. Simple."
       />
 
       <div ref="sectionRef" class="relative">

@@ -8,23 +8,23 @@ function toggle(index: number) {
 const faqs = [
   {
     question: 'Je pense que mon entreprise n\'a pas besoin d\'IA.',
-    answer: 'C\'est ce que pensaient 87% de nos clients avant de commencer. La vérité ? Si vous avez des employés qui font des devis, des relances, de la saisie ou du suivi client — vous perdez de l\'argent chaque jour sans le savoir. Le diagnostic gratuit vous montre exactement combien. Après, vous décidez en toute connaissance de cause.'
+    answer: 'C\'est ce que pensaient 87% de nos clients avant de commencer. La vérité ? Si vous avez des tâches répétitives — devis, relances, saisies, accueil, suivi client — vous perdez de l\'argent chaque jour sans le savoir. Le diagnostic gratuit vous montre exactement combien. Après, vous décidez.'
   },
   {
     question: 'Combien de temps pour voir des résultats concrets ?',
-    answer: '21 jours. Pas 6 mois. Pas "bientôt". Semaine 1 : on analyse vos process et on configure. Semaine 2 : tests en conditions réelles. Semaine 3 : déploiement et formation de votre équipe. Nos clients voient un ROI mesurable dès le premier mois — c\'est pour ça qu\'on garantit le remboursement.'
+    answer: '21 jours. Pas 6 mois. Semaine 1 : on analyse vos process. Semaine 2 : on met en place et on teste. Semaine 3 : déploiement et formation. Nos clients voient un ROI mesurable dès le premier mois — c\'est pour ça qu\'on garantit le remboursement.'
   },
   {
-    question: 'C\'est pas juste un ChatGPT amélioré ?',
-    answer: 'ChatGPT est un outil généraliste : vous posez une question, il répond. Nos agents sont fondamentalement différents. Ils sont entraînés sur VOS données (tarifs, process, ton, documents), intégrés dans VOS outils (CRM, email, téléphone), et fonctionnent en totale autonomie. Personne ne tape de prompt. L\'agent travaille. Vous récoltez.'
+    question: 'C\'est pas juste du ChatGPT ?',
+    answer: 'Non. ChatGPT est un outil générique où vous tapez des prompts. Ce qu\'on met en place est fondamentalement différent : des solutions entraînées sur VOS données, intégrées dans VOS outils (CRM, email, téléphone), qui tournent en autonomie. Pas de prompt, pas de manipulation. Ça tourne tout seul.'
   },
   {
     question: 'Et si ça ne fonctionne pas ?',
-    answer: 'Remboursement intégral le premier mois, sans condition et sans justification. On prend 100% du risque. En 2 ans, notre taux de rétention est de 94% — ce qui veut dire que 94 clients sur 100 restent. Votre account manager suit vos KPIs chaque semaine et ajuste les agents en continu.'
+    answer: 'Remboursement intégral le premier mois, sans condition. On prend 100% du risque. Notre taux de rétention est de 94% — 94 clients sur 100 restent après la première année. On suit vos résultats chaque semaine et on ajuste en continu.'
   },
   {
     question: 'Mon équipe n\'est pas technique du tout.',
-    answer: 'Parfait — la nôtre l\'est. Votre équipe utilise les agents via des interfaces qu\'elle connaît déjà : email, WhatsApp, un dashboard simple. Si vos employés savent utiliser un smartphone, ils sauront utiliser nos agents. On gère 100% de la technique.'
+    answer: 'Parfait — la nôtre l\'est. Tout ce qu\'on met en place s\'utilise via des interfaces simples : email, WhatsApp, un dashboard web. Si votre équipe sait utiliser un smartphone, elle saura utiliser nos solutions. On gère 100% de la technique.'
   },
   {
     question: 'Mes données sont-elles en sécurité ?',
@@ -32,11 +32,11 @@ const faqs = [
   },
   {
     question: 'Ça coûte combien ?',
-    answer: 'Abonnement mensuel, sans engagement longue durée. Concrètement, un agent IA coûte entre 10x et 20x moins qu\'un salarié pour les mêmes tâches. Et il travaille 24h/24, 7j/7. Le diagnostic gratuit vous donne un chiffrage précis adapté à votre situation. Pas de frais cachés, pas de setup fees.'
+    answer: 'Abonnement mensuel, sans engagement longue durée. Concrètement, nos solutions coûtent entre 10x et 20x moins qu\'un salarié pour les mêmes tâches — et elles fonctionnent 24h/24. Le diagnostic gratuit vous donne un chiffrage précis. Pas de frais cachés.'
   },
   {
     question: 'Est-ce que ça marche pour mon secteur ?',
-    answer: 'BTP, commerce, professions libérales, hôtellerie, industrie, agroalimentaire — on a des résultats prouvés dans chaque secteur. Chaque agent est entraîné spécifiquement sur les process de VOTRE métier. Ce n\'est pas une solution générique. C\'est du sur-mesure.'
+    answer: 'BTP, commerce, professions libérales, hôtellerie, industrie, agroalimentaire — on a des résultats prouvés dans chaque secteur. Chaque solution est construite sur-mesure pour VOS process. Pas de la tech générique.'
   }
 ]
 </script>

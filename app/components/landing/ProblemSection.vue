@@ -2,28 +2,28 @@
 const problems = [
   {
     icon: 'i-lucide-clock',
-    title: 'Vos devis partent trop tard',
-    description: 'Pendant que votre commercial reformate un devis pour la 100e fois, votre prospect a déjà signé chez le concurrent qui a répondu en 2 minutes grâce à l\'IA. Ce n\'est pas un problème de compétence — c\'est un problème d\'outils.',
+    title: 'Vos équipes sont noyées dans l\'administratif',
+    description: 'Devis, relances, saisies, reporting... Vos collaborateurs passent 75% de leur temps sur des tâches sans valeur. Résultat : ils n\'ont plus le temps de faire ce qui rapporte vraiment — vendre, innover, développer.',
     stat: '4h/jour',
-    statLabel: 'gaspillées en admin',
+    statLabel: 'perdues en tâches répétitives',
     barPercent: 75,
-    barLabel: '75% du temps commercial perdu en tâches admin',
+    barLabel: '75% du temps perdu en tâches sans valeur ajoutée',
     cost: '23 000 EUR/an'
   },
   {
     icon: 'i-lucide-phone-missed',
-    title: 'Votre trésorerie saigne en silence',
-    description: 'Vous le savez au fond de vous : ces factures impayées qui s\'accumulent, ces relances que vous "ferez demain"... Demain ne vient jamais. Et chaque semaine d\'inaction, c\'est 1 200 EUR qui s\'évaporent.',
+    title: 'L\'argent file entre les mailles',
+    description: 'Factures oubliées, prospects non relancés, opportunités manquées parce que personne n\'avait le temps. Ce n\'est pas de la négligence — c\'est le signe qu\'il y a trop de choses à gérer manuellement.',
     stat: '60%',
-    statLabel: 'jamais relancées',
+    statLabel: 'des opportunités perdues',
     barPercent: 60,
-    barLabel: '60% des factures impayées oubliées',
+    barLabel: '60% des revenus perdus par manque de suivi',
     cost: '15 000 EUR/an'
   },
   {
     icon: 'i-lucide-user-x',
-    title: 'Vous avez créé votre propre prison',
-    description: 'Emails à 23h. Weekends au bureau. Vacances annulées. Vous n\'avez pas lancé votre boîte pour ça. Le vrai problème ? Vous faites le travail de 3 personnes parce que vos employés sont noyés dans des microtâches sans valeur.',
+    title: 'Vous portez tout sur vos épaules',
+    description: 'Emails à 23h. Weekends au bureau. Vacances annulées. Tout passe par vous parce que les process ne tournent pas sans vous. Vous n\'avez pas lancé votre boîte pour en devenir prisonnier.',
     stat: '70h',
     statLabel: 'par semaine',
     barPercent: 87,
@@ -90,9 +90,9 @@ const totalCost = computed(() => {
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <LandingSectionHeader
         eyebrow="Ce n'est pas votre faute."
-        title="Les microtâches tuent votre "
-        highlight="entreprise."
-        description="Vous n'avez pas échoué. On ne vous a jamais donné les bons outils. Pendant que vous relancez des factures à la main et reformatez des devis sous Excel, vos concurrents ont automatisé — et ils vous dépassent."
+        title="Votre entreprise est pleine de "
+        highlight="fuites invisibles."
+        description="Vous n'avez pas un problème de compétence. Vous avez un problème d'outils. Pendant que vous et vos équipes perdez des heures sur des tâches répétitives, vos concurrents ont déjà optimisé — et ils avancent plus vite."
       />
 
       <div ref="barsRef" class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -156,8 +156,8 @@ const totalCost = computed(() => {
           {{ totalCost.toLocaleString('fr-FR') }} EUR<span class="text-2xl md:text-3xl text-white/30">/an</span>
         </div>
         <p class="text-white/50 max-w-xl mx-auto mb-2">
-          L'équivalent d'un salaire chargé. Brûlé chaque année en tâches qu'un agent IA exécute en quelques secondes.
-          <span class="text-white/70 font-medium">Vous n'avez pas un problème de rentabilité — vous avez un problème d'outils.</span>
+          L'équivalent d'un salaire chargé. Brûlé chaque année en inefficacités que l'IA élimine en quelques semaines.
+          <span class="text-white/70 font-medium">Ce n'est pas un problème de rentabilité — c'est un problème d'optimisation.</span>
         </p>
         <p class="text-emerald-400 font-medium text-sm">
           → Nos clients récupèrent cette somme dès les 3 premières semaines.

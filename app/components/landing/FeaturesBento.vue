@@ -1,68 +1,68 @@
 <script setup lang="ts">
 const features = [
   {
-    icon: 'i-lucide-file-text',
-    title: 'Agent Devis Express',
-    description: 'Votre prospect demande un devis à 22h ? Il le reçoit en 2 minutes, personnalisé, avec vos tarifs. Votre concurrent met 4 heures à répondre. Devinez qui signe le contrat.',
+    icon: 'i-lucide-zap',
+    title: 'Automatiser les tâches répétitives',
+    description: 'Devis, relances, saisies, emails de suivi... Tout ce que vos équipes font à la main et qui pourrait tourner tout seul. On identifie ces tâches et on les automatise. Résultat : vos collaborateurs font enfin ce qui compte.',
     stat: 85,
-    statLabel: 'de temps gagné',
+    statLabel: 'de temps libéré',
     statSuffix: '%',
-    before: '4 heures',
-    after: '2 minutes',
-    beforeLabel: 'Avant : process manuel',
-    afterLabel: 'Avec Nexoma',
+    before: 'Process manuels',
+    after: 'Automatisé par l\'IA',
+    beforeLabel: 'Avant Nexoma',
+    afterLabel: 'Après Nexoma',
     size: 'large'
   },
   {
-    icon: 'i-lucide-bell-ring',
-    title: 'Agent Recouvrement',
-    description: 'Chaque facture impayée est relancée au bon moment, avec le bon ton. Escalade automatique si nécessaire. Résultat : +40% de factures récupérées — sans que vous leviez le petit doigt.',
+    icon: 'i-lucide-trending-up',
+    title: 'Récupérer l\'argent qui vous échappe',
+    description: 'Factures impayées non relancées, prospects qui tombent dans l\'oubli, opportunités ratées faute de réactivité. On met en place un suivi intelligent qui ne laisse plus rien passer.',
     stat: 40,
-    statLabel: 'de factures récupérées',
+    statLabel: 'de revenus récupérés',
     statSuffix: '%',
-    before: 'Relances manuelles',
-    after: 'Séquences IA',
-    beforeLabel: 'Post-it et oublis',
-    afterLabel: 'Zéro effort',
+    before: 'Suivi manuel',
+    after: 'Suivi automatique',
+    beforeLabel: 'Oublis et pertes',
+    afterLabel: 'Chaque euro suivi',
     size: 'normal'
   },
   {
-    icon: 'i-lucide-headphones',
-    title: 'Agent Accueil 24/7',
-    description: 'Un prospect vous appelle dimanche à 11h. Sans agent : messagerie, prospect perdu. Avec Nexoma : appel qualifié, RDV pris, vous êtes prévenu. Combien de clients perdez-vous chaque weekend ?',
+    icon: 'i-lucide-clock',
+    title: 'Être disponible quand vos clients ont besoin de vous',
+    description: 'Un client vous contacte le soir, le weekend, un jour férié ? Aujourd\'hui : messagerie, perdu. Avec Nexoma : il est accueilli, qualifié, orienté — automatiquement. Vous ne ratez plus rien.',
     stat: 24,
     statLabel: 'heures sur 24',
     statSuffix: 'h',
     before: 'Heures de bureau',
-    after: '24/7 non-stop',
-    beforeLabel: 'Clients perdus le soir',
-    afterLabel: 'Chaque lead capté',
+    after: 'Disponible 24/7',
+    beforeLabel: 'Leads perdus',
+    afterLabel: 'Chaque demande captée',
     size: 'normal'
   },
   {
     icon: 'i-lucide-users',
-    title: 'Agent RH & Onboarding',
-    description: 'Votre nouveau salarié est opérationnel en 1 semaine au lieu de 3. Documents préparés, formations planifiées, suivi automatique. Vos employés font enfin ce pour quoi vous les payez : du travail à forte valeur.',
+    title: 'Libérer vos équipes pour ce qui a de la valeur',
+    description: 'Vos salariés passent des heures sur de la saisie, du classement, de la relance ? On prend en charge ces tâches. Résultat : ils se concentrent sur le métier, la relation client, la croissance.',
     stat: 60,
-    statLabel: 'de temps d\'intégration en moins',
+    statLabel: 'de productivité en plus',
     statSuffix: '%',
-    before: '3 semaines',
-    after: '1 semaine',
-    beforeLabel: 'Intégration classique',
-    afterLabel: 'Onboarding IA',
+    before: 'Tâches répétitives',
+    after: 'Travail à forte valeur',
+    beforeLabel: 'Temps gaspillé',
+    afterLabel: 'Équipe recentrée',
     size: 'normal'
   },
   {
-    icon: 'i-lucide-search',
-    title: 'Agent Veille Marchés',
-    description: 'Vos concurrents répondent à 9 appels d\'offres sur 10. Vous ? Peut-être 1. Notre agent détecte et analyse les marchés qui vous correspondent en temps réel. Ne laissez plus passer les contrats qui font votre année.',
+    icon: 'i-lucide-target',
+    title: 'Détecter les opportunités avant les autres',
+    description: 'Appels d\'offres, évolutions marché, signaux faibles de vos clients... L\'IA surveille et vous alerte en temps réel. Vos concurrents réagissent. Vous, vous anticipez.',
     stat: 3,
-    statLabel: 'plus d\'opportunités',
+    statLabel: 'plus d\'opportunités détectées',
     statSuffix: 'x',
     before: 'Veille manuelle',
-    after: 'Détection IA',
-    beforeLabel: '1 marché sur 10 détecté',
-    afterLabel: '9 marchés sur 10',
+    after: 'Veille automatique',
+    beforeLabel: '1 opportunité sur 10',
+    afterLabel: '9 sur 10 captées',
     size: 'normal'
   }
 ]
@@ -98,10 +98,10 @@ onMounted(() => {
 
     <div ref="sectionRef" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <LandingSectionHeader
-        eyebrow="La solution existe — et elle coûte moins cher qu'un stagiaire"
-        title="5 agents qui travaillent pour vous "
-        highlight="24h/24."
-        description="Ce ne sont pas des chatbots. Ce sont des agents entraînés sur VOS données, VOS tarifs, VOS process. Imaginez un employé qui connaît votre entreprise par cœur dès le jour 1, ne prend jamais de pause, et coûte 10x moins qu'un salarié."
+        eyebrow="Ce qu'on fait concrètement pour vous"
+        title="On optimise ce qui "
+        highlight="vous ralentit."
+        description="Chaque entreprise est différente. On analyse vos process, on identifie les points de friction, et on met en place des solutions IA taillées sur-mesure pour votre métier. Pas de la tech générique — du concret, adapté à vous."
       />
 
       <!-- Bento Grid -->
