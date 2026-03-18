@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const stats = [
-  { value: 207, label: 'PME transformées', suffix: '+', decimals: 0 },
+  { value: 207, label: 'entreprises optimisées', suffix: '+', decimals: 0 },
   { value: 47, label: 'économisés par client / an', suffix: 'K EUR', decimals: 0 },
   { value: 21, label: 'jours pour les premiers résultats', suffix: 'j', decimals: 0 },
   { value: 94, label: 'de taux de rétention client', suffix: '%', decimals: 0 }

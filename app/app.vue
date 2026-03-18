@@ -27,11 +27,27 @@ const form = reactive({
   company: '',
   phone: '',
   email: '',
+  employees: '' as string,
+  mainChallenge: '' as string,
   message: '',
   timeSlot: '' as string
 })
 const formLoading = ref(false)
 const formError = ref('')
+
+const employeeRanges = [
+  { value: '1-5', label: '1 — 5' },
+  { value: '6-20', label: '6 — 20' },
+  { value: '21-50', label: '21 — 50' },
+  { value: '50+', label: '50+' }
+]
+
+const challenges = [
+  { value: 'temps', label: 'Gagner du temps', icon: 'i-lucide-clock' },
+  { value: 'tresorerie', label: 'Récupérer de l\'argent', icon: 'i-lucide-trending-up' },
+  { value: 'clients', label: 'Ne plus perdre de clients', icon: 'i-lucide-users' },
+  { value: 'equipe', label: 'Libérer mon équipe', icon: 'i-lucide-unlock' }
+]
 
 const timeSlots = [
   { value: '9h-12h', label: '9h — 12h' },
@@ -50,11 +66,13 @@ async function submitForm() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        _subject: `🔥 Nouveau lead Nexoma — ${form.company}`,
+        _subject: `🔥 Nouveau lead Nexoma — ${form.company} (${form.employees} salariés)`,
         name: `${form.firstName} ${form.lastName}`,
         email: form.email,
         phone: form.phone,
         company: form.company,
+        employees: form.employees,
+        main_challenge: form.mainChallenge,
         message: form.message,
         preferred_time: form.timeSlot
       })
@@ -64,7 +82,7 @@ async function submitForm() {
       markSubmitted()
     } else {
       // Fallback: mailto
-      const body = `Nom: ${form.firstName} ${form.lastName}%0AEntreprise: ${form.company}%0ATéléphone: ${form.phone}%0AEmail: ${form.email}%0ACréneau: ${form.timeSlot}%0A%0ABesoin: ${form.message}`
+      const body = `Nom: ${form.firstName} ${form.lastName}%0AEntreprise: ${form.company} (${form.employees} salariés)%0ATéléphone: ${form.phone}%0AEmail: ${form.email}%0ADéfi principal: ${form.mainChallenge}%0ACréneau: ${form.timeSlot}%0A%0ABesoin: ${form.message}`
       window.location.href = `mailto:contact@poitiers.digital?subject=Demande de diagnostic — ${form.company}&body=${body}`
       markSubmitted()
     }
@@ -151,11 +169,11 @@ async function submitForm() {
           <div>
             <h4 class="text-sm font-semibold text-white mb-4">Solutions</h4>
             <ul class="space-y-3">
-              <li><a href="#solution" class="text-sm text-white/40 hover:text-white/70 transition-colors">Devis Express</a></li>
-              <li><a href="#solution" class="text-sm text-white/40 hover:text-white/70 transition-colors">Relance & Recouvrement</a></li>
-              <li><a href="#solution" class="text-sm text-white/40 hover:text-white/70 transition-colors">Accueil 24/7</a></li>
-              <li><a href="#solution" class="text-sm text-white/40 hover:text-white/70 transition-colors">RH & Onboarding</a></li>
-              <li><a href="#solution" class="text-sm text-white/40 hover:text-white/70 transition-colors">Veille Marchés Publics</a></li>
+              <li><a href="#solution" class="text-sm text-white/40 hover:text-white/70 transition-colors">Automatisation des tâches</a></li>
+              <li><a href="#solution" class="text-sm text-white/40 hover:text-white/70 transition-colors">Suivi & recouvrement</a></li>
+              <li><a href="#solution" class="text-sm text-white/40 hover:text-white/70 transition-colors">Accueil & relation client</a></li>
+              <li><a href="#solution" class="text-sm text-white/40 hover:text-white/70 transition-colors">Productivité des équipes</a></li>
+              <li><a href="#solution" class="text-sm text-white/40 hover:text-white/70 transition-colors">Veille & opportunités</a></li>
             </ul>
           </div>
 
@@ -173,7 +191,7 @@ async function submitForm() {
             <h4 class="text-sm font-semibold text-white mb-4">Contact</h4>
             <ul class="space-y-3">
               <li class="text-sm text-white/40">Poitiers, Vienne (86)</li>
-              <li><a href="mailto:contact@poitiers.digital" class="text-sm text-white/40 hover:text-emerald-400 transition-colors">contact@nexoma.fr</a></li>
+              <li><a href="mailto:contact@poitiers.digital" class="text-sm text-white/40 hover:text-emerald-400 transition-colors">contact@poitiers.digital</a></li>
               <li>
                 <button
                   class="text-sm text-emerald-400 hover:text-emerald-300 transition-colors cursor-pointer"
@@ -287,6 +305,59 @@ async function submitForm() {
                        focus:outline-none focus:border-emerald-500/50 focus:bg-white/[0.06]
                        transition-all duration-300"
               >
+            </div>
+
+            <!-- Nombre de salariés -->
+            <div>
+              <label class="block text-xs text-white/50 uppercase tracking-wider mb-2 font-medium">Nombre de salariés</label>
+              <div class="grid grid-cols-4 gap-3">
+                <label
+                  v-for="range in employeeRanges"
+                  :key="range.value"
+                  class="relative flex items-center justify-center px-2 py-2.5 rounded-xl cursor-pointer
+                         text-sm font-medium transition-all duration-300 text-center"
+                  :class="form.employees === range.value
+                    ? 'bg-emerald-500/15 border border-emerald-500/40 text-emerald-400'
+                    : 'bg-white/[0.04] border border-white/[0.08] text-white/50 hover:border-white/[0.15] hover:text-white/70'"
+                >
+                  <input
+                    v-model="form.employees"
+                    type="radio"
+                    name="employees"
+                    :value="range.value"
+                    required
+                    class="sr-only"
+                  >
+                  {{ range.label }}
+                </label>
+              </div>
+            </div>
+
+            <!-- Défi principal -->
+            <div>
+              <label class="block text-xs text-white/50 uppercase tracking-wider mb-2 font-medium">Votre défi principal</label>
+              <div class="grid grid-cols-2 gap-3">
+                <label
+                  v-for="ch in challenges"
+                  :key="ch.value"
+                  class="relative flex items-center gap-2 px-3 py-3 rounded-xl cursor-pointer
+                         text-sm font-medium transition-all duration-300"
+                  :class="form.mainChallenge === ch.value
+                    ? 'bg-emerald-500/15 border border-emerald-500/40 text-emerald-400'
+                    : 'bg-white/[0.04] border border-white/[0.08] text-white/50 hover:border-white/[0.15] hover:text-white/70'"
+                >
+                  <input
+                    v-model="form.mainChallenge"
+                    type="radio"
+                    name="mainChallenge"
+                    :value="ch.value"
+                    required
+                    class="sr-only"
+                  >
+                  <UIcon :name="ch.icon" class="text-base flex-shrink-0" />
+                  {{ ch.label }}
+                </label>
+              </div>
             </div>
 
             <!-- Téléphone + Email -->

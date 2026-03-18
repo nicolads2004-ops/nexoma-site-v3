@@ -1,37 +1,28 @@
 <script setup lang="ts">
-const logos = [
-  'Atelier Rivaud', 'Groupe Valoris', 'Maison Clairac', 'LK Industries',
-  'Studio Hélios', 'Côté Jardin', 'NovaBat', 'Comptoir Belharra'
+const stats = [
+  { value: '207+', label: 'entreprises accompagnées' },
+  { value: '94%', label: 'de clients restent après 1 an' },
+  { value: '21j', label: 'pour voir des résultats' },
+  { value: '47K€', label: 'économisés en moyenne / an' }
 ]
 </script>
 
 <template>
-  <section class="relative py-16 overflow-hidden border-y border-white/[0.08]" data-reveal>
-    <div class="max-w-7xl mx-auto px-4 mb-8">
-      <p class="text-center text-xs uppercase tracking-[0.2em] text-white/50 font-medium">
-        Ils nous font confiance
-      </p>
-    </div>
-
-    <!-- Marquee -->
-    <div class="relative">
-      <!-- Fade edges -->
-      <div class="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#050505] to-transparent z-10" />
-      <div class="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#050505] to-transparent z-10" />
-
-      <div class="flex animate-marquee">
+  <section class="relative py-12 overflow-hidden" data-reveal>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
         <div
-          v-for="(logo, i) in [...logos, ...logos]"
-          :key="i"
-          class="flex-shrink-0 mx-6 px-7 py-3.5 rounded-xl
-                 bg-white/[0.06] border border-white/[0.10]
-                 text-white/60 font-semibold text-sm whitespace-nowrap
-                 hover:bg-white/[0.10] hover:text-white/80 hover:border-white/[0.18]
-                 transition-all duration-300"
+          v-for="stat in stats"
+          :key="stat.label"
+          class="text-center py-4"
         >
-          {{ logo }}
+          <div class="text-2xl md:text-3xl font-bold text-white mb-1">{{ stat.value }}</div>
+          <div class="text-xs md:text-sm text-white/35 leading-tight">{{ stat.label }}</div>
         </div>
       </div>
     </div>
+
+    <!-- Subtle separator -->
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-white/[0.08] to-transparent" />
   </section>
 </template>

@@ -2,7 +2,7 @@
 @import "@nuxt/ui";
 
 @theme static {
-  --font-sans: 'Inter', 'DM Sans', sans-serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
 
   /* Emerald accent palette */
   --color-green-50: #ecfdf5;
