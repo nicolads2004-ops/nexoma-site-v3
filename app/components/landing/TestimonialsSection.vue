@@ -125,7 +125,6 @@ const visibleTestimonials = computed(() => {
       <div class="md:hidden mb-8">
         <div
           class="glass-card rounded-2xl p-8 border-emerald-500/10"
-          data-reveal
         >
           <div class="flex items-center gap-1 text-amber-400 mb-4 text-lg">
             <span v-for="s in testimonials[activeIndex].rating" :key="s">★</span>
@@ -171,8 +170,6 @@ const visibleTestimonials = computed(() => {
           :key="testimonial.index"
           class="glass-card rounded-2xl p-8 transition-all duration-500"
           :class="i === 0 ? 'border-emerald-500/20' : ''"
-          data-reveal
-          :data-reveal-delay="i + 1"
         >
           <!-- Stars -->
           <div class="flex items-center gap-1 text-amber-400 mb-4 text-base">
