@@ -76,8 +76,8 @@ onMounted(() => {
           />
         </div>
 
-        <!-- Animated connecting line (mobile) -->
-        <div class="lg:hidden absolute top-0 bottom-0 left-8 w-px overflow-hidden">
+        <!-- Animated connecting line (mobile) - hidden since steps are centered -->
+        <div class="hidden absolute top-0 bottom-0 left-8 w-px overflow-hidden">
           <div
             class="w-full bg-gradient-to-b from-emerald-500/50 via-emerald-400/50 to-emerald-500/50 transition-all duration-1500 ease-out origin-top"
             :style="{ height: lineProgress + '%' }"
@@ -88,12 +88,12 @@ onMounted(() => {
           <div
             v-for="(step, index) in steps"
             :key="step.number"
-            class="relative text-center lg:text-center pl-20 lg:pl-0"
+            class="relative text-center pl-0"
             :class="activeStep >= index ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'"
             style="transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);"
           >
             <!-- Step circle -->
-            <div class="relative mx-auto lg:mx-auto mb-8 absolute lg:relative left-0 top-0 lg:left-auto lg:top-auto">
+            <div class="relative mx-auto mb-8">
               <div
                 class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto transition-all duration-500"
                 :class="activeStep >= index
@@ -141,7 +141,25 @@ onMounted(() => {
           :class="activeStep >= 2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'"
           style="transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); transition-delay: 0.3s;"
         >
-          <div class="inline-flex items-center gap-6 glass-card rounded-2xl px-8 py-5">
+          <!-- Mobile: stack vertical -->
+          <div class="sm:hidden glass-card rounded-2xl px-6 py-5 max-w-xs mx-auto space-y-3">
+            <div class="flex items-center gap-2.5">
+              <UIcon name="i-lucide-shield-check" class="text-emerald-400 text-lg flex-shrink-0" />
+              <span class="text-white/60 text-sm">Garanti sans risque</span>
+            </div>
+            <div class="h-px bg-white/[0.06]" />
+            <div class="flex items-center gap-2.5">
+              <UIcon name="i-lucide-lock" class="text-emerald-400 text-lg flex-shrink-0" />
+              <span class="text-white/60 text-sm">Vos données restent vôtres</span>
+            </div>
+            <div class="h-px bg-white/[0.06]" />
+            <div class="flex items-center gap-2.5">
+              <UIcon name="i-lucide-heart-handshake" class="text-emerald-400 text-lg flex-shrink-0" />
+              <span class="text-white/60 text-sm">Accompagnement humain</span>
+            </div>
+          </div>
+          <!-- Desktop: horizontal -->
+          <div class="hidden sm:inline-flex items-center gap-6 glass-card rounded-2xl px-8 py-5">
             <div class="flex items-center gap-2">
               <UIcon name="i-lucide-shield-check" class="text-emerald-400 text-lg" />
               <span class="text-white/60 text-sm">Garanti sans risque</span>

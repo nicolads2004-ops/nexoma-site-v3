@@ -152,7 +152,7 @@ const totalCost = computed(() => {
         <p class="text-white/40 text-sm uppercase tracking-wider mb-3">
           Ne rien changer vous coûte exactement :
         </p>
-        <div class="text-5xl md:text-7xl font-extrabold text-red-400 tabular-nums mb-4">
+        <div class="text-4xl sm:text-5xl md:text-7xl font-extrabold text-red-400 tabular-nums mb-4">
           {{ totalCost.toLocaleString('fr-FR') }} EUR<span class="text-2xl md:text-3xl text-white/30">/an</span>
         </div>
         <p class="text-white/50 max-w-xl mx-auto mb-2">

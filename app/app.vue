@@ -227,7 +227,7 @@ async function submitForm() {
     </footer>
 
     <!-- Contact Form Modal -->
-    <UModal v-model:open="showForm">
+    <UModal v-model:open="showForm" :scrollable="true">
       <template #content>
         <div class="bg-[#0a0a0f] rounded-2xl p-6 sm:p-8 w-full max-w-lg">
           <!-- Header -->

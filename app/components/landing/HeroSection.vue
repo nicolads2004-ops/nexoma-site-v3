@@ -128,7 +128,7 @@ onMounted(() => {
 
       <!-- Headline -->
       <h1
-        class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight leading-[1] text-white mb-6"
+        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight leading-[1.05] text-white mb-6"
         data-reveal
         data-reveal-delay="1"
       >
@@ -165,16 +165,16 @@ onMounted(() => {
         data-reveal-delay="3"
       >
         <button
-          class="group relative px-10 py-5 bg-emerald-500 hover:bg-emerald-600 text-white
-                 rounded-xl font-semibold text-lg glow-button cursor-pointer animate-pulse-glow"
+          class="group relative w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-emerald-500 hover:bg-emerald-600 text-white
+                 rounded-xl font-semibold text-base sm:text-lg glow-button cursor-pointer animate-pulse-glow"
           @click="openForm"
         >
           <span class="relative z-10">Réserver mon diagnostic gratuit →</span>
         </button>
         <a
           href="#solution"
-          class="px-8 py-4 bg-white/5 hover:bg-white/10 text-white
-                 rounded-xl font-medium text-lg transition-all duration-300
+          class="w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 text-white
+                 rounded-xl font-medium text-base sm:text-lg transition-all duration-300 text-center
                  border border-white/10 hover:border-white/20"
         >
           Voir ce qu'on a fait pour d'autres
@@ -198,7 +198,7 @@ onMounted(() => {
             {{ ['NB', 'LR', 'MC', 'JP', 'SA'][i-1] }}
           </div>
         </div>
-        <div class="flex items-center gap-6">
+        <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
           <div class="text-center">
             <span class="text-2xl font-bold text-white tabular-nums">{{ counterPME.displayValue.value }}+</span>
             <span class="block text-xs text-white/40">entreprises optimisées</span>

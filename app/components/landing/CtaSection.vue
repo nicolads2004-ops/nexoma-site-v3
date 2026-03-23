@@ -52,7 +52,7 @@ onUnmounted(() => {
         Plus que {{ placesLeft }} places disponibles ce mois-ci
       </div>
 
-      <h2 class="text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+      <h2 class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
         Dans 3 mois, vous aurez agi<br>
         <span class="gradient-text">— ou vous aurez perdu 12 000 EUR.</span>
       </h2>
@@ -89,8 +89,8 @@ onUnmounted(() => {
       <!-- CTA Button with pulse -->
       <div class="flex flex-col items-center gap-4">
         <button
-          class="group relative px-12 py-6 bg-emerald-500 hover:bg-emerald-600 text-white
-                 rounded-xl font-bold text-xl cursor-pointer animate-cta-pulse transition-all duration-300"
+          class="group relative w-full sm:w-auto px-8 sm:px-12 py-5 sm:py-6 bg-emerald-500 hover:bg-emerald-600 text-white
+                 rounded-xl font-bold text-lg sm:text-xl cursor-pointer animate-cta-pulse transition-all duration-300"
           @click="openForm()"
         >
           <span class="relative z-10">Réserver mon diagnostic gratuit →</span>

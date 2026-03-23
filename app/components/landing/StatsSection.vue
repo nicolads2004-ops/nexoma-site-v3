@@ -78,7 +78,7 @@ onUnmounted(() => {
           <!-- Animated number -->
           <div class="relative mb-4">
             <div
-              class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tabular-nums leading-none"
+              class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tabular-nums leading-none"
             >
               {{ counters[index].displayValue.value }}<span class="text-emerald-400 text-3xl md:text-4xl lg:text-5xl">{{ stat.suffix }}</span>
             </div>
