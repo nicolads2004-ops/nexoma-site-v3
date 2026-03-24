@@ -8,7 +8,7 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'LocalBusiness',
         name: 'Nexoma',
-        description: 'Agence d\'intelligence artificielle pour PME à Poitiers. Optimisation et automatisation des process métier avec des solutions IA sur-mesure.',
+        description: 'Agence IA à Poitiers spécialisée en automatisation pour PME. Agents IA sur-mesure, optimisation des process métier, accueil 24/7.',
         url: 'https://nexoma.poitiers.digital',
         email: 'contact@poitiers.digital',
         address: {

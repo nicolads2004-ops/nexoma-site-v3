@@ -132,7 +132,7 @@ onMounted(() => {
         data-reveal
         data-reveal-delay="1"
       >
-        Votre entreprise, mais en mieux :<br>
+        Agence IA à Poitiers :<br>
         <span class="gradient-text inline-block min-h-[1.1em]">
           {{ displayedText }}<span class="animate-blink text-emerald-400">|</span>
         </span>
