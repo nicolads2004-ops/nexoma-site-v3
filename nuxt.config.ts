@@ -31,6 +31,7 @@ export default defineNuxtConfig({
       htmlAttrs: { lang: 'fr' },
       title: 'Nexoma | Agence IA pour PME à Poitiers — Automatisation & Optimisation (86)',
       meta: [
+        { name: 'google-site-verification', content: 'ckptY8NA7qKLu2Yrn6qmQLlD3CHoB3MsWR0aIbMYZss' },
         { name: 'description', content: 'Nexoma, agence d\'intelligence artificielle à Poitiers (86). On optimise votre entreprise avec l\'IA sur-mesure : automatisation des tâches, recouvrement, accueil 24/7. 207+ entreprises transformées dans la Vienne. Résultats en 21 jours ou remboursé.' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         // Open Graph
