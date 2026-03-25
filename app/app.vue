@@ -67,6 +67,7 @@ async function submitForm() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         _subject: `🔥 Nouveau lead Nexoma — ${form.company} (${form.employees} salariés)`,
+        _cc: 'matthieu@shark-graphil.fr',
         name: `${form.firstName} ${form.lastName}`,
         email: form.email,
         phone: form.phone,
