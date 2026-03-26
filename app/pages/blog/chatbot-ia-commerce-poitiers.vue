@@ -189,6 +189,21 @@ const { openForm } = useContactForm()
         </p>
       </div>
 
+      <!-- Articles liés -->
+      <div class="max-w-3xl mx-auto mt-12 border-t border-white/[0.06] pt-8">
+        <h3 class="text-white font-semibold mb-4">À lire aussi</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <NuxtLink to="/blog/ia-pme-poitiers-guide-debutant" class="block p-4 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-emerald-500/30 transition-colors">
+            <span class="text-xs text-emerald-400 font-semibold uppercase tracking-wider">Guide</span>
+            <p class="text-white text-sm font-medium mt-1">IA pour les PME de Poitiers : par où commencer ?</p>
+          </NuxtLink>
+          <NuxtLink to="/blog/automatiser-relances-clients-pme-poitiers" class="block p-4 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-emerald-500/30 transition-colors">
+            <span class="text-xs text-emerald-400 font-semibold uppercase tracking-wider">Cas pratique</span>
+            <p class="text-white text-sm font-medium mt-1">Automatiser ses relances clients et récupérer 5h par semaine</p>
+          </NuxtLink>
+        </div>
+      </div>
+
       <!-- CTA -->
       <div class="max-w-3xl mx-auto mt-16 p-8 rounded-2xl bg-emerald-500/[0.06] border border-emerald-500/20 text-center">
         <h3 class="text-2xl font-bold mb-3">Votre commerce mérite de répondre à toute heure.</h3>
