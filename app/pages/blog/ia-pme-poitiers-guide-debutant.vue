@@ -9,7 +9,7 @@ useHead({
     { property: 'og:title', content: 'IA pour les PME de Poitiers : par où commencer en 2026 ?' },
     { property: 'og:description', content: 'Guide IA débutant pour PME à Poitiers. Usages concrets, coûts et exemples secteur Vienne 86.' },
     { property: 'og:url', content: 'https://nexoma.poitiers.digital/blog/ia-pme-poitiers-guide-debutant' },
-    { property: 'og:image', content: 'https://tempfile.aiquickdraw.com/h/e16bf7c06700738c223e102cc249761d_1774530725.png' },
+    { property: 'og:image', content: '/images/blog/blog-nexoma-ia-pme.png' },
     { name: 'robots', content: 'index, follow' }
   ],
   link: [
@@ -71,7 +71,7 @@ const { openForm } = useContactForm()
     <div class="px-4 sm:px-6 lg:px-8 py-8">
       <div class="max-w-3xl mx-auto">
         <img
-          src="https://tempfile.aiquickdraw.com/h/e16bf7c06700738c223e102cc249761d_1774530725.png"
+          src="/images/blog/blog-nexoma-ia-pme.png"
           alt="IA pour PME Poitiers guide débutant — intelligence artificielle entreprise Vienne 86"
           class="w-full rounded-2xl aspect-[2/1] object-cover"
           loading="eager"

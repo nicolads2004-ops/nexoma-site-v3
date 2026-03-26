@@ -9,7 +9,7 @@ useHead({
     { property: 'og:title', content: 'Chatbot IA pour les commerces de Poitiers — Nexoma' },
     { property: 'og:description', content: 'Chatbot IA pour commerces et restaurants à Poitiers. Répondez à vos clients 24h/24 sur site web et WhatsApp. Exemples et ROI.' },
     { property: 'og:url', content: 'https://nexoma.poitiers.digital/blog/chatbot-ia-commerce-poitiers' },
-    { property: 'og:image', content: 'https://tempfile.aiquickdraw.com/h/a5eb08225611237bee1c935e72ddae37_1774530726.png' },
+    { property: 'og:image', content: '/images/blog/blog-nexoma-chatbot.png' },
     { name: 'robots', content: 'index, follow' }
   ],
   link: [
@@ -28,7 +28,7 @@ useHead({
         publisher: { '@type': 'Organization', name: 'Nexoma', url: 'https://nexoma.poitiers.digital' },
         description: 'Comment un chatbot IA peut aider les commerces de Poitiers à répondre aux clients 24h/24.',
         url: 'https://nexoma.poitiers.digital/blog/chatbot-ia-commerce-poitiers',
-        image: 'https://tempfile.aiquickdraw.com/h/a5eb08225611237bee1c935e72ddae37_1774530726.png'
+        image: '/images/blog/blog-nexoma-chatbot.png'
       })
     }
   ]
@@ -71,7 +71,7 @@ const { openForm } = useContactForm()
     <div class="px-4 sm:px-6 lg:px-8 py-8">
       <div class="max-w-3xl mx-auto">
         <img
-          src="https://tempfile.aiquickdraw.com/h/a5eb08225611237bee1c935e72ddae37_1774530726.png"
+          src="/images/blog/blog-nexoma-chatbot.png"
           alt="Chatbot IA commerce Poitiers — assistant virtuel WhatsApp automatisation PME Vienne"
           class="w-full rounded-2xl aspect-[2/1] object-cover"
           loading="eager"

@@ -9,7 +9,7 @@ useHead({
     { property: 'og:title', content: 'Automatiser ses relances clients — guide PME Poitiers' },
     { property: 'og:description', content: 'Automatisez vos relances clients avec un agent IA. Guide pour PME Poitiers, exemples artisan BTP, intégration CRM.' },
     { property: 'og:url', content: 'https://nexoma.poitiers.digital/blog/automatiser-relances-clients-pme-poitiers' },
-    { property: 'og:image', content: 'https://tempfile.aiquickdraw.com/h/1ed4e92eb57143348b3c618ca5ebbad1_1774530701.png' },
+    { property: 'og:image', content: '/images/blog/blog-nexoma-relances.png' },
     { name: 'robots', content: 'index, follow' }
   ],
   link: [
@@ -71,7 +71,7 @@ const { openForm } = useContactForm()
     <div class="px-4 sm:px-6 lg:px-8 py-8">
       <div class="max-w-3xl mx-auto">
         <img
-          src="https://tempfile.aiquickdraw.com/h/1ed4e92eb57143348b3c618ca5ebbad1_1774530701.png"
+          src="/images/blog/blog-nexoma-relances.png"
           alt="Automatiser relances clients PME Poitiers — CRM automatisation IA gain de temps Vienne"
           class="w-full rounded-2xl aspect-[2/1] object-cover"
           loading="eager"
