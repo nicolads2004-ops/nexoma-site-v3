@@ -34,6 +34,7 @@ const form = reactive({
   message: '',
   timeSlot: '' as string
 })
+const mobileOpen = ref(false)
 const formLoading = ref(false)
 const formError = ref('')
 
@@ -118,7 +119,7 @@ async function submitForm() {
 
           <div class="flex items-center gap-3">
             <button
-              class="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white text-sm
+              class="hidden md:inline-flex px-5 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white text-sm
                      rounded-xl font-medium transition-all duration-300
                      shadow-[0_0_20px_-5px_rgba(16,185,129,0.4)]
                      hover:shadow-[0_0_30px_-5px_rgba(16,185,129,0.6)]
@@ -127,10 +128,49 @@ async function submitForm() {
             >
               Nous contacter
             </button>
+            <button
+              class="md:hidden p-2 text-white/60 hover:text-white cursor-pointer"
+              @click="mobileOpen = !mobileOpen"
+              :aria-label="mobileOpen ? 'Fermer' : 'Menu'"
+            >
+              <svg v-if="!mobileOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+              <svg v-else class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
           </div>
         </div>
       </div>
     </header>
+
+    <!-- Mobile drawer -->
+    <div v-if="mobileOpen" class="fixed inset-0 z-40 bg-[#050508]/95 backdrop-blur-xl pt-20 px-6 md:hidden">
+      <nav class="flex flex-col gap-6">
+        <template v-for="link in navLinks" :key="link.label">
+          <NuxtLink
+            v-if="link.to.startsWith('/')"
+            :to="link.to"
+            class="text-lg text-white/70 hover:text-white transition-colors"
+            @click="mobileOpen = false"
+          >
+            {{ link.label }}
+          </NuxtLink>
+          <a
+            v-else
+            :href="link.to"
+            class="text-lg text-white/70 hover:text-white transition-colors"
+            @click="mobileOpen = false"
+          >
+            {{ link.label }}
+          </a>
+        </template>
+        <button
+          class="mt-4 text-center py-3 px-6 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl font-semibold cursor-pointer
+                 shadow-[0_0_20px_-5px_rgba(16,185,129,0.4)] transition-all duration-300"
+          @click="mobileOpen = false; openForm()"
+        >
+          Nous contacter
+        </button>
+      </nav>
+    </div>
 
     <!-- Main content -->
     <main>
