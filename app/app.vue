@@ -205,6 +205,18 @@ async function submitForm() {
           </div>
         </div>
 
+        <!-- Divisions -->
+        <div class="border-t border-white/[0.06] pt-8 mb-4">
+          <p class="text-xs font-semibold uppercase tracking-widest text-white/25 mb-4">Studio Digital Poitiers — nos divisions</p>
+          <div class="flex flex-wrap gap-x-6 gap-y-2">
+            <a href="https://poitiers.digital" target="_blank" rel="noopener" class="text-sm text-white/35 hover:text-white transition-colors">← Studio Digital Poitiers</a>
+            <a href="https://adscale.poitiers.digital" target="_blank" rel="noopener" class="text-sm text-white/35 hover:text-[#4285f4] transition-colors">ADSCALE — Google Ads</a>
+            <a href="https://rankeo.poitiers.digital" target="_blank" rel="noopener" class="text-sm text-white/35 hover:text-[#34a853] transition-colors">RANKEO — SEO</a>
+            <a href="https://nexoma.poitiers.digital" class="text-sm text-emerald-400/70">NEXOMA — IA & Automatisation</a>
+            <a href="https://nova-studio.poitiers.digital" target="_blank" rel="noopener" class="text-sm text-white/35 hover:text-[#f43f5e] transition-colors">NOVA STUDIO — UGC & Contenu</a>
+          </div>
+        </div>
+
         <div class="pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4">
           <p class="text-xs text-white/30">
             © {{ new Date().getFullYear() }} Nexoma. Tous droits réservés.
