@@ -31,6 +31,9 @@
   --bg-secondary: #0a0a0f;
 }
 
+html, body {
+  overflow-x: hidden;
+}
 /* Dark mode body */
 html.dark body,
 body {
