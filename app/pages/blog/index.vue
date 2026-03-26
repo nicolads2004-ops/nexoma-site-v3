@@ -24,7 +24,7 @@ const articles = [
     date: '20 mars 2026',
     readTime: '7 min',
     category: 'Guide',
-    image: 'https://picsum.photos/seed/nexoma1/800/400'
+    image: '/images/blog/blog-nexoma-ia-pme.png'
   },
   {
     slug: 'automatiser-relances-clients-pme-poitiers',
@@ -33,7 +33,7 @@ const articles = [
     date: '22 mars 2026',
     readTime: '6 min',
     category: 'Cas pratique',
-    image: 'https://picsum.photos/seed/nexoma2/800/400'
+    image: '/images/blog/blog-nexoma-relances.png'
   },
   {
     slug: 'chatbot-ia-commerce-poitiers',
@@ -42,7 +42,7 @@ const articles = [
     date: '24 mars 2026',
     readTime: '5 min',
     category: 'Solution',
-    image: 'https://picsum.photos/seed/nexoma3/800/400'
+    image: '/images/blog/blog-nexoma-chatbot.png'
   }
 ]
 
