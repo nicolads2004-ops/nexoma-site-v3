@@ -17,7 +17,9 @@ const navLinks = [
   { label: 'Problème', to: '#probleme' },
   { label: 'Solution', to: '#solution' },
   { label: 'Cas d\'usage', to: '#cas' },
-  { label: 'FAQ', to: '#faq' }
+  { label: 'FAQ', to: '#faq' },
+  { label: 'À propos', to: '/a-propos' },
+  { label: 'Blog', to: '/blog' }
 ]
 
 // Form state
@@ -96,14 +98,22 @@ async function submitForm() {
           </NuxtLink>
 
           <nav class="hidden md:flex items-center gap-8">
-            <a
-              v-for="link in navLinks"
-              :key="link.label"
-              :href="link.to"
-              class="text-sm text-white/50 hover:text-white transition-colors duration-300 link-animated"
-            >
-              {{ link.label }}
-            </a>
+            <template v-for="link in navLinks" :key="link.label">
+              <NuxtLink
+                v-if="link.to.startsWith('/')"
+                :to="link.to"
+                class="text-sm text-white/50 hover:text-white transition-colors duration-300 link-animated"
+              >
+                {{ link.label }}
+              </NuxtLink>
+              <a
+                v-else
+                :href="link.to"
+                class="text-sm text-white/50 hover:text-white transition-colors duration-300 link-animated"
+              >
+                {{ link.label }}
+              </a>
+            </template>
           </nav>
 
           <div class="flex items-center gap-3">
