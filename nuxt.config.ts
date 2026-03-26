@@ -29,22 +29,26 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'fr' },
-      title: 'Agence IA à Poitiers — Automatisation & IA sur-mesure pour PME | Nexoma',
+      title: 'Nexoma | Votre équipe IA sur-mesure — Poitiers & Vienne (86)',
       meta: [
         { name: 'google-site-verification', content: 'ckptY8NA7qKLu2Yrn6qmQLlD3CHoB3MsWR0aIbMYZss' },
-        { name: 'description', content: 'Agence IA à Poitiers spécialisée en automatisation pour PME. Agents IA sur-mesure, automatisation des tâches, accueil 24/7. 207+ entreprises optimisées dans la Vienne (86). Résultats en 21 jours ou remboursé.' },
+        { name: 'description', content: 'Nexoma, agence IA sur-mesure à Poitiers pour TPE/PME. Automatisation, agents IA, chatbots. Résultats en 21 jours ou remboursé.' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         // Open Graph
-        { property: 'og:title', content: 'Agence IA à Poitiers — Automatisation sur-mesure pour PME | Nexoma' },
-        { property: 'og:description', content: 'Agence IA à Poitiers. Agents IA sur-mesure, automatisation des tâches, accueil 24/7. 207+ PME optimisées dans la Vienne (86).' },
+        { property: 'og:title', content: 'Nexoma | Votre équipe IA sur-mesure — Poitiers & Vienne (86)' },
+        { property: 'og:description', content: 'Nexoma optimise votre entreprise avec l\'IA sur-mesure. On automatise ce qui vous coûte du temps et de l\'argent. 207+ entreprises transformées dans la Vienne (86).' },
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://nexoma.poitiers.digital' },
         { property: 'og:locale', content: 'fr_FR' },
         { property: 'og:site_name', content: 'Nexoma' },
+        { property: 'og:image', content: 'https://nexoma.poitiers.digital/og-image.jpg' },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
         // Twitter
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: 'Agence IA à Poitiers — Nexoma' },
         { name: 'twitter:description', content: 'Agence IA à Poitiers. Automatisation sur-mesure pour PME. 207+ entreprises optimisées. Résultats en 21 jours.' },
+        { name: 'twitter:image', content: 'https://nexoma.poitiers.digital/og-image.jpg' },
         // SEO Keywords
         { name: 'keywords', content: 'agence IA Poitiers, intelligence artificielle PME, automatisation entreprise Vienne 86, agent IA sur-mesure, optimisation PME Poitiers, automatisation tâches Châtellerault, IA entreprise Poitiers, transformation digitale Vienne, agence automatisation Poitiers, consultant IA PME 86' },
         // Geo tags for local SEO

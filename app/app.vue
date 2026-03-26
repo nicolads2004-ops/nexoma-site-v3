@@ -62,32 +62,20 @@ async function submitForm() {
   try {
     // Formspree - gratuit 50 soumissions/mois
     // Pour activer: crée un form sur formspree.io et remplace l'ID ci-dessous
-    const response = await fetch('https://formspree.io/f/xpwdgekb', {
+    await $fetch('/api/contact', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        _subject: `🔥 Nouveau lead Nexoma — ${form.company} (${form.employees} salariés)`,
-        _cc: 'matthieu@shark-graphil.fr',
+      body: {
         name: `${form.firstName} ${form.lastName}`,
         email: form.email,
-        phone: form.phone,
         company: form.company,
-        employees: form.employees,
-        main_challenge: form.mainChallenge,
-        message: form.message,
-        preferred_time: form.timeSlot
-      })
+        sector: form.employees,
+        task: form.mainChallenge,
+        message: `Créneau préféré : ${form.timeSlot}\nTéléphone : ${form.phone}\n\n${form.message}`
+      }
     })
-
-    if (response.ok) {
-      markSubmitted()
-    } else {
-      // Fallback: mailto
-      const body = `Nom: ${form.firstName} ${form.lastName}%0AEntreprise: ${form.company} (${form.employees} salariés)%0ATéléphone: ${form.phone}%0AEmail: ${form.email}%0ADéfi principal: ${form.mainChallenge}%0ACréneau: ${form.timeSlot}%0A%0ABesoin: ${form.message}`
-      window.location.href = `mailto:contact@poitiers.digital?subject=Demande de diagnostic — ${form.company}&body=${body}`
-      markSubmitted()
-    }
+    markSubmitted()
   } catch {
+    // Fallback mailto
     const body = `Nom: ${form.firstName} ${form.lastName}%0AEntreprise: ${form.company}%0ATéléphone: ${form.phone}%0AEmail: ${form.email}%0ACréneau: ${form.timeSlot}%0A%0ABesoin: ${form.message}`
     window.location.href = `mailto:contact@poitiers.digital?subject=Demande de diagnostic — ${form.company}&body=${body}`
     markSubmitted()

@@ -5,7 +5,12 @@ function toggle(index: number) {
   openIndex.value = openIndex.value === index ? null : index
 }
 
-const faqs = [
+interface FaqItem {
+  question: string
+  answer: string
+}
+
+const faqs: FaqItem[] = [
   {
     question: 'Je pense que mon entreprise n\'a pas besoin d\'IA.',
     answer: 'C\'est ce que pensaient 87% de nos clients avant de commencer. La vérité ? Si vous avez des tâches répétitives — devis, relances, saisies, accueil, suivi client — vous perdez de l\'argent chaque jour sans le savoir. Le diagnostic gratuit vous montre exactement combien. Après, vous décidez.'
@@ -39,6 +44,28 @@ const faqs = [
     answer: 'BTP, commerce, professions libérales, hôtellerie, industrie, agroalimentaire — on a des résultats prouvés dans chaque secteur. Chaque solution est construite sur-mesure pour VOS process. Pas de la tech générique.'
   }
 ]
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  'mainEntity': faqs.map((faq) => ({
+    '@type': 'Question',
+    'name': faq.question,
+    'acceptedAnswer': {
+      '@type': 'Answer',
+      'text': faq.answer
+    }
+  }))
+}
+
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify(faqSchema)
+    }
+  ]
+})
 </script>
 
 <template>

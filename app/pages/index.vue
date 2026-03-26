@@ -60,55 +60,6 @@ useHead({
       type: 'application/ld+json',
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: [
-          {
-            '@type': 'Question',
-            name: 'Combien de temps pour voir des résultats avec l\'IA en entreprise ?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: '21 jours. Semaine 1 : analyse de vos process. Semaine 2 : mise en place et tests. Semaine 3 : déploiement et formation. ROI mesurable dès le premier mois, garanti remboursé.'
-            }
-          },
-          {
-            '@type': 'Question',
-            name: 'Est-ce que l\'IA fonctionne pour les PME à Poitiers ?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Oui. Nexoma accompagne plus de 207 entreprises dans la Vienne (86) : BTP, commerce, professions libérales, hôtellerie, industrie. Chaque solution est construite sur-mesure pour vos process métier.'
-            }
-          },
-          {
-            '@type': 'Question',
-            name: 'Combien coûte un agent IA pour une PME ?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Nos solutions coûtent entre 10x et 20x moins qu\'un salarié pour les mêmes tâches, et fonctionnent 24h/24. Abonnement mensuel sans engagement. Le diagnostic gratuit vous donne un chiffrage précis.'
-            }
-          },
-          {
-            '@type': 'Question',
-            name: 'Quelle est la différence entre Nexoma et ChatGPT ?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'ChatGPT est un outil générique. Nexoma met en place des solutions IA entraînées sur VOS données, intégrées dans VOS outils (CRM, email, téléphone), qui tournent en autonomie sans intervention.'
-            }
-          },
-          {
-            '@type': 'Question',
-            name: 'Mes données sont-elles en sécurité ?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Hébergement en France (OVH), conformité RGPD complète, chiffrement de bout en bout. Vos données ne sont jamais partagées. Accord de confidentialité signé avant chaque mission.'
-            }
-          }
-        ]
-      })
-    },
-    {
-      type: 'application/ld+json',
-      innerHTML: JSON.stringify({
-        '@context': 'https://schema.org',
         '@type': 'WebSite',
         name: 'Nexoma',
         url: 'https://nexoma.poitiers.digital',
