@@ -28,7 +28,7 @@ useHead({
         publisher: { '@type': 'Organization', name: 'Nexoma', url: 'https://nexoma.poitiers.digital' },
         description: 'Guide complet pour les PME de la Vienne qui veulent adopter l\'intelligence artificielle en 2026.',
         url: 'https://nexoma.poitiers.digital/blog/ia-pme-poitiers-guide-debutant',
-        image: 'https://picsum.photos/seed/nexoma1/1200/630'
+        image: 'https://nexoma.poitiers.digital/images/blog/blog-nexoma-ia-pme.png'
       })
     }
   ]

@@ -12,7 +12,8 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
 
   routeRules: {
-    '/': { prerender: true }
+    '/': { prerender: true },
+    '/**': { isr: true }
   },
 
   // Performance: SSR + prerender for SEO

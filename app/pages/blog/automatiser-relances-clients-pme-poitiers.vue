@@ -28,7 +28,7 @@ useHead({
         publisher: { '@type': 'Organization', name: 'Nexoma', url: 'https://nexoma.poitiers.digital' },
         description: 'Automatisez vos relances clients avec un agent IA. Guide pour PME et artisans de Poitiers.',
         url: 'https://nexoma.poitiers.digital/blog/automatiser-relances-clients-pme-poitiers',
-        image: 'https://picsum.photos/seed/nexoma2/1200/630'
+        image: 'https://nexoma.poitiers.digital/images/blog/blog-nexoma-relances.png'
       })
     }
   ]
