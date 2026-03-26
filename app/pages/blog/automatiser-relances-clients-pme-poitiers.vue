@@ -81,110 +81,184 @@ const { openForm } = useContactForm()
 
     <!-- Contenu -->
     <article class="px-4 sm:px-6 lg:px-8 pb-20">
-      <div class="max-w-3xl mx-auto prose prose-invert prose-lg max-w-none">
-        <h2>Le vrai coût des relances manuelles</h2>
-        <p>
+      <div class="max-w-3xl mx-auto">
+
+        <!-- Intro snippet -->
+        <div class="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-5 mb-8 text-white/80 text-[15px] leading-relaxed">
+          Dans une PME de 5 à 20 salariés, les relances représentent entre 3 et 8 heures par semaine de travail administratif — souvent assumé par le gérant lui-même. Un agent IA peut s'en charger intégralement, avec le bon ton et le bon timing.
+        </div>
+
+        <!-- H2 -->
+        <h2 class="text-xl font-bold text-white mt-10 mb-4 border-l-[3px] border-emerald-500 pl-4">Le vrai coût des relances manuelles</h2>
+
+        <p class="text-white/70 leading-relaxed text-[15px]">
           Relancer un client qui n'a pas payé sa facture. Relancer un prospect qui n'a pas répondu au devis.
           Rappeler un client dont la commande est prête. Ce sont des tâches simples, mais elles s'accumulent.
         </p>
-        <p>
-          Dans une PME de 5 à 20 salariés, on estime que les relances représentent entre 3 et 8 heures par semaine
-          de travail administratif — souvent assumé par le gérant lui-même ou par un assistant débordé.
-          À 40 euros de l'heure de coût salarial, c'est entre 480 et 1 280 euros par mois dépensés
-          sur des tâches que l'on peut confier à un agent IA.
-        </p>
-        <p>
+
+        <!-- Stat -->
+        <div class="bg-white/[0.03] border border-white/[0.06] rounded-xl p-5 my-6 flex items-center gap-5">
+          <div class="text-3xl font-bold text-emerald-400 flex-shrink-0">1 280 €</div>
+          <div class="text-sm text-white/50">de coût salarial mensuel maximum sur des tâches de relance pures dans une PME de 5 à 20 personnes — à 40 €/h de coût salarial, sur 8h/semaine.</div>
+        </div>
+
+        <p class="text-white/70 leading-relaxed text-[15px]">
           Et ce n'est que le coût direct. Le coût indirect est encore plus élevé : les relances oubliées,
           les devis qui restent sans suite faute de suivi, les factures payées avec deux mois de retard parce que
           personne n'a pensé à relancer.
         </p>
 
-        <h2>Ce qu'un agent IA peut faire à votre place</h2>
-        <p>
+        <!-- H2 -->
+        <h2 class="text-xl font-bold text-white mt-10 mb-4 border-l-[3px] border-emerald-500 pl-4">Ce qu'un agent IA peut faire à votre place</h2>
+
+        <p class="text-white/70 leading-relaxed text-[15px]">
           Un agent IA de relance n'est pas un simple envoi d'emails en masse. C'est un système intelligent
           qui connaît le contexte de chaque client et adapte son message en conséquence.
         </p>
-        <p>Concrètement, voici ce qu'il peut gérer :</p>
-        <ul>
-          <li>
-            <strong>Relances de devis</strong> : un email personnalisé à J+7, un SMS à J+14, un appel automatisé à J+21.
-            Le message change selon que le client a ouvert le devis ou non.
-          </li>
-          <li>
-            <strong>Relances de factures</strong> : rappel amiable à l'échéance, relance ferme à J+8, mise en demeure à J+20.
-            Ton adapté à l'ancienneté de la relation client.
-          </li>
-          <li>
-            <strong>Rappels de rendez-vous</strong> : confirmation 48h avant, rappel 2h avant, message de suivi après le rendez-vous.
-          </li>
-          <li>
-            <strong>Suivi des prospects</strong> : nurturing automatique sur plusieurs semaines pour les prospects qui ne sont pas encore prêts à acheter.
-          </li>
-        </ul>
 
-        <h2>Exemple concret : un artisan BTP à Poitiers</h2>
-        <p>
+        <p class="text-white/70 leading-relaxed text-[15px] mt-4 mb-3">Concrètement, voici ce qu'il peut gérer :</p>
+
+        <div class="space-y-3 my-4">
+          <div class="flex items-start gap-3">
+            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-white/70 text-sm leading-relaxed"><strong class="text-white">Relances de devis</strong> : un email personnalisé à J+7, un SMS à J+14, un appel automatisé à J+21. Le message change selon que le client a ouvert le devis ou non.</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-white/70 text-sm leading-relaxed"><strong class="text-white">Relances de factures</strong> : rappel amiable à l'échéance, relance ferme à J+8, mise en demeure à J+20. Ton adapté à l'ancienneté de la relation client.</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-white/70 text-sm leading-relaxed"><strong class="text-white">Rappels de rendez-vous</strong> : confirmation 48h avant, rappel 2h avant, message de suivi après le rendez-vous.</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-white/70 text-sm leading-relaxed"><strong class="text-white">Suivi des prospects</strong> : nurturing automatique sur plusieurs semaines pour les prospects qui ne sont pas encore prêts à acheter.</span>
+          </div>
+        </div>
+
+        <!-- H2 -->
+        <h2 class="text-xl font-bold text-white mt-10 mb-4 border-l-[3px] border-emerald-500 pl-4">Exemple concret : un artisan BTP à Poitiers</h2>
+
+        <p class="text-white/70 leading-relaxed text-[15px]">
           Prenons l'exemple d'un plaquiste-peintre installé à Poitiers qui travaille principalement avec des particuliers
           et des petites entreprises. Avant de travailler avec Nexoma, voici sa situation :
         </p>
-        <ul>
-          <li>Il envoie entre 15 et 25 devis par mois.</li>
-          <li>En moyenne, 40 % restent sans réponse après une semaine.</li>
-          <li>Il relance à la main, quand il s'en souvient — souvent trop tard.</li>
-          <li>Son taux de transformation était de 38 %.</li>
-        </ul>
-        <p>
+
+        <div class="space-y-3 my-4">
+          <div class="flex items-start gap-3">
+            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-white/70 text-sm leading-relaxed">Il envoie entre 15 et 25 devis par mois.</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-white/70 text-sm leading-relaxed">En moyenne, 40 % restent sans réponse après une semaine.</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-white/70 text-sm leading-relaxed">Il relance à la main, quand il s'en souvient — souvent trop tard.</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-white/70 text-sm leading-relaxed">Son taux de transformation était de 38 %.</span>
+          </div>
+        </div>
+
+        <p class="text-white/70 leading-relaxed text-[15px] mt-4">
           Après déploiement d'un agent IA de relance connecté à son logiciel de devis (en l'occurrence Batappli),
           la séquence automatique démarre dès qu'un devis est envoyé :
         </p>
-        <ul>
-          <li>J+5 : email de relance douce, proposant de répondre à d'éventuelles questions.</li>
-          <li>J+10 : SMS court, personnel, rappelant la validité du devis.</li>
-          <li>J+18 : email de dernière chance avec une légère urgence.</li>
-        </ul>
-        <p>
-          Résultat après trois mois : taux de transformation passé de 38 % à 52 %.
-          Temps de suivi commercial récupéré : 4h30 par semaine.
-          Retour sur investissement atteint dès le deuxième mois.
-        </p>
 
-        <h2>Résultats attendus pour votre PME</h2>
-        <p>
+        <!-- Étapes numérotées -->
+        <div class="space-y-3 my-6">
+          <div class="flex items-start gap-4 bg-white/[0.02] rounded-xl p-4 border border-white/[0.06]">
+            <span class="text-emerald-400 font-bold text-lg flex-shrink-0 w-8">J+5</span>
+            <div>
+              <div class="text-white font-medium text-sm">Email de relance douce</div>
+              <div class="text-white/50 text-sm mt-1">Proposant de répondre à d'éventuelles questions sur le devis.</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 bg-white/[0.02] rounded-xl p-4 border border-white/[0.06]">
+            <span class="text-emerald-400 font-bold text-lg flex-shrink-0 w-8">J+10</span>
+            <div>
+              <div class="text-white font-medium text-sm">SMS court et personnel</div>
+              <div class="text-white/50 text-sm mt-1">Rappelant la validité du devis, ton direct et non intrusif.</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 bg-white/[0.02] rounded-xl p-4 border border-white/[0.06]">
+            <span class="text-emerald-400 font-bold text-lg flex-shrink-0 w-8">J+18</span>
+            <div>
+              <div class="text-white font-medium text-sm">Email de dernière chance</div>
+              <div class="text-white/50 text-sm mt-1">Avec une légère urgence sur la disponibilité et la validité du devis.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Résultat en stats -->
+        <div class="bg-white/[0.03] border border-white/[0.06] rounded-xl p-5 my-6 flex items-center gap-5">
+          <div class="text-3xl font-bold text-emerald-400 flex-shrink-0">38 → 52 %</div>
+          <div class="text-sm text-white/50">Taux de transformation après trois mois. Temps de suivi commercial récupéré : 4h30 par semaine. ROI atteint dès le deuxième mois.</div>
+        </div>
+
+        <!-- H2 -->
+        <h2 class="text-xl font-bold text-white mt-10 mb-4 border-l-[3px] border-emerald-500 pl-4">Résultats attendus pour votre PME</h2>
+
+        <p class="text-white/70 leading-relaxed text-[15px] mb-4">
           Les résultats varient selon votre secteur et votre volume, mais voici les ordres de grandeur
           que nous constatons chez nos clients de la Vienne après 90 jours :
         </p>
-        <ul>
-          <li>+20 à +40 % de taux de transformation sur les devis</li>
-          <li>-30 à -50 % de délai de paiement moyen</li>
-          <li>3 à 6 heures récupérées par semaine sur les tâches de suivi</li>
-          <li>Réduction de 80 % des relances oubliées</li>
-        </ul>
 
-        <h2>Intégration CRM et outils existants</h2>
-        <p>
+        <div class="space-y-3 my-4">
+          <div class="flex items-start gap-3">
+            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-white/70 text-sm leading-relaxed">+20 à +40 % de taux de transformation sur les devis</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-white/70 text-sm leading-relaxed">-30 à -50 % de délai de paiement moyen</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-white/70 text-sm leading-relaxed">3 à 6 heures récupérées par semaine sur les tâches de suivi</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-white/70 text-sm leading-relaxed">Réduction de 80 % des relances oubliées</span>
+          </div>
+        </div>
+
+        <!-- H2 -->
+        <h2 class="text-xl font-bold text-white mt-10 mb-4 border-l-[3px] border-emerald-500 pl-4">Intégration CRM et outils existants</h2>
+
+        <p class="text-white/70 leading-relaxed text-[15px]">
           La bonne nouvelle : vous n'avez pas à changer vos outils. Nos agents IA s'intègrent avec ce que vous utilisez déjà.
           Que vous soyez sur HubSpot, Sellsy, Dolibarr, Sage, ou simplement sur un tableau Excel bien organisé —
           on construit le pont entre vos données et les automatisations.
         </p>
-        <p>
-          Pour les professions libérales de Poitiers (avocats, comptables, kinés, ostéopathes),
-          on travaille également avec Doctolib, Calendly, et les logiciels métier spécialisés.
-        </p>
-        <p>
-          L'intégration prend en général entre 3 et 10 jours selon la complexité de votre stack. Après déploiement,
-          l'agent fonctionne en autonomie — vous recevez un rapport hebdomadaire et pouvez ajuster les séquences à tout moment.
+
+        <!-- Exemple concret -->
+        <div class="border-l-4 border-emerald-500/30 pl-5 py-3 my-6 bg-emerald-500/[0.04] rounded-r-xl">
+          <p class="text-white/70 text-sm italic">Pour les professions libérales de Poitiers (avocats, comptables, kinés, ostéopathes), on travaille également avec Doctolib, Calendly, et les logiciels métier spécialisés. L'intégration prend en général entre 3 et 10 jours selon la complexité de votre stack.</p>
+        </div>
+
+        <p class="text-white/70 leading-relaxed text-[15px]">
+          Après déploiement, l'agent fonctionne en autonomie — vous recevez un rapport hebdomadaire et pouvez ajuster les séquences à tout moment.
         </p>
 
-        <h2>Par où commencer avec Nexoma ?</h2>
-        <p>
+        <!-- H2 -->
+        <h2 class="text-xl font-bold text-white mt-10 mb-4 border-l-[3px] border-emerald-500 pl-4">Par où commencer avec Nexoma ?</h2>
+
+        <p class="text-white/70 leading-relaxed text-[15px]">
           La première étape est notre diagnostic gratuit. En 30 minutes, on identifie ensemble vos principales sources
           de perte de temps sur le suivi client, on vous propose une architecture de relances adaptée à votre activité,
           et on vous donne une estimation précise du retour sur investissement.
         </p>
-        <p>
-          Aucun engagement. Si nos chiffres ne vous convainquent pas, vous repartez avec un audit de votre processus de relances —
-          ce qui vaut déjà quelques heures de conseil.
-        </p>
+
+        <!-- Exemple concret -->
+        <div class="border-l-4 border-emerald-500/30 pl-5 py-3 my-6 bg-emerald-500/[0.04] rounded-r-xl">
+          <p class="text-white/70 text-sm italic">Aucun engagement. Si nos chiffres ne vous convainquent pas, vous repartez avec un audit de votre processus de relances — ce qui vaut déjà quelques heures de conseil.</p>
+        </div>
+
       </div>
 
       <!-- Articles liés -->

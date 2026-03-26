@@ -81,112 +81,175 @@ const { openForm } = useContactForm()
 
     <!-- Contenu -->
     <article class="px-4 sm:px-6 lg:px-8 pb-20">
-      <div class="max-w-3xl mx-auto prose prose-invert prose-lg max-w-none">
-        <h2>Pourquoi les clients n'attendent plus</h2>
-        <p>
-          Le comportement des consommateurs a profondément changé ces dernières années. Selon les données 2025,
-          67 % des clients qui ne reçoivent pas de réponse dans l'heure passent à la concurrence.
-          Pour les commerces et restaurants, la fenêtre de décision est encore plus courte : un client qui cherche
+      <div class="max-w-3xl mx-auto">
+
+        <!-- Intro snippet -->
+        <div class="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-5 mb-8 text-white/80 text-[15px] leading-relaxed">
+          67 % des clients qui ne reçoivent pas de réponse dans l'heure passent à la concurrence. Pour les commerces et restaurants de Poitiers, la fenêtre de décision est encore plus courte — un chatbot IA change la donne.
+        </div>
+
+        <!-- H2 -->
+        <h2 class="text-xl font-bold text-white mt-10 mb-4 border-l-[3px] border-emerald-500 pl-4">Pourquoi les clients n'attendent plus</h2>
+
+        <p class="text-white/70 leading-relaxed text-[15px]">
+          Le comportement des consommateurs a profondément changé ces dernières années. Pour les commerces et restaurants,
+          la fenêtre de décision est encore plus courte : un client qui cherche
           une table pour samedi soir à Poitiers enverra des messages à plusieurs établissements en même temps —
           et ira là où on lui répond en premier.
         </p>
-        <p>
+
+        <!-- Stat -->
+        <div class="bg-white/[0.03] border border-white/[0.06] rounded-xl p-5 my-6 flex items-center gap-5">
+          <div class="text-3xl font-bold text-emerald-400 flex-shrink-0">67 %</div>
+          <div class="text-sm text-white/50">des clients qui ne reçoivent pas de réponse dans l'heure passent à la concurrence (données 2025).</div>
+        </div>
+
+        <p class="text-white/70 leading-relaxed text-[15px]">
           Le problème : vous ne pouvez pas être disponible 24h/24. Votre équipe sert des clients en boutique,
           en cuisine, sur un chantier. Répondre aux messages entrants n'est pas toujours possible en temps réel.
           Un chatbot IA change la donne.
         </p>
 
-        <h2>Chatbot IA vs FAQ : quelle différence ?</h2>
-        <p>
+        <!-- H2 -->
+        <h2 class="text-xl font-bold text-white mt-10 mb-4 border-l-[3px] border-emerald-500 pl-4">Chatbot IA vs FAQ : quelle différence ?</h2>
+
+        <p class="text-white/70 leading-relaxed text-[15px]">
           Beaucoup de commerçants ont déjà une page FAQ sur leur site. C'est bien, mais ce n'est pas suffisant.
           Un client qui cherche une information ne va pas toujours trouver la bonne page, lire les bonnes lignes,
           et formuler sa conclusion tout seul.
         </p>
-        <p>
+        <p class="text-white/70 leading-relaxed text-[15px] mt-4">
           Un chatbot IA est fondamentalement différent. Il comprend le langage naturel, répond à des questions formulées
           de façon imprévue, et peut enchaîner une vraie conversation. Il retient le contexte de l'échange,
           propose des alternatives, et oriente le client vers l'action souhaitée — réservation, appel, achat.
         </p>
-        <p>
-          Concrètement : si un client écrit « vous faites des menus végétariens ? » à 22h un dimanche,
-          la FAQ ne lui répondra pas. Le chatbot, lui, lui donnera la réponse et lui proposera de réserver pour ce soir ou ce week-end.
-        </p>
 
-        <h2>Intégration site web et WhatsApp</h2>
-        <p>
-          Nos chatbots pour commerces poitevins s'intègrent sur deux canaux principaux :
-        </p>
-        <p>
-          <strong>Sur votre site web</strong> : une bulle de conversation discrète apparaît en bas de page.
-          Personnalisée à votre image (couleurs, nom de l'assistant, photo), elle engage le visiteur sans être intrusive.
-          Disponible sur mobile comme sur desktop.
-        </p>
-        <p>
-          <strong>Sur WhatsApp Business</strong> : c'est le canal qui monte fortement dans le commerce local.
-          Vos clients vous envoient déjà des messages WhatsApp. L'agent IA répond automatiquement, filtre les demandes,
-          et vous transmet uniquement celles qui nécessitent votre intervention personnelle.
-        </p>
-        <p>
+        <!-- Exemple concret -->
+        <div class="border-l-4 border-emerald-500/30 pl-5 py-3 my-6 bg-emerald-500/[0.04] rounded-r-xl">
+          <p class="text-white/70 text-sm italic">Si un client écrit « vous faites des menus végétariens ? » à 22h un dimanche, la FAQ ne lui répondra pas. Le chatbot, lui, lui donnera la réponse et lui proposera de réserver pour ce soir ou ce week-end.</p>
+        </div>
+
+        <!-- H2 -->
+        <h2 class="text-xl font-bold text-white mt-10 mb-4 border-l-[3px] border-emerald-500 pl-4">Intégration site web et WhatsApp</h2>
+
+        <p class="text-white/70 leading-relaxed text-[15px] mb-4">Nos chatbots pour commerces poitevins s'intègrent sur deux canaux principaux :</p>
+
+        <!-- Étapes numérotées -->
+        <div class="space-y-3 my-6">
+          <div class="flex items-start gap-4 bg-white/[0.02] rounded-xl p-4 border border-white/[0.06]">
+            <span class="text-emerald-400 font-bold text-lg flex-shrink-0 w-8">01</span>
+            <div>
+              <div class="text-white font-medium text-sm">Sur votre site web</div>
+              <div class="text-white/50 text-sm mt-1">Une bulle de conversation discrète apparaît en bas de page. Personnalisée à votre image (couleurs, nom de l'assistant, photo), elle engage le visiteur sans être intrusive. Disponible sur mobile comme sur desktop.</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 bg-white/[0.02] rounded-xl p-4 border border-white/[0.06]">
+            <span class="text-emerald-400 font-bold text-lg flex-shrink-0 w-8">02</span>
+            <div>
+              <div class="text-white font-medium text-sm">Sur WhatsApp Business</div>
+              <div class="text-white/50 text-sm mt-1">C'est le canal qui monte fortement dans le commerce local. Vos clients vous envoient déjà des messages WhatsApp. L'agent IA répond automatiquement, filtre les demandes, et vous transmet uniquement celles qui nécessitent votre intervention personnelle.</div>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-white/70 leading-relaxed text-[15px]">
           Les deux canaux peuvent être synchronisés : une demande reçue sur WhatsApp peut déclencher une réservation
           visible dans votre agenda en ligne. L'intégration avec des outils comme Calendly, Réservio ou votre propre
           système de caisse est réalisable en quelques jours.
         </p>
 
-        <h2>Exemples : restaurant et boutique à Poitiers</h2>
+        <!-- H2 -->
+        <h2 class="text-xl font-bold text-white mt-10 mb-4 border-l-[3px] border-emerald-500 pl-4">Exemples : restaurant et boutique à Poitiers</h2>
 
-        <h3>Un restaurant en centre-ville de Poitiers</h3>
-        <p>
+        <!-- H3 -->
+        <h3 class="text-base font-semibold text-emerald-400 mt-6 mb-3">Un restaurant en centre-ville de Poitiers</h3>
+
+        <p class="text-white/70 leading-relaxed text-[15px]">
           Un restaurant de 40 couverts sur la place d'Armes à Poitiers recevait environ 80 messages par semaine sur WhatsApp :
           questions sur la carte, disponibilités, allergènes, demandes de groupes, réservations de dernière minute.
           L'équipe en salle répondait quand elle pouvait — souvent avec plusieurs heures de retard.
         </p>
-        <p>
-          Après déploiement d'un agent IA WhatsApp et d'un chatbot sur leur site :
-        </p>
-        <ul>
-          <li>75 % des demandes traitées automatiquement sans intervention humaine.</li>
-          <li>Taux de réservation en ligne augmenté de 34 % en deux mois.</li>
-          <li>Zéro appel manqué pour des questions de base (horaires, parking, accès PMR).</li>
-          <li>L'équipe se concentre sur l'accueil en salle et les demandes complexes.</li>
-        </ul>
+        <p class="text-white/70 leading-relaxed text-[15px] mt-4 mb-3">Après déploiement d'un agent IA WhatsApp et d'un chatbot sur leur site :</p>
 
-        <h3>Une boutique de prêt-à-porter à Poitiers</h3>
-        <p>
+        <div class="space-y-3 my-4">
+          <div class="flex items-start gap-3">
+            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-white/70 text-sm leading-relaxed">75 % des demandes traitées automatiquement sans intervention humaine.</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-white/70 text-sm leading-relaxed">Taux de réservation en ligne augmenté de 34 % en deux mois.</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-white/70 text-sm leading-relaxed">Zéro appel manqué pour des questions de base (horaires, parking, accès PMR).</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-white/70 text-sm leading-relaxed">L'équipe se concentre sur l'accueil en salle et les demandes complexes.</span>
+          </div>
+        </div>
+
+        <!-- H3 -->
+        <h3 class="text-base font-semibold text-emerald-400 mt-6 mb-3">Une boutique de prêt-à-porter à Poitiers</h3>
+
+        <p class="text-white/70 leading-relaxed text-[15px]">
           Une boutique indépendante dans le quartier des Cordeliers à Poitiers proposait déjà quelques produits en ligne,
           mais la grande majorité de son chiffre d'affaires restait en magasin. Les clientes envoyaient régulièrement
           des messages Instagram et WhatsApp pour demander si tel article était disponible en telle taille,
           ou si on pouvait mettre de côté une pièce.
         </p>
-        <p>
-          L'agent IA connecté à leur inventaire répond en temps réel sur la disponibilité des articles, propose des alternatives,
-          et peut mettre un article de côté pour une durée définie. Résultat : 18 ventes supplémentaires par mois
-          directement attribuables aux conversations automatisées en dehors des heures d'ouverture.
-        </p>
 
-        <h2>ROI concret : ce que ça rapporte vraiment</h2>
-        <p>
+        <!-- Stat -->
+        <div class="bg-white/[0.03] border border-white/[0.06] rounded-xl p-5 my-6 flex items-center gap-5">
+          <div class="text-3xl font-bold text-emerald-400 flex-shrink-0">+18</div>
+          <div class="text-sm text-white/50">ventes supplémentaires par mois directement attribuables aux conversations automatisées en dehors des heures d'ouverture — grâce à l'agent IA connecté à l'inventaire.</div>
+        </div>
+
+        <!-- H2 -->
+        <h2 class="text-xl font-bold text-white mt-10 mb-4 border-l-[3px] border-emerald-500 pl-4">ROI concret : ce que ça rapporte vraiment</h2>
+
+        <p class="text-white/70 leading-relaxed text-[15px] mb-4">
           Voici les chiffres moyens constatés chez nos clients commerces de la Vienne, après 90 jours :
         </p>
-        <ul>
-          <li>+25 à +40 % de taux de conversion sur les demandes entrantes.</li>
-          <li>-60 % du temps consacré à la réponse aux messages répétitifs.</li>
-          <li>+15 à +30 % de réservations ou prises de rendez-vous supplémentaires.</li>
-          <li>ROI positif dès le premier mois dans 8 cas sur 10.</li>
-        </ul>
-        <p>
-          Le coût d'un chatbot IA pour un commerce local varie entre 80 et 250 euros par mois selon les fonctionnalités
-          et les canaux déployés. Un seul client supplémentaire par jour — c'est souvent suffisant pour couvrir l'investissement.
-        </p>
 
-        <h2>Démarrer avec Nexoma</h2>
-        <p>
+        <div class="space-y-3 my-4">
+          <div class="flex items-start gap-3">
+            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-white/70 text-sm leading-relaxed">+25 à +40 % de taux de conversion sur les demandes entrantes.</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-white/70 text-sm leading-relaxed">-60 % du temps consacré à la réponse aux messages répétitifs.</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-white/70 text-sm leading-relaxed">+15 à +30 % de réservations ou prises de rendez-vous supplémentaires.</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-white/70 text-sm leading-relaxed">ROI positif dès le premier mois dans 8 cas sur 10.</span>
+          </div>
+        </div>
+
+        <!-- Exemple concret -->
+        <div class="border-l-4 border-emerald-500/30 pl-5 py-3 my-6 bg-emerald-500/[0.04] rounded-r-xl">
+          <p class="text-white/70 text-sm italic">Le coût d'un chatbot IA pour un commerce local varie entre 80 et 250 euros par mois selon les fonctionnalités et les canaux déployés. Un seul client supplémentaire par jour — c'est souvent suffisant pour couvrir l'investissement.</p>
+        </div>
+
+        <!-- H2 -->
+        <h2 class="text-xl font-bold text-white mt-10 mb-4 border-l-[3px] border-emerald-500 pl-4">Démarrer avec Nexoma</h2>
+
+        <p class="text-white/70 leading-relaxed text-[15px]">
           On installe, configure et forme votre équipe. Vous n'avez rien à comprendre techniquement.
           Le diagnostic de départ est gratuit et prend 30 minutes — on repart avec un plan concret et un chiffrage précis.
         </p>
-        <p>
-          Si vous êtes commerçant, restaurateur ou artisan à Poitiers, Châtellerault, Loudun ou ailleurs dans la Vienne,
-          on peut être opérationnels en moins de deux semaines.
-        </p>
+
+        <!-- Exemple concret -->
+        <div class="border-l-4 border-emerald-500/30 pl-5 py-3 my-6 bg-emerald-500/[0.04] rounded-r-xl">
+          <p class="text-white/70 text-sm italic">Si vous êtes commerçant, restaurateur ou artisan à Poitiers, Châtellerault, Loudun ou ailleurs dans la Vienne, on peut être opérationnels en moins de deux semaines.</p>
+        </div>
+
       </div>
 
       <!-- Articles liés -->
