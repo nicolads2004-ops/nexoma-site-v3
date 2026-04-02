@@ -161,6 +161,10 @@ async function submitForm() {
           </nav>
 
           <div class="flex items-center gap-3">
+            <a href="tel:+33769801190" class="hidden md:flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors">
+              <UIcon name="i-lucide-phone" class="w-4 h-4" />
+              07 69 80 11 90
+            </a>
             <button
               class="hidden md:inline-flex px-5 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white text-sm
                      rounded-xl font-medium transition-all duration-300
@@ -212,6 +216,10 @@ async function submitForm() {
         >
           Nous contacter
         </button>
+        <a href="tel:+33769801190" class="flex items-center justify-center gap-2 w-full py-3 px-4 bg-green-600 hover:bg-green-500 text-white rounded-xl font-semibold transition-colors mt-4" @click="mobileOpen = false">
+          <UIcon name="i-lucide-phone" class="w-5 h-5" />
+          Nous appeler
+        </a>
       </nav>
     </div>
 
