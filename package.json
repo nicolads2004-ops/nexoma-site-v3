@@ -13,6 +13,7 @@
   "dependencies": {
     "@iconify-json/lucide": "^1.2.98",
     "@iconify-json/simple-icons": "^1.2.74",
+    "@nuxt/fonts": "^0.14.0",
     "@nuxt/ui": "^4.5.1",
     "nodemailer": "^8.0.4",
     "nuxt": "^4.4.2",

@@ -2,7 +2,8 @@
 export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
-    '@nuxt/ui'
+    '@nuxt/ui',
+    '@nuxt/fonts'
   ],
 
   devtools: {
@@ -11,9 +12,21 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  fonts: {
+    families: [
+      { name: 'Inter', provider: 'google', weights: [400, 500, 600, 700] }
+    ],
+    defaults: {
+      preload: true,
+      fontDisplay: 'optional',
+      fallbacks: {
+        sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif']
+      }
+    }
+  },
+
   routeRules: {
-    '/': { prerender: true },
-    '/**': { isr: true }
+    '/**': { swr: 60 }
   },
 
   // Performance: SSR + prerender for SEO
@@ -30,13 +43,13 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'fr' },
-      title: 'Nexoma | Votre équipe IA sur-mesure — Poitiers & Vienne (86)',
+      title: 'Agence IA Poitiers — Automatisation sur-mesure pour TPE/PME | Nexoma',
       meta: [
         { name: 'google-site-verification', content: 'ckptY8NA7qKLu2Yrn6qmQLlD3CHoB3MsWR0aIbMYZss' },
         { name: 'description', content: 'Nexoma, agence IA sur-mesure à Poitiers pour TPE/PME. Automatisation, agents IA, chatbots. Résultats en 21 jours ou remboursé.' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         // Open Graph
-        { property: 'og:title', content: 'Nexoma | Votre équipe IA sur-mesure — Poitiers & Vienne (86)' },
+        { property: 'og:title', content: 'Agence IA Poitiers — Automatisation sur-mesure pour TPE/PME' },
         { property: 'og:description', content: 'Nexoma optimise votre entreprise avec l\'IA sur-mesure. On automatise ce qui vous coûte du temps et de l\'argent. 207+ entreprises transformées dans la Vienne (86).' },
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://nexoma.poitiers.digital' },
@@ -64,13 +77,7 @@ export default defineNuxtConfig({
         { name: 'theme-color', content: '#050505' }
       ],
       link: [
-        { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' },
-        { rel: 'canonical', href: 'https://nexoma.poitiers.digital' },
-        { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-        { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap', media: 'print', onload: 'this.media="all"' }
+        { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }
       ],
       script: []
     }
