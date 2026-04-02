@@ -142,13 +142,13 @@ async function submitForm() {
     </header>
 
     <!-- Mobile drawer -->
-    <div v-if="mobileOpen" class="fixed inset-0 z-40 bg-[#050508]/95 backdrop-blur-xl pt-20 px-6 md:hidden">
+    <div v-if="mobileOpen" role="dialog" aria-modal="true" aria-label="Menu de navigation" class="fixed inset-0 z-40 bg-[#050508]/95 backdrop-blur-xl pt-20 px-6 md:hidden">
       <nav class="flex flex-col gap-6">
         <template v-for="link in navLinks" :key="link.label">
           <NuxtLink
             v-if="link.to.startsWith('/')"
             :to="link.to"
-            class="text-lg text-white/70 hover:text-white transition-colors"
+            class="text-lg text-white/70 hover:text-white transition-colors link-animated"
             @click="mobileOpen = false"
           >
             {{ link.label }}
@@ -156,7 +156,7 @@ async function submitForm() {
           <a
             v-else
             :href="link.to"
-            class="text-lg text-white/70 hover:text-white transition-colors"
+            class="text-lg text-white/70 hover:text-white transition-colors link-animated"
             @click="mobileOpen = false"
           >
             {{ link.label }}
@@ -189,14 +189,20 @@ async function submitForm() {
             </p>
             <div class="flex items-center gap-3">
               <a
-                href="#"
+                href="https://www.linkedin.com/company/nexoma-poitiers"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn Nexoma"
                 class="w-9 h-9 rounded-lg bg-white/[0.05] hover:bg-white/[0.1] border border-white/[0.06]
                        flex items-center justify-center text-white/40 hover:text-white transition-all duration-300"
               >
                 <UIcon name="i-simple-icons-linkedin" class="text-base" />
               </a>
               <a
-                href="#"
+                href="https://x.com/nexoma_poitiers"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X (Twitter) Nexoma"
                 class="w-9 h-9 rounded-lg bg-white/[0.05] hover:bg-white/[0.1] border border-white/[0.06]
                        flex items-center justify-center text-white/40 hover:text-white transition-all duration-300"
               >
