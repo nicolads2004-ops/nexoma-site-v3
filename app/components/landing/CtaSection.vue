@@ -38,7 +38,7 @@ onUnmounted(() => {
   <section class="relative py-24 md:py-32 overflow-hidden">
     <!-- Glow background -->
     <div class="absolute inset-0">
-      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-emerald-500/10 rounded-full blur-[200px] animate-glow" />
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-green-500/10 rounded-full blur-[200px] animate-glow" />
     </div>
 
     <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-reveal>
@@ -89,27 +89,27 @@ onUnmounted(() => {
       <!-- CTA Button with pulse -->
       <div class="flex flex-col items-center gap-4">
         <button
-          class="group relative w-full sm:w-auto px-8 sm:px-12 py-5 sm:py-6 bg-emerald-500 hover:bg-emerald-600 text-white
+          class="group relative w-full sm:w-auto px-8 sm:px-12 py-5 sm:py-6 bg-green-500 hover:bg-green-600 text-white
                  rounded-xl font-bold text-lg sm:text-xl cursor-pointer animate-cta-pulse transition-all duration-300"
           @click="openForm()"
         >
           <span class="relative z-10">Réserver mon diagnostic gratuit →</span>
           <!-- Pulse rings -->
-          <span class="absolute inset-0 rounded-xl bg-emerald-500 animate-ping-slow opacity-20" />
+          <span class="absolute inset-0 rounded-xl bg-green-500 animate-ping-slow opacity-20" />
         </button>
 
         <!-- Micro-guarantees -->
         <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
           <div class="flex items-center gap-1.5 text-sm text-white/40">
-            <UIcon name="i-lucide-check" class="text-emerald-400 text-sm" />
+            <UIcon name="i-lucide-check" class="text-green-400 text-sm" />
             <span>100% gratuit</span>
           </div>
           <div class="flex items-center gap-1.5 text-sm text-white/40">
-            <UIcon name="i-lucide-check" class="text-emerald-400 text-sm" />
+            <UIcon name="i-lucide-check" class="text-green-400 text-sm" />
             <span>Sans engagement</span>
           </div>
           <div class="flex items-center gap-1.5 text-sm text-white/40">
-            <UIcon name="i-lucide-check" class="text-emerald-400 text-sm" />
+            <UIcon name="i-lucide-check" class="text-green-400 text-sm" />
             <span>Résultats en 21 jours ou remboursé</span>
           </div>
         </div>
@@ -125,8 +125,8 @@ onUnmounted(() => {
 
 <style scoped>
 @keyframes cta-pulse {
-  0%, 100% { box-shadow: 0 0 30px -5px rgba(16, 185, 129, 0.4); transform: scale(1); }
-  50% { box-shadow: 0 0 60px -5px rgba(16, 185, 129, 0.6); transform: scale(1.02); }
+  0%, 100% { box-shadow: 0 0 30px -5px rgba(0, 139, 69, 0.4); transform: scale(1); }
+  50% { box-shadow: 0 0 60px -5px rgba(0, 139, 69, 0.6); transform: scale(1.02); }
 }
 .animate-cta-pulse {
   animation: cta-pulse 3s ease-in-out infinite;

@@ -107,14 +107,14 @@ onBeforeUnmount(() => { if (timer) clearInterval(timer) })
       <!-- Desktop: 2 cartes côte à côte -->
       <div class="hidden md:grid grid-cols-2 gap-8 mb-12">
         <!-- Card 1 -->
-        <div class="group relative rounded-2xl overflow-hidden border border-white/[0.08] hover:border-emerald-500/20 transition-all duration-500">
+        <div class="group relative rounded-2xl overflow-hidden border border-white/[0.08] hover:border-green-500/20 transition-all duration-500">
           <!-- Gradient accent top -->
-          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 to-emerald-400" />
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-green-500 to-green-400" />
 
           <div class="p-7">
             <!-- Header: avatar + infos + date -->
             <div class="flex items-start gap-4 mb-5">
-              <div class="w-13 h-13 rounded-xl bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center text-white text-base font-bold flex-shrink-0 shadow-lg shadow-emerald-500/20">
+              <div class="w-13 h-13 rounded-xl bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white text-base font-bold flex-shrink-0 shadow-lg shadow-green-500/20">
                 {{ card1.initials }}
               </div>
               <div class="flex-1 min-w-0">
@@ -138,7 +138,7 @@ onBeforeUnmount(() => { if (timer) clearInterval(timer) })
 
             <!-- Quote -->
             <div class="mb-5">
-              <div class="text-emerald-500/30 text-3xl font-serif leading-none mb-2">"</div>
+              <div class="text-green-500/30 text-3xl font-serif leading-none mb-2">"</div>
               <blockquote class="text-white/80 leading-relaxed text-[15px] -mt-4 pl-2">
                 {{ card1.quote }}
               </blockquote>
@@ -146,12 +146,12 @@ onBeforeUnmount(() => { if (timer) clearInterval(timer) })
 
             <!-- Résultats -->
             <div class="pt-5 border-t border-white/[0.06]">
-              <div class="text-[10px] text-emerald-400/60 uppercase tracking-widest font-semibold mb-3">Résultats obtenus</div>
+              <div class="text-[10px] text-green-400/60 uppercase tracking-widest font-semibold mb-3">Résultats obtenus</div>
               <div class="flex flex-wrap gap-2">
                 <span
                   v-for="result in card1.results"
                   :key="result"
-                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-500/[0.08] border border-emerald-500/[0.15] text-sm text-emerald-400 font-medium"
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-green-500/[0.08] border border-green-500/[0.15] text-sm text-green-400 font-medium"
                 >
                   <UIcon name="i-lucide-trending-up" class="text-xs flex-shrink-0" />
                   {{ result }}
@@ -162,12 +162,12 @@ onBeforeUnmount(() => { if (timer) clearInterval(timer) })
         </div>
 
         <!-- Card 2 -->
-        <div class="group relative rounded-2xl overflow-hidden border border-white/[0.08] hover:border-emerald-500/20 transition-all duration-500">
-          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 to-emerald-400" />
+        <div class="group relative rounded-2xl overflow-hidden border border-white/[0.08] hover:border-green-500/20 transition-all duration-500">
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-green-500 to-green-400" />
 
           <div class="p-7">
             <div class="flex items-start gap-4 mb-5">
-              <div class="w-13 h-13 rounded-xl bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center text-white text-base font-bold flex-shrink-0 shadow-lg shadow-emerald-500/20">
+              <div class="w-13 h-13 rounded-xl bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white text-base font-bold flex-shrink-0 shadow-lg shadow-green-500/20">
                 {{ card2.initials }}
               </div>
               <div class="flex-1 min-w-0">
@@ -189,19 +189,19 @@ onBeforeUnmount(() => { if (timer) clearInterval(timer) })
             </div>
 
             <div class="mb-5">
-              <div class="text-emerald-500/30 text-3xl font-serif leading-none mb-2">"</div>
+              <div class="text-green-500/30 text-3xl font-serif leading-none mb-2">"</div>
               <blockquote class="text-white/80 leading-relaxed text-[15px] -mt-4 pl-2">
                 {{ card2.quote }}
               </blockquote>
             </div>
 
             <div class="pt-5 border-t border-white/[0.06]">
-              <div class="text-[10px] text-emerald-400/60 uppercase tracking-widest font-semibold mb-3">Résultats obtenus</div>
+              <div class="text-[10px] text-green-400/60 uppercase tracking-widest font-semibold mb-3">Résultats obtenus</div>
               <div class="flex flex-wrap gap-2">
                 <span
                   v-for="result in card2.results"
                   :key="result"
-                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-500/[0.08] border border-emerald-500/[0.15] text-sm text-emerald-400 font-medium"
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-green-500/[0.08] border border-green-500/[0.15] text-sm text-green-400 font-medium"
                 >
                   <UIcon name="i-lucide-trending-up" class="text-xs flex-shrink-0" />
                   {{ result }}
@@ -215,11 +215,11 @@ onBeforeUnmount(() => { if (timer) clearInterval(timer) })
       <!-- Mobile: 1 card -->
       <div class="md:hidden mb-10">
         <div class="relative rounded-2xl overflow-hidden border border-white/[0.08]">
-          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 to-emerald-400" />
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-green-500 to-green-400" />
 
           <div class="p-6">
             <div class="flex items-start gap-4 mb-5">
-              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
+              <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
                 {{ card1.initials }}
               </div>
               <div class="flex-1 min-w-0">
@@ -238,19 +238,19 @@ onBeforeUnmount(() => { if (timer) clearInterval(timer) })
             </div>
 
             <div class="mb-5">
-              <div class="text-emerald-500/30 text-2xl font-serif leading-none mb-1">"</div>
+              <div class="text-green-500/30 text-2xl font-serif leading-none mb-1">"</div>
               <blockquote class="text-white/90 leading-relaxed text-base -mt-3 pl-2">
                 {{ card1.quote }}
               </blockquote>
             </div>
 
             <div class="pt-4 border-t border-white/[0.06]">
-              <div class="text-[10px] text-emerald-400/60 uppercase tracking-widest font-semibold mb-3">Résultats</div>
+              <div class="text-[10px] text-green-400/60 uppercase tracking-widest font-semibold mb-3">Résultats</div>
               <div class="flex flex-wrap gap-2">
                 <span
                   v-for="result in card1.results"
                   :key="result"
-                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-500/[0.08] border border-emerald-500/[0.15] text-sm text-emerald-400 font-medium"
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-green-500/[0.08] border border-green-500/[0.15] text-sm text-green-400 font-medium"
                 >
                   <UIcon name="i-lucide-trending-up" class="text-xs" />
                   {{ result }}
@@ -277,7 +277,7 @@ onBeforeUnmount(() => { if (timer) clearInterval(timer) })
             :key="i"
             class="rounded-full transition-all duration-300 cursor-pointer"
             :class="(i - 1) === activeIndex
-              ? 'w-8 h-2 bg-emerald-400'
+              ? 'w-8 h-2 bg-green-400'
               : 'w-2 h-2 bg-white/[0.2] hover:bg-white/[0.4]'"
             @click="goTo(i - 1)"
           />

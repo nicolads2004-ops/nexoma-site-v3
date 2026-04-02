@@ -80,7 +80,7 @@ const useCases = [
           :key="uc.sector"
           class="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer"
           :class="activeTab === index
-            ? 'bg-emerald-500/10 border border-emerald-500/30 text-emerald-400'
+            ? 'bg-green-500/10 border border-green-500/30 text-green-400'
             : 'bg-white/[0.03] border border-white/[0.06] text-white/50 hover:text-white/70 hover:border-white/[0.12]'"
           @click="activeTab = index"
         >
@@ -97,7 +97,7 @@ const useCases = [
             <div>
               <h3 class="text-2xl font-bold text-white mb-2">{{ useCases[activeTab].title }}</h3>
               <div class="flex items-center gap-2 mb-6">
-                <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-medium">
+                <span class="px-3 py-1 rounded-full bg-green-500/10 text-green-400 text-xs font-medium">
                   {{ useCases[activeTab].solution }}
                 </span>
               </div>
@@ -108,7 +108,7 @@ const useCases = [
               </div>
 
               <!-- Quote -->
-              <div class="border-l-2 border-emerald-500/30 pl-6">
+              <div class="border-l-2 border-green-500/30 pl-6">
                 <blockquote class="text-white/70 italic leading-relaxed mb-3">
                   "{{ useCases[activeTab].quote }}"
                 </blockquote>
@@ -129,7 +129,7 @@ const useCases = [
                   <div v-if="result.before" class="text-white/30 text-sm line-through">{{ result.before }}</div>
                 </div>
                 <div class="text-right">
-                  <div class="text-xl font-bold text-emerald-400">{{ result.after }}</div>
+                  <div class="text-xl font-bold text-green-400">{{ result.after }}</div>
                 </div>
               </div>
             </div>

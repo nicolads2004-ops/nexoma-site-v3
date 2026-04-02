@@ -80,8 +80,8 @@ const { openForm } = useContactForm()
           <!-- Popular badge -->
           <div v-if="plan.featured" class="mb-6">
             <span
-              class="inline-flex px-3 py-1 rounded-full bg-emerald-500/10
-                     text-emerald-400 text-xs font-medium"
+              class="inline-flex px-3 py-1 rounded-full bg-green-500/10
+                     text-green-400 text-xs font-medium"
             >
               Le plus populaire
             </span>
@@ -111,7 +111,7 @@ const { openForm } = useContactForm()
               <UIcon
                 name="i-lucide-check"
                 class="flex-shrink-0 mt-0.5"
-                :class="plan.featured ? 'text-emerald-400' : 'text-white/30'"
+                :class="plan.featured ? 'text-green-400' : 'text-white/30'"
               />
               {{ feature }}
             </li>
@@ -121,7 +121,7 @@ const { openForm } = useContactForm()
           <button
             class="w-full py-3.5 rounded-xl font-medium transition-all duration-300 cursor-pointer"
             :class="plan.featured
-              ? 'bg-emerald-500 hover:bg-emerald-600 text-white glow-button'
+              ? 'bg-green-500 hover:bg-green-600 text-white glow-button'
               : 'bg-white/5 hover:bg-white/10 text-white border border-white/10 hover:border-white/20'"
             @click="openForm()"
           >
@@ -133,7 +133,7 @@ const { openForm } = useContactForm()
       <!-- Guarantee -->
       <div class="mt-12 text-center" data-reveal>
         <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white/[0.03] border border-white/[0.06]">
-          <UIcon name="i-lucide-shield-check" class="text-emerald-400" />
+          <UIcon name="i-lucide-shield-check" class="text-green-400" />
           <span class="text-sm text-white/50">Satisfait ou remboursé le 1er mois — Sans engagement</span>
         </div>
       </div>

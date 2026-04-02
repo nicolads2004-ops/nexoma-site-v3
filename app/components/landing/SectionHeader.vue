@@ -16,7 +16,7 @@ defineProps<{
   >
     <div
       class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full
-             bg-emerald-500/10 border border-emerald-500/20 text-emerald-400
+             bg-green-500/10 border border-green-500/20 text-green-400
              text-xs uppercase tracking-[0.15em] font-medium mb-6"
     >
       {{ eyebrow }}

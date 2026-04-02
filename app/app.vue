@@ -166,10 +166,10 @@ async function submitForm() {
               Nous appeler
             </a>
             <button
-              class="hidden md:inline-flex px-5 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white text-sm
+              class="hidden md:inline-flex px-5 py-2.5 bg-green-500 hover:bg-green-600 text-white text-sm
                      rounded-xl font-medium transition-all duration-300
-                     shadow-[0_0_20px_-5px_rgba(16,185,129,0.4)]
-                     hover:shadow-[0_0_30px_-5px_rgba(16,185,129,0.6)]
+                     shadow-[0_0_20px_-5px_rgba(0,139,69,0.4)]
+                     hover:shadow-[0_0_30px_-5px_rgba(0,139,69,0.6)]
                      hover:-translate-y-0.5 cursor-pointer"
               @click="openForm"
             >
@@ -210,8 +210,8 @@ async function submitForm() {
           </a>
         </template>
         <button
-          class="mt-4 text-center py-3 px-6 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl font-semibold cursor-pointer
-                 shadow-[0_0_20px_-5px_rgba(16,185,129,0.4)] transition-all duration-300"
+          class="mt-4 text-center py-3 px-6 bg-green-500 hover:bg-green-600 text-white rounded-xl font-semibold cursor-pointer
+                 shadow-[0_0_20px_-5px_rgba(0,139,69,0.4)] transition-all duration-300"
           @click="mobileOpen = false; openForm()"
         >
           Nous contacter
@@ -287,11 +287,11 @@ async function submitForm() {
             <h4 class="text-sm font-semibold text-white mb-4">Contact</h4>
             <ul class="space-y-3">
               <li class="text-sm text-white/40">Poitiers, Vienne (86)</li>
-              <li><a href="tel:+33769801190" class="text-sm text-white/40 hover:text-emerald-400 transition-colors">07 69 80 11 90</a></li>
-              <li><a href="mailto:contact@poitiers.digital" class="text-sm text-white/40 hover:text-emerald-400 transition-colors">contact@poitiers.digital</a></li>
+              <li><a href="tel:+33769801190" class="text-sm text-white/40 hover:text-green-400 transition-colors">07 69 80 11 90</a></li>
+              <li><a href="mailto:contact@poitiers.digital" class="text-sm text-white/40 hover:text-green-400 transition-colors">contact@poitiers.digital</a></li>
               <li>
                 <button
-                  class="text-sm text-emerald-400 hover:text-emerald-300 transition-colors cursor-pointer"
+                  class="text-sm text-green-400 hover:text-green-300 transition-colors cursor-pointer"
                   @click="openForm"
                 >
                   Nous contacter →
@@ -308,7 +308,7 @@ async function submitForm() {
             <a href="https://poitiers.digital" target="_blank" rel="noopener" class="text-sm text-white/35 hover:text-white transition-colors">← Studio Digital Poitiers</a>
             <a href="https://adscale.poitiers.digital" target="_blank" rel="noopener" class="text-sm text-white/35 hover:text-[#4285f4] transition-colors">ADSCALE — Google Ads</a>
             <a href="https://rankeo.poitiers.digital" target="_blank" rel="noopener" class="text-sm text-white/35 hover:text-[#34a853] transition-colors">RANKEO — SEO</a>
-            <a href="https://nexoma.poitiers.digital" class="text-sm text-emerald-400/70">NEXOMA — IA & Automatisation</a>
+            <a href="https://nexoma.poitiers.digital" class="text-sm text-green-400/70">NEXOMA — IA & Automatisation</a>
             <a href="https://nova-studio.poitiers.digital" target="_blank" rel="noopener" class="text-sm text-white/35 hover:text-[#f43f5e] transition-colors">NOVA STUDIO — UGC & Contenu</a>
           </div>
         </div>
@@ -341,8 +341,8 @@ async function submitForm() {
         <div class="bg-[#0a0a0f]/95 backdrop-blur-xl rounded-2xl p-6 sm:p-8 w-full max-w-lg border border-white/[0.06]">
           <!-- Success state -->
           <div v-if="formSubmitted" class="text-center py-12">
-            <div class="w-16 h-16 rounded-full bg-emerald-500/10 flex items-center justify-center mx-auto mb-6">
-              <UIcon name="i-lucide-check" class="text-emerald-400 text-3xl" />
+            <div class="w-16 h-16 rounded-full bg-green-500/10 flex items-center justify-center mx-auto mb-6">
+              <UIcon name="i-lucide-check" class="text-green-400 text-3xl" />
             </div>
             <h4 class="text-xl font-semibold text-white mb-2">Demande envoyee !</h4>
             <p class="text-white/50 mb-8">Nous vous recontactons sous 24h pour un diagnostic gratuit de vos process.</p>
@@ -371,7 +371,7 @@ async function submitForm() {
             <!-- Progress bar -->
             <div class="w-full h-1 bg-white/[0.06] rounded-full mb-8">
               <div
-                class="h-full bg-emerald-500 rounded-full transition-all duration-500 ease-out"
+                class="h-full bg-green-500 rounded-full transition-all duration-500 ease-out"
                 :style="{ width: progressPercent + '%' }"
               />
             </div>
@@ -386,13 +386,13 @@ async function submitForm() {
                 :key="opt.value"
                 class="flex items-center gap-4 px-4 py-4 rounded-xl cursor-pointer transition-all duration-300"
                 :class="form.painPoint === opt.value
-                  ? 'bg-emerald-500/10 border border-emerald-500/40 text-emerald-400 shadow-[0_0_20px_-8px_rgba(16,185,129,0.3)]'
+                  ? 'bg-green-500/10 border border-green-500/40 text-green-400 shadow-[0_0_20px_-8px_rgba(0,139,69,0.3)]'
                   : 'bg-white/[0.03] border border-white/[0.08] text-white/60 hover:border-white/[0.15] hover:text-white/80 hover:bg-white/[0.05]'"
                 @click="form.painPoint = opt.value"
               >
                 <input type="radio" name="painPoint" :value="opt.value" v-model="form.painPoint" class="sr-only">
                 <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
-                  :class="form.painPoint === opt.value ? 'bg-emerald-500/20' : 'bg-white/[0.05]'"
+                  :class="form.painPoint === opt.value ? 'bg-green-500/20' : 'bg-white/[0.05]'"
                 >
                   <UIcon :name="opt.icon" class="text-lg" />
                 </div>
@@ -407,13 +407,13 @@ async function submitForm() {
                 :key="opt.value"
                 class="flex items-center gap-4 px-4 py-4 rounded-xl cursor-pointer transition-all duration-300"
                 :class="form.teamSize === opt.value
-                  ? 'bg-emerald-500/10 border border-emerald-500/40 text-emerald-400 shadow-[0_0_20px_-8px_rgba(16,185,129,0.3)]'
+                  ? 'bg-green-500/10 border border-green-500/40 text-green-400 shadow-[0_0_20px_-8px_rgba(0,139,69,0.3)]'
                   : 'bg-white/[0.03] border border-white/[0.08] text-white/60 hover:border-white/[0.15] hover:text-white/80 hover:bg-white/[0.05]'"
                 @click="form.teamSize = opt.value"
               >
                 <input type="radio" name="teamSize" :value="opt.value" v-model="form.teamSize" class="sr-only">
                 <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
-                  :class="form.teamSize === opt.value ? 'bg-emerald-500/20' : 'bg-white/[0.05]'"
+                  :class="form.teamSize === opt.value ? 'bg-green-500/20' : 'bg-white/[0.05]'"
                 >
                   <UIcon :name="opt.icon" class="text-lg" />
                 </div>
@@ -428,13 +428,13 @@ async function submitForm() {
                 :key="opt.value"
                 class="flex items-center gap-4 px-4 py-4 rounded-xl cursor-pointer transition-all duration-300"
                 :class="form.aiExperience === opt.value
-                  ? 'bg-emerald-500/10 border border-emerald-500/40 text-emerald-400 shadow-[0_0_20px_-8px_rgba(16,185,129,0.3)]'
+                  ? 'bg-green-500/10 border border-green-500/40 text-green-400 shadow-[0_0_20px_-8px_rgba(0,139,69,0.3)]'
                   : 'bg-white/[0.03] border border-white/[0.08] text-white/60 hover:border-white/[0.15] hover:text-white/80 hover:bg-white/[0.05]'"
                 @click="form.aiExperience = opt.value"
               >
                 <input type="radio" name="aiExperience" :value="opt.value" v-model="form.aiExperience" class="sr-only">
                 <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
-                  :class="form.aiExperience === opt.value ? 'bg-emerald-500/20' : 'bg-white/[0.05]'"
+                  :class="form.aiExperience === opt.value ? 'bg-green-500/20' : 'bg-white/[0.05]'"
                 >
                   <UIcon :name="opt.icon" class="text-lg" />
                 </div>
@@ -452,7 +452,7 @@ async function submitForm() {
                   placeholder="Votre entreprise"
                   class="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08]
                          text-white placeholder-white/25 text-sm
-                         focus:outline-none focus:border-emerald-500/50 focus:bg-white/[0.06]
+                         focus:outline-none focus:border-green-500/50 focus:bg-white/[0.06]
                          transition-all duration-300"
                 >
               </div>
@@ -465,7 +465,7 @@ async function submitForm() {
                   placeholder="Jean Dupont"
                   class="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08]
                          text-white placeholder-white/25 text-sm
-                         focus:outline-none focus:border-emerald-500/50 focus:bg-white/[0.06]
+                         focus:outline-none focus:border-green-500/50 focus:bg-white/[0.06]
                          transition-all duration-300"
                 >
               </div>
@@ -478,7 +478,7 @@ async function submitForm() {
                   placeholder="jean@entreprise.fr"
                   class="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08]
                          text-white placeholder-white/25 text-sm
-                         focus:outline-none focus:border-emerald-500/50 focus:bg-white/[0.06]
+                         focus:outline-none focus:border-green-500/50 focus:bg-white/[0.06]
                          transition-all duration-300"
                 >
               </div>
@@ -491,7 +491,7 @@ async function submitForm() {
                   placeholder="06 12 34 56 78"
                   class="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08]
                          text-white placeholder-white/25 text-sm
-                         focus:outline-none focus:border-emerald-500/50 focus:bg-white/[0.06]
+                         focus:outline-none focus:border-green-500/50 focus:bg-white/[0.06]
                          transition-all duration-300"
                 >
               </div>
@@ -503,10 +503,10 @@ async function submitForm() {
               <button
                 type="submit"
                 :disabled="formLoading"
-                class="w-full py-4 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl
+                class="w-full py-4 bg-green-500 hover:bg-green-600 text-white rounded-xl
                        font-semibold text-base cursor-pointer
-                       shadow-[0_0_25px_-5px_rgba(16,185,129,0.4)]
-                       hover:shadow-[0_0_35px_-5px_rgba(16,185,129,0.6)]
+                       shadow-[0_0_25px_-5px_rgba(0,139,69,0.4)]
+                       hover:shadow-[0_0_35px_-5px_rgba(0,139,69,0.6)]
                        disabled:opacity-50 disabled:cursor-not-allowed
                        transition-all duration-300"
               >
@@ -534,10 +534,10 @@ async function submitForm() {
               </button>
               <div v-else />
               <button
-                class="px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl
+                class="px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-xl
                        font-semibold text-sm cursor-pointer
-                       shadow-[0_0_20px_-5px_rgba(16,185,129,0.4)]
-                       hover:shadow-[0_0_30px_-5px_rgba(16,185,129,0.6)]
+                       shadow-[0_0_20px_-5px_rgba(0,139,69,0.4)]
+                       hover:shadow-[0_0_30px_-5px_rgba(0,139,69,0.6)]
                        transition-all duration-300
                        disabled:opacity-30 disabled:cursor-not-allowed disabled:shadow-none"
                 :disabled="!canContinue()"

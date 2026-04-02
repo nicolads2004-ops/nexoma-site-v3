@@ -8,7 +8,7 @@ export default defineEventHandler(async (event) => {
   }
 
   const htmlBody = `
-    <h2 style="color:#10b981;">Nouveau lead NEXOMA</h2>
+    <h2 style="color:#008B45;">Nouveau lead NEXOMA</h2>
     <table style="border-collapse:collapse;width:100%;max-width:600px;">
       <tr><td style="padding:8px;border-bottom:1px solid #eee;font-weight:bold;">Nom</td><td style="padding:8px;border-bottom:1px solid #eee;">${body.name}</td></tr>
       <tr><td style="padding:8px;border-bottom:1px solid #eee;font-weight:bold;">Email</td><td style="padding:8px;border-bottom:1px solid #eee;"><a href="mailto:${body.email}">${body.email}</a></td></tr>

@@ -12,7 +12,7 @@ useHead({
     { name: 'robots', content: 'index, follow' }
   ],
   link: [
-    { rel: 'canonical', href: 'https://nexoma.poitiers.digital/blog' }
+    { rel: 'canonical', href: 'https://nexoma.poitiers.digital/blog', key: 'canonical' }
   ]
 })
 
@@ -49,7 +49,7 @@ const articles = [
 const categoryColors: Record<string, string> = {
   'Guide': 'bg-blue-500/10 border-blue-500/20 text-blue-400',
   'Cas pratique': 'bg-amber-500/10 border-amber-500/20 text-amber-400',
-  'Solution': 'bg-emerald-500/10 border-emerald-500/20 text-emerald-400'
+  'Solution': 'bg-green-500/10 border-green-500/20 text-green-400'
 }
 
 const { openForm } = useContactForm()
@@ -60,16 +60,16 @@ const { openForm } = useContactForm()
     <!-- Hero -->
     <section class="relative pt-32 pb-16 px-4 sm:px-6 lg:px-8">
       <div class="absolute inset-0 overflow-hidden pointer-events-none">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-emerald-500/[0.03] blur-3xl" />
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-green-500/[0.03] blur-3xl" />
       </div>
       <div class="relative max-w-4xl mx-auto text-center">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium mb-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-xs font-medium mb-6">
           <UIcon name="i-lucide-book-open" class="text-sm" />
           Ressources & conseils
         </div>
         <h1 class="text-4xl sm:text-5xl font-black tracking-tight mb-6">
           IA & Automatisation<br>
-          <span class="text-emerald-400">pour les PME de Poitiers</span>
+          <span class="text-green-400">pour les PME de Poitiers</span>
         </h1>
         <p class="text-lg text-white/50 max-w-2xl mx-auto">
           Guides pratiques, cas d'usage concrets et conseils terrain pour les entreprises de la Vienne
@@ -86,7 +86,7 @@ const { openForm } = useContactForm()
             v-for="article in articles"
             :key="article.slug"
             class="group flex flex-col rounded-2xl bg-white/[0.03] border border-white/[0.06]
-                   hover:border-emerald-500/20 transition-all duration-300 overflow-hidden"
+                   hover:border-green-500/20 transition-all duration-300 overflow-hidden"
           >
             <NuxtLink :to="`/blog/${article.slug}`">
               <div class="overflow-hidden aspect-[2/1]">
@@ -112,7 +112,7 @@ const { openForm } = useContactForm()
               </div>
 
               <NuxtLink :to="`/blog/${article.slug}`" class="flex-1">
-                <h2 class="text-lg font-bold mb-3 leading-snug group-hover:text-emerald-400 transition-colors duration-300">
+                <h2 class="text-lg font-bold mb-3 leading-snug group-hover:text-green-400 transition-colors duration-300">
                   {{ article.title }}
                 </h2>
                 <p class="text-sm text-white/40 leading-relaxed">{{ article.excerpt }}</p>
@@ -120,7 +120,7 @@ const { openForm } = useContactForm()
 
               <NuxtLink
                 :to="`/blog/${article.slug}`"
-                class="inline-flex items-center gap-2 text-sm text-emerald-400 hover:text-emerald-300
+                class="inline-flex items-center gap-2 text-sm text-green-400 hover:text-green-300
                        transition-colors duration-300 mt-6 font-medium"
               >
                 Lire l'article
@@ -142,9 +142,9 @@ const { openForm } = useContactForm()
           Diagnostic gratuit en 30 minutes. On identifie vos gains rapides, sans jargon.
         </p>
         <button
-          class="px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl font-semibold
-                 transition-all duration-300 shadow-[0_0_30px_-5px_rgba(16,185,129,0.4)]
-                 hover:shadow-[0_0_40px_-5px_rgba(16,185,129,0.6)] hover:-translate-y-0.5 cursor-pointer"
+          class="px-8 py-4 bg-green-500 hover:bg-green-600 text-white rounded-xl font-semibold
+                 transition-all duration-300 shadow-[0_0_30px_-5px_rgba(0,139,69,0.4)]
+                 hover:shadow-[0_0_40px_-5px_rgba(0,139,69,0.6)] hover:-translate-y-0.5 cursor-pointer"
           @click="openForm"
         >
           Demander mon diagnostic gratuit →

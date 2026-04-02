@@ -71,7 +71,7 @@ onMounted(() => {
         <!-- Animated connecting line (desktop) -->
         <div class="hidden lg:block absolute top-24 left-[16.66%] right-[16.66%] h-px overflow-hidden">
           <div
-            class="h-full bg-gradient-to-r from-emerald-500/50 via-emerald-400/50 to-emerald-500/50 transition-all duration-1000 ease-out origin-left"
+            class="h-full bg-gradient-to-r from-green-500/50 via-green-400/50 to-green-500/50 transition-all duration-1000 ease-out origin-left"
             :style="{ width: lineProgress + '%' }"
           />
         </div>
@@ -79,7 +79,7 @@ onMounted(() => {
         <!-- Animated connecting line (mobile) - hidden since steps are centered -->
         <div class="hidden absolute top-0 bottom-0 left-8 w-px overflow-hidden">
           <div
-            class="w-full bg-gradient-to-b from-emerald-500/50 via-emerald-400/50 to-emerald-500/50 transition-all duration-1500 ease-out origin-top"
+            class="w-full bg-gradient-to-b from-green-500/50 via-green-400/50 to-green-500/50 transition-all duration-1500 ease-out origin-top"
             :style="{ height: lineProgress + '%' }"
           />
         </div>
@@ -97,18 +97,18 @@ onMounted(() => {
               <div
                 class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto transition-all duration-500"
                 :class="activeStep >= index
-                  ? 'bg-emerald-500/20 border border-emerald-500/40 shadow-lg shadow-emerald-500/10'
-                  : 'bg-emerald-500/5 border border-emerald-500/10'"
+                  ? 'bg-green-500/20 border border-green-500/40 shadow-lg shadow-green-500/10'
+                  : 'bg-green-500/5 border border-green-500/10'"
               >
-                <UIcon :name="step.icon" class="text-emerald-400 text-2xl" />
+                <UIcon :name="step.icon" class="text-green-400 text-2xl" />
               </div>
               <!-- Step number badge -->
               <div
                 class="absolute -top-2 -right-2 w-8 h-8 rounded-full text-white
                        text-xs font-bold flex items-center justify-center transition-all duration-500"
                 :class="activeStep >= index
-                  ? 'bg-emerald-500 scale-100'
-                  : 'bg-emerald-500/30 scale-75'"
+                  ? 'bg-green-500 scale-100'
+                  : 'bg-green-500/30 scale-75'"
               >
                 {{ step.number }}
               </div>
@@ -116,7 +116,7 @@ onMounted(() => {
 
             <!-- Duration badge -->
             <div
-              class="inline-flex items-center px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-medium mb-4 transition-all duration-500"
+              class="inline-flex items-center px-3 py-1 rounded-full bg-green-500/10 text-green-400 text-xs font-medium mb-4 transition-all duration-500"
               :class="activeStep >= index ? 'opacity-100' : 'opacity-0'"
             >
               {{ step.duration }}
@@ -127,7 +127,7 @@ onMounted(() => {
 
             <!-- Detail tag -->
             <div
-              class="inline-flex items-center gap-1.5 text-xs text-emerald-400/70"
+              class="inline-flex items-center gap-1.5 text-xs text-green-400/70"
             >
               <UIcon name="i-lucide-check-circle" class="text-sm" />
               {{ step.detail }}
@@ -144,34 +144,34 @@ onMounted(() => {
           <!-- Mobile: stack vertical -->
           <div class="sm:hidden glass-card rounded-2xl px-6 py-5 max-w-xs mx-auto space-y-3">
             <div class="flex items-center gap-2.5">
-              <UIcon name="i-lucide-shield-check" class="text-emerald-400 text-lg flex-shrink-0" />
+              <UIcon name="i-lucide-shield-check" class="text-green-400 text-lg flex-shrink-0" />
               <span class="text-white/60 text-sm">Garanti sans risque</span>
             </div>
             <div class="h-px bg-white/[0.06]" />
             <div class="flex items-center gap-2.5">
-              <UIcon name="i-lucide-lock" class="text-emerald-400 text-lg flex-shrink-0" />
+              <UIcon name="i-lucide-lock" class="text-green-400 text-lg flex-shrink-0" />
               <span class="text-white/60 text-sm">Vos données restent vôtres</span>
             </div>
             <div class="h-px bg-white/[0.06]" />
             <div class="flex items-center gap-2.5">
-              <UIcon name="i-lucide-heart-handshake" class="text-emerald-400 text-lg flex-shrink-0" />
+              <UIcon name="i-lucide-heart-handshake" class="text-green-400 text-lg flex-shrink-0" />
               <span class="text-white/60 text-sm">Accompagnement humain</span>
             </div>
           </div>
           <!-- Desktop: horizontal -->
           <div class="hidden sm:inline-flex items-center gap-6 glass-card rounded-2xl px-8 py-5">
             <div class="flex items-center gap-2">
-              <UIcon name="i-lucide-shield-check" class="text-emerald-400 text-lg" />
+              <UIcon name="i-lucide-shield-check" class="text-green-400 text-lg" />
               <span class="text-white/60 text-sm">Garanti sans risque</span>
             </div>
             <div class="w-px h-6 bg-white/10" />
             <div class="flex items-center gap-2">
-              <UIcon name="i-lucide-lock" class="text-emerald-400 text-lg" />
+              <UIcon name="i-lucide-lock" class="text-green-400 text-lg" />
               <span class="text-white/60 text-sm">Vos données restent vôtres</span>
             </div>
             <div class="w-px h-6 bg-white/10" />
             <div class="flex items-center gap-2">
-              <UIcon name="i-lucide-heart-handshake" class="text-emerald-400 text-lg" />
+              <UIcon name="i-lucide-heart-handshake" class="text-green-400 text-lg" />
               <span class="text-white/60 text-sm">Accompagnement humain</span>
             </div>
           </div>

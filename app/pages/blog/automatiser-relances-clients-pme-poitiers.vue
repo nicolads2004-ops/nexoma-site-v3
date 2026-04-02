@@ -1,19 +1,19 @@
 <script setup lang="ts">
 useHead({
-  title: 'Automatiser ses relances clients PME Poitiers — récupérez 5h par semaine — Nexoma',
+  title: 'Agent IA relance client : récupérez 5h par semaine — Guide PME Poitiers | Nexoma',
   meta: [
     {
       name: 'description',
-      content: 'Comment automatiser les relances clients avec un agent IA ? Guide pratique pour les PME et artisans de Poitiers et la Vienne (86). Exemples concrets, intégration CRM, résultats attendus.'
+      content: 'Déployez un agent IA pour automatiser vos relances clients. Guide pratique pour les PME et artisans de Poitiers et la Vienne (86). Intégration CRM, exemples concrets, ROI mesurable.'
     },
-    { property: 'og:title', content: 'Automatiser ses relances clients — guide PME Poitiers' },
-    { property: 'og:description', content: 'Automatisez vos relances clients avec un agent IA. Guide pour PME Poitiers, exemples artisan BTP, intégration CRM.' },
+    { property: 'og:title', content: 'Agent IA relance client — récupérez 5h par semaine | Nexoma' },
+    { property: 'og:description', content: 'Agent IA pour automatiser vos relances clients. Guide PME Poitiers, intégration CRM, exemples concrets.' },
     { property: 'og:url', content: 'https://nexoma.poitiers.digital/blog/automatiser-relances-clients-pme-poitiers' },
     { property: 'og:image', content: '/images/blog/blog-nexoma-relances.png' },
     { name: 'robots', content: 'index, follow' }
   ],
   link: [
-    { rel: 'canonical', href: 'https://nexoma.poitiers.digital/blog/automatiser-relances-clients-pme-poitiers' }
+    { rel: 'canonical', href: 'https://nexoma.poitiers.digital/blog/automatiser-relances-clients-pme-poitiers', key: 'canonical' }
   ],
   script: [
     {
@@ -57,7 +57,7 @@ const { openForm } = useContactForm()
         </div>
 
         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight mb-6">
-          Comment automatiser ses relances clients et récupérer 5h par semaine — guide PME Poitiers
+          Agent IA relance client : récupérez 5h par semaine
         </h1>
 
         <p class="text-xl text-white/50 leading-relaxed">
@@ -84,12 +84,12 @@ const { openForm } = useContactForm()
       <div class="max-w-3xl mx-auto">
 
         <!-- Intro snippet -->
-        <div class="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-5 mb-8 text-white/80 text-[15px] leading-relaxed">
+        <div class="bg-green-500/10 border border-green-500/20 rounded-xl p-5 mb-8 text-white/80 text-[15px] leading-relaxed">
           Dans une PME de 5 à 20 salariés, les relances représentent entre 3 et 8 heures par semaine de travail administratif — souvent assumé par le gérant lui-même. Un agent IA peut s'en charger intégralement, avec le bon ton et le bon timing.
         </div>
 
         <!-- H2 -->
-        <h2 class="text-xl font-bold text-white mt-10 mb-4 border-l-[3px] border-emerald-500 pl-4">Le vrai coût des relances manuelles</h2>
+        <h2 class="text-xl font-bold text-white mt-10 mb-4 border-l-[3px] border-green-500 pl-4">Le vrai coût des relances manuelles</h2>
 
         <p class="text-white/70 leading-relaxed text-[15px]">
           Relancer un client qui n'a pas payé sa facture. Relancer un prospect qui n'a pas répondu au devis.
@@ -98,7 +98,7 @@ const { openForm } = useContactForm()
 
         <!-- Stat -->
         <div class="bg-white/[0.03] border border-white/[0.06] rounded-xl p-5 my-6 flex items-center gap-5">
-          <div class="text-3xl font-bold text-emerald-400 flex-shrink-0">1 280 €</div>
+          <div class="text-3xl font-bold text-green-400 flex-shrink-0">1 280 €</div>
           <div class="text-sm text-white/50">de coût salarial mensuel maximum sur des tâches de relance pures dans une PME de 5 à 20 personnes — à 40 €/h de coût salarial, sur 8h/semaine.</div>
         </div>
 
@@ -109,7 +109,7 @@ const { openForm } = useContactForm()
         </p>
 
         <!-- H2 -->
-        <h2 class="text-xl font-bold text-white mt-10 mb-4 border-l-[3px] border-emerald-500 pl-4">Ce qu'un agent IA peut faire à votre place</h2>
+        <h2 class="text-xl font-bold text-white mt-10 mb-4 border-l-[3px] border-green-500 pl-4">Ce qu'un agent IA peut faire à votre place</h2>
 
         <p class="text-white/70 leading-relaxed text-[15px]">
           Un agent IA de relance n'est pas un simple envoi d'emails en masse. C'est un système intelligent
@@ -120,25 +120,25 @@ const { openForm } = useContactForm()
 
         <div class="space-y-3 my-4">
           <div class="flex items-start gap-3">
-            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-green-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
             <span class="text-white/70 text-sm leading-relaxed"><strong class="text-white">Relances de devis</strong> : un email personnalisé à J+7, un SMS à J+14, un appel automatisé à J+21. Le message change selon que le client a ouvert le devis ou non.</span>
           </div>
           <div class="flex items-start gap-3">
-            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-green-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
             <span class="text-white/70 text-sm leading-relaxed"><strong class="text-white">Relances de factures</strong> : rappel amiable à l'échéance, relance ferme à J+8, mise en demeure à J+20. Ton adapté à l'ancienneté de la relation client.</span>
           </div>
           <div class="flex items-start gap-3">
-            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-green-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
             <span class="text-white/70 text-sm leading-relaxed"><strong class="text-white">Rappels de rendez-vous</strong> : confirmation 48h avant, rappel 2h avant, message de suivi après le rendez-vous.</span>
           </div>
           <div class="flex items-start gap-3">
-            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-green-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
             <span class="text-white/70 text-sm leading-relaxed"><strong class="text-white">Suivi des prospects</strong> : nurturing automatique sur plusieurs semaines pour les prospects qui ne sont pas encore prêts à acheter.</span>
           </div>
         </div>
 
         <!-- H2 -->
-        <h2 class="text-xl font-bold text-white mt-10 mb-4 border-l-[3px] border-emerald-500 pl-4">Exemple concret : un artisan BTP à Poitiers</h2>
+        <h2 class="text-xl font-bold text-white mt-10 mb-4 border-l-[3px] border-green-500 pl-4">Exemple concret : un artisan BTP à Poitiers</h2>
 
         <p class="text-white/70 leading-relaxed text-[15px]">
           Prenons l'exemple d'un plaquiste-peintre installé à Poitiers qui travaille principalement avec des particuliers
@@ -147,19 +147,19 @@ const { openForm } = useContactForm()
 
         <div class="space-y-3 my-4">
           <div class="flex items-start gap-3">
-            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-green-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
             <span class="text-white/70 text-sm leading-relaxed">Il envoie entre 15 et 25 devis par mois.</span>
           </div>
           <div class="flex items-start gap-3">
-            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-green-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
             <span class="text-white/70 text-sm leading-relaxed">En moyenne, 40 % restent sans réponse après une semaine.</span>
           </div>
           <div class="flex items-start gap-3">
-            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-green-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
             <span class="text-white/70 text-sm leading-relaxed">Il relance à la main, quand il s'en souvient — souvent trop tard.</span>
           </div>
           <div class="flex items-start gap-3">
-            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-green-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
             <span class="text-white/70 text-sm leading-relaxed">Son taux de transformation était de 38 %.</span>
           </div>
         </div>
@@ -172,21 +172,21 @@ const { openForm } = useContactForm()
         <!-- Étapes numérotées -->
         <div class="space-y-3 my-6">
           <div class="flex items-start gap-4 bg-white/[0.02] rounded-xl p-4 border border-white/[0.06]">
-            <span class="text-emerald-400 font-bold text-lg flex-shrink-0 w-8">J+5</span>
+            <span class="text-green-400 font-bold text-lg flex-shrink-0 w-8">J+5</span>
             <div>
               <div class="text-white font-medium text-sm">Email de relance douce</div>
               <div class="text-white/50 text-sm mt-1">Proposant de répondre à d'éventuelles questions sur le devis.</div>
             </div>
           </div>
           <div class="flex items-start gap-4 bg-white/[0.02] rounded-xl p-4 border border-white/[0.06]">
-            <span class="text-emerald-400 font-bold text-lg flex-shrink-0 w-8">J+10</span>
+            <span class="text-green-400 font-bold text-lg flex-shrink-0 w-8">J+10</span>
             <div>
               <div class="text-white font-medium text-sm">SMS court et personnel</div>
               <div class="text-white/50 text-sm mt-1">Rappelant la validité du devis, ton direct et non intrusif.</div>
             </div>
           </div>
           <div class="flex items-start gap-4 bg-white/[0.02] rounded-xl p-4 border border-white/[0.06]">
-            <span class="text-emerald-400 font-bold text-lg flex-shrink-0 w-8">J+18</span>
+            <span class="text-green-400 font-bold text-lg flex-shrink-0 w-8">J+18</span>
             <div>
               <div class="text-white font-medium text-sm">Email de dernière chance</div>
               <div class="text-white/50 text-sm mt-1">Avec une légère urgence sur la disponibilité et la validité du devis.</div>
@@ -196,48 +196,48 @@ const { openForm } = useContactForm()
 
         <!-- Résultat en stats -->
         <div class="bg-white/[0.03] border border-white/[0.06] rounded-xl p-5 my-6 flex items-center gap-5">
-          <div class="text-3xl font-bold text-emerald-400 flex-shrink-0">38 → 52 %</div>
+          <div class="text-3xl font-bold text-green-400 flex-shrink-0">38 → 52 %</div>
           <div class="text-sm text-white/50">Taux de transformation après trois mois. Temps de suivi commercial récupéré : 4h30 par semaine. ROI atteint dès le deuxième mois.</div>
         </div>
 
         <!-- H2 -->
-        <h2 class="text-xl font-bold text-white mt-10 mb-4 border-l-[3px] border-emerald-500 pl-4">Résultats attendus pour votre PME</h2>
+        <h2 class="text-xl font-bold text-white mt-10 mb-4 border-l-[3px] border-green-500 pl-4">Résultats attendus pour votre PME</h2>
 
         <p class="text-white/70 leading-relaxed text-[15px] mb-4">
           Les résultats varient selon votre secteur et votre volume, mais voici les ordres de grandeur
-          que nous constatons chez nos clients de la Vienne après 90 jours :
+          que nous constatons chez nos clients de la Vienne après 90 jours. Pour maximiser l'impact, certains combinent l'automatisation des relances avec un <a href="https://rankeo.poitiers.digital" target="_blank" rel="noopener" class="text-green-400 hover:text-green-300 underline underline-offset-2">référencement SEO local</a> pour attirer davantage de prospects en amont :
         </p>
 
         <div class="space-y-3 my-4">
           <div class="flex items-start gap-3">
-            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-green-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
             <span class="text-white/70 text-sm leading-relaxed">+20 à +40 % de taux de transformation sur les devis</span>
           </div>
           <div class="flex items-start gap-3">
-            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-green-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
             <span class="text-white/70 text-sm leading-relaxed">-30 à -50 % de délai de paiement moyen</span>
           </div>
           <div class="flex items-start gap-3">
-            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-green-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
             <span class="text-white/70 text-sm leading-relaxed">3 à 6 heures récupérées par semaine sur les tâches de suivi</span>
           </div>
           <div class="flex items-start gap-3">
-            <span class="text-emerald-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
+            <span class="text-green-400 mt-0.5 flex-shrink-0 text-sm">✓</span>
             <span class="text-white/70 text-sm leading-relaxed">Réduction de 80 % des relances oubliées</span>
           </div>
         </div>
 
         <!-- H2 -->
-        <h2 class="text-xl font-bold text-white mt-10 mb-4 border-l-[3px] border-emerald-500 pl-4">Intégration CRM et outils existants</h2>
+        <h2 class="text-xl font-bold text-white mt-10 mb-4 border-l-[3px] border-green-500 pl-4">Intégration CRM et outils existants</h2>
 
         <p class="text-white/70 leading-relaxed text-[15px]">
           La bonne nouvelle : vous n'avez pas à changer vos outils. Nos agents IA s'intègrent avec ce que vous utilisez déjà.
           Que vous soyez sur HubSpot, Sellsy, Dolibarr, Sage, ou simplement sur un tableau Excel bien organisé —
-          on construit le pont entre vos données et les automatisations.
+          on construit le pont entre vos données et les automatisations. Si vous souhaitez également accélérer votre acquisition, la <a href="https://adscale.poitiers.digital" target="_blank" rel="noopener" class="text-green-400 hover:text-green-300 underline underline-offset-2">publicité Google Ads</a> peut être pilotée depuis la même interface.
         </p>
 
         <!-- Exemple concret -->
-        <div class="border-l-4 border-emerald-500/30 pl-5 py-3 my-6 bg-emerald-500/[0.04] rounded-r-xl">
+        <div class="border-l-4 border-green-500/30 pl-5 py-3 my-6 bg-green-500/[0.04] rounded-r-xl">
           <p class="text-white/70 text-sm italic">Pour les professions libérales de Poitiers (avocats, comptables, kinés, ostéopathes), on travaille également avec Doctolib, Calendly, et les logiciels métier spécialisés. L'intégration prend en général entre 3 et 10 jours selon la complexité de votre stack.</p>
         </div>
 
@@ -246,7 +246,7 @@ const { openForm } = useContactForm()
         </p>
 
         <!-- H2 -->
-        <h2 class="text-xl font-bold text-white mt-10 mb-4 border-l-[3px] border-emerald-500 pl-4">Par où commencer avec Nexoma ?</h2>
+        <h2 class="text-xl font-bold text-white mt-10 mb-4 border-l-[3px] border-green-500 pl-4">Par où commencer avec Nexoma ?</h2>
 
         <p class="text-white/70 leading-relaxed text-[15px]">
           La première étape est notre diagnostic gratuit. En 30 minutes, on identifie ensemble vos principales sources
@@ -255,7 +255,7 @@ const { openForm } = useContactForm()
         </p>
 
         <!-- Exemple concret -->
-        <div class="border-l-4 border-emerald-500/30 pl-5 py-3 my-6 bg-emerald-500/[0.04] rounded-r-xl">
+        <div class="border-l-4 border-green-500/30 pl-5 py-3 my-6 bg-green-500/[0.04] rounded-r-xl">
           <p class="text-white/70 text-sm italic">Aucun engagement. Si nos chiffres ne vous convainquent pas, vous repartez avec un audit de votre processus de relances — ce qui vaut déjà quelques heures de conseil.</p>
         </div>
 
@@ -265,25 +265,25 @@ const { openForm } = useContactForm()
       <div class="max-w-3xl mx-auto mt-12 border-t border-white/[0.06] pt-8">
         <h3 class="text-white font-semibold mb-4">À lire aussi</h3>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <NuxtLink to="/blog/ia-pme-poitiers-guide-debutant" class="block p-4 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-emerald-500/30 transition-colors">
-            <span class="text-xs text-emerald-400 font-semibold uppercase tracking-wider">Guide</span>
+          <NuxtLink to="/blog/ia-pme-poitiers-guide-debutant" class="block p-4 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-green-500/30 transition-colors">
+            <span class="text-xs text-green-400 font-semibold uppercase tracking-wider">Guide</span>
             <p class="text-white text-sm font-medium mt-1">IA pour les PME de Poitiers : par où commencer ?</p>
           </NuxtLink>
-          <NuxtLink to="/blog/chatbot-ia-commerce-poitiers" class="block p-4 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-emerald-500/30 transition-colors">
-            <span class="text-xs text-emerald-400 font-semibold uppercase tracking-wider">Solution</span>
+          <NuxtLink to="/blog/chatbot-ia-commerce-poitiers" class="block p-4 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-green-500/30 transition-colors">
+            <span class="text-xs text-green-400 font-semibold uppercase tracking-wider">Solution</span>
             <p class="text-white text-sm font-medium mt-1">Chatbot IA pour les commerces de Poitiers</p>
           </NuxtLink>
         </div>
       </div>
 
       <!-- CTA -->
-      <div class="max-w-3xl mx-auto mt-16 p-8 rounded-2xl bg-emerald-500/[0.06] border border-emerald-500/20 text-center">
+      <div class="max-w-3xl mx-auto mt-16 p-8 rounded-2xl bg-green-500/[0.06] border border-green-500/20 text-center">
         <h3 class="text-2xl font-bold mb-3">Combien d'heures perdez-vous chaque semaine en relances ?</h3>
         <p class="text-white/50 mb-6">Diagnostic gratuit en 30 minutes. On chiffre vos gains ensemble, sans engagement.</p>
         <button
-          class="px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl font-semibold
-                 transition-all duration-300 shadow-[0_0_30px_-5px_rgba(16,185,129,0.4)]
-                 hover:shadow-[0_0_40px_-5px_rgba(16,185,129,0.6)] hover:-translate-y-0.5 cursor-pointer"
+          class="px-8 py-4 bg-green-500 hover:bg-green-600 text-white rounded-xl font-semibold
+                 transition-all duration-300 shadow-[0_0_30px_-5px_rgba(0,139,69,0.4)]
+                 hover:shadow-[0_0_40px_-5px_rgba(0,139,69,0.6)] hover:-translate-y-0.5 cursor-pointer"
           @click="openForm"
         >
           Demander mon diagnostic gratuit →

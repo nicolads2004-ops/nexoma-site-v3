@@ -71,6 +71,9 @@ useHead({
         }
       })
     }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://nexoma.poitiers.digital/', key: 'canonical' }
   ]
 })
 </script>

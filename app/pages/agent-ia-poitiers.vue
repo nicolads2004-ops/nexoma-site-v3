@@ -165,18 +165,18 @@ const { openForm } = useContactForm()
     <!-- Hero -->
     <section class="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div class="absolute inset-0 overflow-hidden pointer-events-none">
-        <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-emerald-500/[0.04] blur-3xl" />
+        <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-green-500/[0.04] blur-3xl" />
       </div>
 
       <div class="relative max-w-4xl mx-auto text-center">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium mb-6">
-          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-xs font-medium mb-6">
+          <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
           Agent IA sur mesure — Poitiers & Vienne (86)
         </div>
 
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-6 leading-tight">
           Votre agent IA à Poitiers<br>
-          <span class="text-emerald-400">qui travaille pendant que vous dormez</span>
+          <span class="text-green-400">qui travaille pendant que vous dormez</span>
         </h1>
 
         <p class="text-lg sm:text-xl text-white/50 leading-relaxed max-w-2xl mx-auto mb-10">
@@ -188,9 +188,9 @@ const { openForm } = useContactForm()
         </p>
 
         <button
-          class="px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl font-semibold
-                 text-base transition-all duration-300 shadow-[0_0_30px_-5px_rgba(16,185,129,0.4)]
-                 hover:shadow-[0_0_40px_-5px_rgba(16,185,129,0.6)] hover:-translate-y-0.5 cursor-pointer"
+          class="px-8 py-4 bg-green-500 hover:bg-green-600 text-white rounded-xl font-semibold
+                 text-base transition-all duration-300 shadow-[0_0_30px_-5px_rgba(0,139,69,0.4)]
+                 hover:shadow-[0_0_40px_-5px_rgba(0,139,69,0.6)] hover:-translate-y-0.5 cursor-pointer"
           @click="openForm"
         >
           Demander un diagnostic gratuit →
@@ -203,7 +203,7 @@ const { openForm } = useContactForm()
       <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p class="text-xs font-semibold uppercase tracking-widest text-emerald-400 mb-4">Comprendre</p>
+            <p class="text-xs font-semibold uppercase tracking-widest text-green-400 mb-4">Comprendre</p>
             <h2 class="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
               Un agent IA, c'est un collaborateur numérique qui exécute vos tâches répétitives
             </h2>
@@ -231,7 +231,7 @@ const { openForm } = useContactForm()
               :key="advantage.value"
               class="p-6 rounded-2xl bg-white/[0.03] border border-white/[0.06] text-center"
             >
-              <div class="text-4xl font-black text-emerald-400 mb-2">{{ advantage.value }}</div>
+              <div class="text-4xl font-black text-green-400 mb-2">{{ advantage.value }}</div>
               <div class="text-sm text-white/40">{{ advantage.label }}</div>
             </div>
           </div>
@@ -243,7 +243,7 @@ const { openForm } = useContactForm()
     <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white/[0.015]">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-14">
-          <p class="text-xs font-semibold uppercase tracking-widest text-emerald-400 mb-4">Cas d'usage pour PME</p>
+          <p class="text-xs font-semibold uppercase tracking-widest text-green-400 mb-4">Cas d'usage pour PME</p>
           <h2 class="text-3xl sm:text-4xl font-bold">Ce que votre agent IA peut faire dès le premier mois</h2>
         </div>
 
@@ -251,10 +251,10 @@ const { openForm } = useContactForm()
           <div
             v-for="useCase in useCases"
             :key="useCase.title"
-            class="p-8 rounded-2xl bg-[#030303] border border-white/[0.06] hover:border-emerald-500/20 transition-colors duration-300"
+            class="p-8 rounded-2xl bg-[#030303] border border-white/[0.06] hover:border-green-500/20 transition-colors duration-300"
           >
-            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center mb-6">
-              <UIcon :name="useCase.icon" class="text-emerald-400 text-xl" />
+            <div class="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center mb-6">
+              <UIcon :name="useCase.icon" class="text-green-400 text-xl" />
             </div>
             <h3 class="text-lg font-semibold mb-3">{{ useCase.title }}</h3>
             <p class="text-white/40 text-sm leading-relaxed">{{ useCase.description }}</p>
@@ -267,7 +267,7 @@ const { openForm } = useContactForm()
     <section class="py-20 px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-14">
-          <p class="text-xs font-semibold uppercase tracking-widest text-emerald-400 mb-4">Notre méthode</p>
+          <p class="text-xs font-semibold uppercase tracking-widest text-green-400 mb-4">Notre méthode</p>
           <h2 class="text-3xl sm:text-4xl font-bold">De l'audit à l'agent opérationnel en 21 jours</h2>
         </div>
 
@@ -278,7 +278,7 @@ const { openForm } = useContactForm()
             class="relative p-8 rounded-2xl bg-white/[0.03] border border-white/[0.06]"
           >
             <div class="text-5xl font-black text-white/[0.06] mb-4">{{ step.number }}</div>
-            <h3 class="text-lg font-semibold mb-3 text-emerald-400">{{ step.title }}</h3>
+            <h3 class="text-lg font-semibold mb-3 text-green-400">{{ step.title }}</h3>
             <p class="text-white/40 text-sm leading-relaxed">{{ step.description }}</p>
           </div>
         </div>
@@ -289,7 +289,7 @@ const { openForm } = useContactForm()
     <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white/[0.015]">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-14">
-          <p class="text-xs font-semibold uppercase tracking-widest text-emerald-400 mb-4">Secteurs d'activité</p>
+          <p class="text-xs font-semibold uppercase tracking-widest text-green-400 mb-4">Secteurs d'activité</p>
           <h2 class="text-3xl sm:text-4xl font-bold">Un agent IA adapté à votre métier</h2>
         </div>
 
@@ -297,11 +297,11 @@ const { openForm } = useContactForm()
           <div
             v-for="sector in sectors"
             :key="sector.label"
-            class="p-6 rounded-2xl bg-[#030303] border border-white/[0.06] hover:border-emerald-500/20 transition-colors duration-300"
+            class="p-6 rounded-2xl bg-[#030303] border border-white/[0.06] hover:border-green-500/20 transition-colors duration-300"
           >
             <div class="flex items-center gap-3 mb-3">
-              <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center">
-                <UIcon :name="sector.icon" class="text-emerald-400 text-lg" />
+              <div class="w-10 h-10 rounded-lg bg-green-500/10 flex items-center justify-center">
+                <UIcon :name="sector.icon" class="text-green-400 text-lg" />
               </div>
               <h3 class="text-base font-semibold">{{ sector.label }}</h3>
             </div>
@@ -315,7 +315,7 @@ const { openForm } = useContactForm()
     <section class="py-20 px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl mx-auto">
         <div class="text-center mb-14">
-          <p class="text-xs font-semibold uppercase tracking-widest text-emerald-400 mb-4">Questions fréquentes</p>
+          <p class="text-xs font-semibold uppercase tracking-widest text-green-400 mb-4">Questions fréquentes</p>
           <h2 class="text-3xl sm:text-4xl font-bold">Agent IA pour entreprise : ce qu'il faut savoir</h2>
         </div>
 
@@ -337,12 +337,12 @@ const { openForm } = useContactForm()
       <div class="max-w-3xl mx-auto text-center">
         <p class="text-white/40 text-sm mb-4">Nos autres services IA à Poitiers</p>
         <p class="text-white/30 text-xs mb-6">
-          Boostez votre acquisition avec le <a href="https://rankeo.poitiers.digital" target="_blank" rel="noopener" class="text-emerald-400/70 hover:text-emerald-400 underline underline-offset-2">référencement naturel</a> ou la <a href="https://adscale.poitiers.digital" target="_blank" rel="noopener" class="text-emerald-400/70 hover:text-emerald-400 underline underline-offset-2">publicité Google Ads</a>.
+          Boostez votre acquisition avec le <a href="https://rankeo.poitiers.digital" target="_blank" rel="noopener" class="text-green-400/70 hover:text-green-400 underline underline-offset-2">référencement naturel</a> ou la <a href="https://adscale.poitiers.digital" target="_blank" rel="noopener" class="text-green-400/70 hover:text-green-400 underline underline-offset-2">publicité Google Ads</a>.
         </p>
         <div class="flex flex-wrap justify-center gap-3">
           <NuxtLink
             to="/chatbot-ia-poitiers"
-            class="px-4 py-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm hover:bg-emerald-500/20 transition-colors"
+            class="px-4 py-2 rounded-lg bg-green-500/10 border border-green-500/20 text-green-400 text-sm hover:bg-green-500/20 transition-colors"
           >
             Chatbot IA Poitiers
           </NuxtLink>
@@ -379,9 +379,9 @@ const { openForm } = useContactForm()
           et on vous montre ce qu'un agent IA peut prendre en charge dans votre activité.
         </p>
         <button
-          class="px-10 py-5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl font-bold
-                 text-lg transition-all duration-300 shadow-[0_0_40px_-5px_rgba(16,185,129,0.5)]
-                 hover:shadow-[0_0_60px_-5px_rgba(16,185,129,0.7)] hover:-translate-y-1 cursor-pointer"
+          class="px-10 py-5 bg-green-500 hover:bg-green-600 text-white rounded-xl font-bold
+                 text-lg transition-all duration-300 shadow-[0_0_40px_-5px_rgba(0,139,69,0.5)]
+                 hover:shadow-[0_0_60px_-5px_rgba(0,139,69,0.7)] hover:-translate-y-1 cursor-pointer"
           @click="openForm"
         >
           Demander mon diagnostic gratuit →

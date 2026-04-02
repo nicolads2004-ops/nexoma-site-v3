@@ -50,7 +50,7 @@ onUnmounted(() => {
       class="absolute inset-0 opacity-30 transition-opacity duration-1000"
       :style="{
         background: `
-          radial-gradient(ellipse 80% 50% at ${50 + Math.sin(gradientOffset * 0.02) * 20}% ${50 + Math.cos(gradientOffset * 0.015) * 15}%, rgba(16, 185, 129, 0.15), transparent),
+          radial-gradient(ellipse 80% 50% at ${50 + Math.sin(gradientOffset * 0.02) * 20}% ${50 + Math.cos(gradientOffset * 0.015) * 15}%, rgba(0, 139, 69, 0.15), transparent),
           radial-gradient(ellipse 60% 40% at ${30 + Math.sin(gradientOffset * 0.025) * 15}% ${60 + Math.cos(gradientOffset * 0.02) * 10}%, rgba(59, 130, 246, 0.08), transparent)
         `
       }"
@@ -58,13 +58,13 @@ onUnmounted(() => {
     <div class="absolute inset-0 bg-noise" />
 
     <!-- Top/bottom edge lines -->
-    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent" />
-    <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent" />
+    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-green-500/30 to-transparent" />
+    <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-green-500/30 to-transparent" />
 
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section label -->
       <div class="text-center mb-12" data-reveal>
-        <p class="text-sm text-emerald-400 uppercase tracking-widest font-medium">Des résultats, pas des promesses</p>
+        <p class="text-sm text-green-400 uppercase tracking-widest font-medium">Des résultats, pas des promesses</p>
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
@@ -80,11 +80,11 @@ onUnmounted(() => {
             <div
               class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tabular-nums leading-none"
             >
-              {{ counters[index].displayValue.value }}<span class="text-emerald-400 text-3xl md:text-4xl lg:text-5xl">{{ stat.suffix }}</span>
+              {{ counters[index].displayValue.value }}<span class="text-green-400 text-3xl md:text-4xl lg:text-5xl">{{ stat.suffix }}</span>
             </div>
             <!-- Glow under number -->
             <div
-              class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-24 h-6 bg-emerald-500/20 rounded-full blur-xl transition-opacity duration-500"
+              class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-24 h-6 bg-green-500/20 rounded-full blur-xl transition-opacity duration-500"
               :class="sectionVisible ? 'opacity-100' : 'opacity-0'"
             />
           </div>

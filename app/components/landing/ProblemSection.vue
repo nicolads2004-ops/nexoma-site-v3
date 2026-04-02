@@ -159,7 +159,7 @@ const totalCost = computed(() => {
           L'équivalent d'un salaire chargé. Brûlé chaque année en inefficacités que l'IA élimine en quelques semaines.
           <span class="text-white/70 font-medium">Ce n'est pas un problème de rentabilité — c'est un problème d'optimisation.</span>
         </p>
-        <p class="text-emerald-400 font-medium text-sm">
+        <p class="text-green-400 font-medium text-sm">
           → Nos clients récupèrent cette somme dès les 3 premières semaines.
         </p>
       </div>

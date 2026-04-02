@@ -4,18 +4,18 @@
 @theme static {
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
 
-  /* Emerald accent palette */
-  --color-green-50: #ecfdf5;
-  --color-green-100: #d1fae5;
-  --color-green-200: #a7f3d0;
-  --color-green-300: #6ee7b7;
-  --color-green-400: #34d399;
-  --color-green-500: #10b981;
-  --color-green-600: #059669;
-  --color-green-700: #047857;
-  --color-green-800: #065f46;
-  --color-green-900: #064e3b;
-  --color-green-950: #022c22;
+  /* Vivid emerald accent palette */
+  --color-green-50: #e6f5ed;
+  --color-green-100: #c0e6d3;
+  --color-green-200: #8fd4b0;
+  --color-green-300: #4fbf85;
+  --color-green-400: #00a85a;
+  --color-green-500: #008B45;
+  --color-green-600: #007a3d;
+  --color-green-700: #006633;
+  --color-green-800: #005229;
+  --color-green-900: #003d1f;
+  --color-green-950: #002613;
 }
 
 /* ═══════════════════════════════════════
@@ -23,10 +23,10 @@
    ═══════════════════════════════════════ */
 
 :root {
-  --accent: #10b981;
-  --accent-dark: #059669;
-  --accent-light: #34d399;
-  --accent-rgb: 16, 185, 129;
+  --accent: #008B45;
+  --accent-dark: #007a3d;
+  --accent-light: #00a85a;
+  --accent-rgb: 0, 139, 69;
   --bg-primary: #050505;
   --bg-secondary: #0a0a0f;
 }
@@ -36,7 +36,7 @@ html, body {
 }
 
 :focus-visible {
-  outline: 2px solid #6366f1;
+  outline: 2px solid #008B45;
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -48,7 +48,7 @@ body {
 
 /* ─── Gradient Text ─── */
 .gradient-text {
-  background: linear-gradient(135deg, #34d399, #059669);
+  background: linear-gradient(135deg, #00a85a, #007a3d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -116,7 +116,7 @@ body {
 /* ─── Hero Mesh Gradient ─── */
 .hero-gradient {
   background:
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(16, 185, 129, 0.15), transparent),
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 139, 69, 0.15), transparent),
     radial-gradient(ellipse 60% 40% at 80% 50%, rgba(59, 130, 246, 0.06), transparent),
     radial-gradient(ellipse 50% 50% at 20% 80%, rgba(139, 92, 246, 0.04), transparent);
 }

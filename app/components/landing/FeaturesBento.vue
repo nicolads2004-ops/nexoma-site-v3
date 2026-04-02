@@ -113,10 +113,10 @@ onMounted(() => {
         >
           <div class="h-full flex flex-col">
             <div
-              class="w-14 h-14 rounded-xl bg-emerald-500/10 flex items-center justify-center mb-6"
+              class="w-14 h-14 rounded-xl bg-green-500/10 flex items-center justify-center mb-6"
               :class="iconPulse[0] && 'animate-icon-pulse'"
             >
-              <UIcon :name="features[0].icon" class="text-emerald-400 text-2xl" />
+              <UIcon :name="features[0].icon" class="text-green-400 text-2xl" />
             </div>
 
             <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">{{ features[0].title }}</h3>
@@ -133,12 +133,12 @@ onMounted(() => {
                   <div class="text-3xl font-bold text-red-400 line-through opacity-60">{{ features[0].before }}</div>
                 </div>
                 <div class="flex flex-col items-center gap-1">
-                  <UIcon name="i-lucide-arrow-right" class="text-emerald-400 text-2xl" />
-                  <span class="text-xs text-emerald-400/60">-98%</span>
+                  <UIcon name="i-lucide-arrow-right" class="text-green-400 text-2xl" />
+                  <span class="text-xs text-green-400/60">-98%</span>
                 </div>
                 <div class="text-center flex-1">
                   <div class="text-xs text-white/30 uppercase tracking-wider mb-2">{{ features[0].afterLabel }}</div>
-                  <div class="text-3xl font-bold text-emerald-400">{{ features[0].after }}</div>
+                  <div class="text-3xl font-bold text-green-400">{{ features[0].after }}</div>
                 </div>
               </div>
             </div>
@@ -147,13 +147,13 @@ onMounted(() => {
             <div class="pt-6 border-t border-white/[0.06]">
               <div class="flex items-center justify-between mb-2">
                 <span class="text-sm text-white/40">{{ features[0].statLabel }}</span>
-                <span class="text-lg font-bold text-emerald-400 tabular-nums">
+                <span class="text-lg font-bold text-green-400 tabular-nums">
                   {{ features[0].stat }}{{ features[0].statSuffix }}
                 </span>
               </div>
               <div class="h-2 bg-white/[0.06] rounded-full overflow-hidden">
                 <div
-                  class="h-full bg-gradient-to-r from-emerald-500 to-emerald-400 rounded-full transition-all duration-1500 ease-out"
+                  class="h-full bg-gradient-to-r from-green-500 to-green-400 rounded-full transition-all duration-1500 ease-out"
                   :style="{ width: sectionVisible ? features[0].stat + '%' : '0%' }"
                 />
               </div>
@@ -170,10 +170,10 @@ onMounted(() => {
           :data-reveal-delay="index + 1"
         >
           <div
-            class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center mb-6"
+            class="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center mb-6"
             :class="iconPulse[index + 1] && 'animate-icon-pulse'"
           >
-            <UIcon :name="feature.icon" class="text-emerald-400 text-xl" />
+            <UIcon :name="feature.icon" class="text-green-400 text-xl" />
           </div>
 
           <h3 class="text-xl font-semibold text-white mb-3">{{ feature.title }}</h3>
@@ -182,21 +182,21 @@ onMounted(() => {
           <!-- Mini Before/After -->
           <div class="flex items-center gap-3 mb-6 text-xs">
             <span class="text-red-400/60 line-through">{{ feature.before }}</span>
-            <UIcon name="i-lucide-arrow-right" class="text-emerald-400/60 text-sm" />
-            <span class="text-emerald-400 font-medium">{{ feature.after }}</span>
+            <UIcon name="i-lucide-arrow-right" class="text-green-400/60 text-sm" />
+            <span class="text-green-400 font-medium">{{ feature.after }}</span>
           </div>
 
           <!-- Animated bar -->
           <div class="pt-6 border-t border-white/[0.06]">
             <div class="flex items-center justify-between mb-2">
               <span class="text-xs text-white/40">{{ feature.statLabel }}</span>
-              <span class="text-sm font-bold text-emerald-400 tabular-nums">
+              <span class="text-sm font-bold text-green-400 tabular-nums">
                 {{ feature.stat }}{{ feature.statSuffix }}
               </span>
             </div>
             <div class="h-1.5 bg-white/[0.06] rounded-full overflow-hidden">
               <div
-                class="h-full bg-gradient-to-r from-emerald-500 to-emerald-400 rounded-full transition-all duration-1500 ease-out"
+                class="h-full bg-gradient-to-r from-green-500 to-green-400 rounded-full transition-all duration-1500 ease-out"
                 :style="{ width: sectionVisible ? Math.min(feature.stat * (feature.statSuffix === 'x' ? 33 : 1), 100) + '%' : '0%' }"
               />
             </div>
@@ -213,7 +213,7 @@ onMounted(() => {
 }
 @keyframes icon-pulse {
   0% { transform: scale(1); }
-  50% { transform: scale(1.15); box-shadow: 0 0 20px rgba(16, 185, 129, 0.3); }
+  50% { transform: scale(1.15); box-shadow: 0 0 20px rgba(0, 139, 69, 0.3); }
   100% { transform: scale(1); }
 }
 .animate-icon-pulse {

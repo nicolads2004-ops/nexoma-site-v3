@@ -90,7 +90,7 @@ onMounted(() => {
       <div
         v-for="p in particles"
         :key="p.id"
-        class="absolute rounded-full bg-emerald-400/20 animate-particle"
+        class="absolute rounded-full bg-green-400/20 animate-particle"
         :style="{
           left: p.x + '%',
           top: p.y + '%',
@@ -104,7 +104,7 @@ onMounted(() => {
 
     <!-- Floating glow orbs -->
     <div
-      class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[150px] animate-float"
+      class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-green-500/10 rounded-full blur-[150px] animate-float"
     />
     <div
       class="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[120px] animate-float"
@@ -134,7 +134,7 @@ onMounted(() => {
       >
         Agence IA à Poitiers :<br>
         <span class="gradient-text inline-block min-h-[1.1em]">
-          {{ displayedText }}<span class="animate-blink text-emerald-400">|</span>
+          {{ displayedText }}<span class="animate-blink text-green-400">|</span>
         </span>
       </h1>
 
@@ -151,7 +151,7 @@ onMounted(() => {
 
       <!-- Guarantee line -->
       <p
-        class="text-sm text-emerald-400 font-medium mb-10"
+        class="text-sm text-green-400 font-medium mb-10"
         data-reveal
         data-reveal-delay="2"
       >
@@ -165,7 +165,7 @@ onMounted(() => {
         data-reveal-delay="3"
       >
         <button
-          class="group relative w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-emerald-500 hover:bg-emerald-600 text-white
+          class="group relative w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-green-500 hover:bg-green-600 text-white
                  rounded-xl font-semibold text-base sm:text-lg glow-button cursor-pointer animate-pulse-glow"
           @click="openForm"
         >
@@ -193,7 +193,7 @@ onMounted(() => {
           <div
             v-for="i in 5"
             :key="i"
-            class="w-10 h-10 rounded-full border-2 border-[#050505] bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center text-white text-xs font-bold"
+            class="w-10 h-10 rounded-full border-2 border-[#050505] bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white text-xs font-bold"
           >
             {{ ['NB', 'LR', 'MC', 'JP', 'SA'][i-1] }}
           </div>
@@ -242,8 +242,8 @@ onMounted(() => {
   animation: blink 0.8s step-end infinite;
 }
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 30px -5px rgba(16, 185, 129, 0.4); }
-  50% { box-shadow: 0 0 60px -5px rgba(16, 185, 129, 0.7); }
+  0%, 100% { box-shadow: 0 0 30px -5px rgba(0, 139, 69, 0.4); }
+  50% { box-shadow: 0 0 60px -5px rgba(0, 139, 69, 0.7); }
 }
 .animate-pulse-glow {
   animation: pulse-glow 2.5s ease-in-out infinite;

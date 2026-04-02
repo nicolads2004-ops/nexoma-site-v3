@@ -9,11 +9,10 @@ useHead({
     { property: 'og:title', content: 'À propos — Nexoma, agence IA pour PME à Poitiers' },
     { property: 'og:description', content: 'Agence IA à Poitiers. Agents IA sur mesure, automatisation de tâches, intégration CRM pour PME de la Vienne (86).' },
     { property: 'og:url', content: 'https://nexoma.poitiers.digital/a-propos' },
-    { name: 'robots', content: 'index, follow' },
-    { rel: 'canonical', href: 'https://nexoma.poitiers.digital/a-propos' }
+    { name: 'robots', content: 'index, follow' }
   ],
   link: [
-    { rel: 'canonical', href: 'https://nexoma.poitiers.digital/a-propos' }
+    { rel: 'canonical', href: 'https://nexoma.poitiers.digital/a-propos', key: 'canonical' }
   ]
 })
 
@@ -83,18 +82,18 @@ const { openForm } = useContactForm()
     <section class="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <!-- Background glow -->
       <div class="absolute inset-0 overflow-hidden pointer-events-none">
-        <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-emerald-500/[0.04] blur-3xl" />
+        <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-green-500/[0.04] blur-3xl" />
       </div>
 
       <div class="relative max-w-4xl mx-auto text-center">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium mb-6">
-          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-xs font-medium mb-6">
+          <span class="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
           Agence IA — Poitiers & Vienne (86)
         </div>
 
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-6 leading-tight">
           Agence IA pour PME<br>
-          <span class="text-emerald-400">à Poitiers — Nexoma</span>
+          <span class="text-green-400">à Poitiers — Nexoma</span>
         </h1>
 
         <p class="text-lg sm:text-xl text-white/50 leading-relaxed max-w-2xl mx-auto mb-10">
@@ -103,9 +102,9 @@ const { openForm } = useContactForm()
         </p>
 
         <button
-          class="px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl font-semibold
-                 text-base transition-all duration-300 shadow-[0_0_30px_-5px_rgba(16,185,129,0.4)]
-                 hover:shadow-[0_0_40px_-5px_rgba(16,185,129,0.6)] hover:-translate-y-0.5 cursor-pointer"
+          class="px-8 py-4 bg-green-500 hover:bg-green-600 text-white rounded-xl font-semibold
+                 text-base transition-all duration-300 shadow-[0_0_30px_-5px_rgba(0,139,69,0.4)]
+                 hover:shadow-[0_0_40px_-5px_rgba(0,139,69,0.6)] hover:-translate-y-0.5 cursor-pointer"
           @click="openForm"
         >
           Diagnostic gratuit →
@@ -118,7 +117,7 @@ const { openForm } = useContactForm()
       <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <p class="text-xs font-semibold uppercase tracking-widest text-emerald-400 mb-4">Notre vision</p>
+            <p class="text-xs font-semibold uppercase tracking-widest text-green-400 mb-4">Notre vision</p>
             <h2 class="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
               L'IA accessible à toutes les PME de la Vienne, sans jargon technique
             </h2>
@@ -144,7 +143,7 @@ const { openForm } = useContactForm()
               :key="stat.value"
               class="p-6 rounded-2xl bg-white/[0.03] border border-white/[0.06] text-center"
             >
-              <div class="text-4xl font-black text-emerald-400 mb-2">{{ stat.value }}</div>
+              <div class="text-4xl font-black text-green-400 mb-2">{{ stat.value }}</div>
               <div class="text-sm text-white/40">{{ stat.label }}</div>
             </div>
           </div>
@@ -156,7 +155,7 @@ const { openForm } = useContactForm()
     <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white/[0.015]">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-14">
-          <p class="text-xs font-semibold uppercase tracking-widest text-emerald-400 mb-4">Ce qu'on fait</p>
+          <p class="text-xs font-semibold uppercase tracking-widest text-green-400 mb-4">Ce qu'on fait</p>
           <h2 class="text-3xl sm:text-4xl font-bold">Trois expertises, un seul objectif : vous libérer du temps</h2>
         </div>
 
@@ -164,10 +163,10 @@ const { openForm } = useContactForm()
           <div
             v-for="service in services"
             :key="service.title"
-            class="p-8 rounded-2xl bg-[#030303] border border-white/[0.06] hover:border-emerald-500/20 transition-colors duration-300"
+            class="p-8 rounded-2xl bg-[#030303] border border-white/[0.06] hover:border-green-500/20 transition-colors duration-300"
           >
-            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center mb-6">
-              <UIcon :name="service.icon" class="text-emerald-400 text-xl" />
+            <div class="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center mb-6">
+              <UIcon :name="service.icon" class="text-green-400 text-xl" />
             </div>
             <h3 class="text-lg font-semibold mb-3">{{ service.title }}</h3>
             <p class="text-white/40 text-sm leading-relaxed">{{ service.description }}</p>
@@ -180,7 +179,7 @@ const { openForm } = useContactForm()
     <section class="py-20 px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-14">
-          <p class="text-xs font-semibold uppercase tracking-widest text-emerald-400 mb-4">Notre méthode</p>
+          <p class="text-xs font-semibold uppercase tracking-widest text-green-400 mb-4">Notre méthode</p>
           <h2 class="text-3xl sm:text-4xl font-bold">De la première conversation au déploiement en 21 jours</h2>
         </div>
 
@@ -191,7 +190,7 @@ const { openForm } = useContactForm()
             class="relative p-8 rounded-2xl bg-white/[0.03] border border-white/[0.06]"
           >
             <div class="text-5xl font-black text-white/[0.06] mb-4">{{ step.number }}</div>
-            <h3 class="text-lg font-semibold mb-3 text-emerald-400">{{ step.title }}</h3>
+            <h3 class="text-lg font-semibold mb-3 text-green-400">{{ step.title }}</h3>
             <p class="text-white/40 text-sm leading-relaxed">{{ step.description }}</p>
           </div>
         </div>
@@ -203,7 +202,7 @@ const { openForm } = useContactForm()
       <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div>
-            <p class="text-xs font-semibold uppercase tracking-widest text-emerald-400 mb-4">Secteurs</p>
+            <p class="text-xs font-semibold uppercase tracking-widest text-green-400 mb-4">Secteurs</p>
             <h2 class="text-3xl sm:text-4xl font-bold mb-8">Nous travaillons avec tous les secteurs</h2>
             <div class="grid grid-cols-2 gap-4">
               <div
@@ -211,14 +210,14 @@ const { openForm } = useContactForm()
                 :key="sector.label"
                 class="flex items-center gap-3 p-4 rounded-xl bg-white/[0.03] border border-white/[0.06]"
               >
-                <UIcon :name="sector.icon" class="text-emerald-400 text-lg flex-shrink-0" />
+                <UIcon :name="sector.icon" class="text-green-400 text-lg flex-shrink-0" />
                 <span class="text-sm font-medium">{{ sector.label }}</span>
               </div>
             </div>
           </div>
 
           <div>
-            <p class="text-xs font-semibold uppercase tracking-widest text-emerald-400 mb-4">Zone d'intervention</p>
+            <p class="text-xs font-semibold uppercase tracking-widest text-green-400 mb-4">Zone d'intervention</p>
             <h2 class="text-3xl sm:text-4xl font-bold mb-8">Tout le département de la Vienne</h2>
             <p class="text-white/50 leading-relaxed mb-6">
               Basés à Poitiers, nous intervenons dans tout le 86. Nos missions sont principalement à distance,
@@ -228,7 +227,7 @@ const { openForm } = useContactForm()
               <span
                 v-for="zone in zones"
                 :key="zone"
-                class="px-3 py-1.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-sm"
+                class="px-3 py-1.5 rounded-lg bg-green-500/10 border border-green-500/20 text-green-400 text-sm"
               >
                 {{ zone }}
               </span>
@@ -249,9 +248,9 @@ const { openForm } = useContactForm()
           Sans engagement, sans jargon.
         </p>
         <button
-          class="px-10 py-5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl font-bold
-                 text-lg transition-all duration-300 shadow-[0_0_40px_-5px_rgba(16,185,129,0.5)]
-                 hover:shadow-[0_0_60px_-5px_rgba(16,185,129,0.7)] hover:-translate-y-1 cursor-pointer"
+          class="px-10 py-5 bg-green-500 hover:bg-green-600 text-white rounded-xl font-bold
+                 text-lg transition-all duration-300 shadow-[0_0_40px_-5px_rgba(0,139,69,0.5)]
+                 hover:shadow-[0_0_60px_-5px_rgba(0,139,69,0.7)] hover:-translate-y-1 cursor-pointer"
           @click="openForm"
         >
           Demander mon diagnostic gratuit →
