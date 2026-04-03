@@ -15,8 +15,8 @@ useSeoMeta({
 
 const navLinks = [
   { label: 'Problème', to: '#probleme' },
-  { label: 'Solution', to: '#solution' },
-  { label: 'Cas d\'usage', to: '#cas' },
+  { label: 'Chatbot IA', to: '/chatbot-ia-poitiers' },
+  { label: 'Agent IA', to: '/agent-ia-poitiers' },
   { label: 'FAQ', to: '#faq' },
   { label: 'À propos', to: '/a-propos' },
   { label: 'Blog', to: '/blog' }
@@ -265,11 +265,11 @@ async function submitForm() {
           <div>
             <h4 class="text-sm font-semibold text-white mb-4">Solutions</h4>
             <ul class="space-y-3">
+              <li><NuxtLink to="/chatbot-ia-poitiers" class="text-sm text-white/40 hover:text-white/70 transition-colors">Chatbot IA Poitiers</NuxtLink></li>
+              <li><NuxtLink to="/agent-ia-poitiers" class="text-sm text-white/40 hover:text-white/70 transition-colors">Agent IA Poitiers</NuxtLink></li>
               <li><a href="#solution" class="text-sm text-white/40 hover:text-white/70 transition-colors">Automatisation des tâches</a></li>
-              <li><a href="#solution" class="text-sm text-white/40 hover:text-white/70 transition-colors">Suivi & recouvrement</a></li>
               <li><a href="#solution" class="text-sm text-white/40 hover:text-white/70 transition-colors">Accueil & relation client</a></li>
               <li><a href="#solution" class="text-sm text-white/40 hover:text-white/70 transition-colors">Productivité des équipes</a></li>
-              <li><a href="#solution" class="text-sm text-white/40 hover:text-white/70 transition-colors">Veille & opportunités</a></li>
             </ul>
           </div>
 
