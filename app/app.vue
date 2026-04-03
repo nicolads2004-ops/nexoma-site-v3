@@ -15,11 +15,14 @@ useSeoMeta({
 
 const navLinks = [
   { label: 'Problème', to: '#probleme' },
-  { label: 'Chatbot IA', to: '/chatbot-ia-poitiers' },
-  { label: 'Agent IA', to: '/agent-ia-poitiers' },
   { label: 'FAQ', to: '#faq' },
   { label: 'À propos', to: '/a-propos' },
   { label: 'Blog', to: '/blog' }
+]
+
+const servicePages = [
+  { href: '/chatbot-ia-poitiers', label: 'Chatbot IA', description: 'Assistant conversationnel sur-mesure', icon: 'i-lucide-bot' },
+  { href: '/agent-ia-poitiers', label: 'Agent IA', description: 'Automatisation de vos processus', icon: 'i-lucide-sparkles' },
 ]
 
 // Multi-step form state
@@ -142,6 +145,27 @@ async function submitForm() {
           </NuxtLink>
 
           <nav class="hidden md:flex items-center gap-8">
+            <!-- Solutions Dropdown -->
+            <div class="relative group">
+              <button class="text-sm text-white/50 hover:text-white transition-colors duration-300 flex items-center gap-1">
+                Solutions
+                <UIcon name="i-lucide-chevron-down" class="w-3 h-3 transition-transform group-hover:rotate-180" />
+              </button>
+              <div class="absolute top-full left-0 mt-2 w-72 rounded-xl border border-white/10 bg-[#0a0a14]/95 backdrop-blur-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2">
+                <NuxtLink
+                  v-for="page in servicePages"
+                  :key="page.href"
+                  :to="page.href"
+                  class="flex items-center gap-3 px-4 py-2.5 text-sm text-white/60 hover:text-white hover:bg-white/5 transition-colors"
+                >
+                  <UIcon :name="page.icon" class="w-4 h-4 text-[#008B45]" />
+                  <div>
+                    <div class="font-medium">{{ page.label }}</div>
+                    <div class="text-xs text-white/30">{{ page.description }}</div>
+                  </div>
+                </NuxtLink>
+              </div>
+            </div>
             <template v-for="link in navLinks" :key="link.label">
               <NuxtLink
                 v-if="link.to.startsWith('/')"
@@ -191,6 +215,22 @@ async function submitForm() {
     <!-- Mobile drawer -->
     <div v-if="mobileOpen" role="dialog" aria-modal="true" aria-label="Menu de navigation" class="fixed inset-0 z-40 bg-[#050508]/95 backdrop-blur-xl pt-20 px-6 md:hidden">
       <nav class="flex flex-col gap-6">
+        <!-- Solutions section -->
+        <div class="border-b border-white/10 pb-4">
+          <p class="text-xs uppercase tracking-widest text-white/30 mb-3">Solutions</p>
+          <div class="flex flex-col gap-3 pl-2">
+            <NuxtLink
+              v-for="page in servicePages"
+              :key="page.href"
+              :to="page.href"
+              class="flex items-center gap-3 text-white/70 hover:text-white transition-colors"
+              @click="mobileOpen = false"
+            >
+              <UIcon :name="page.icon" class="w-4 h-4 text-[#008B45]" />
+              <span class="text-base">{{ page.label }}</span>
+            </NuxtLink>
+          </div>
+        </div>
         <template v-for="link in navLinks" :key="link.label">
           <NuxtLink
             v-if="link.to.startsWith('/')"
