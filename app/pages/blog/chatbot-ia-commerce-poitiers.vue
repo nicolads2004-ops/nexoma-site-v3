@@ -60,7 +60,7 @@ const { openForm } = useContactForm()
           Chatbot IA pour les commerces de Poitiers : répondre aux clients à toute heure
         </h1>
 
-        <p class="text-xl text-white/50 leading-relaxed">
+        <p class="text-xl text-white/70 leading-relaxed">
           Un assistant IA répond instantanément à vos clients sur votre site ou WhatsApp,
           même le soir et le week-end. Voici comment ça fonctionne et ce que ça rapporte concrètement.
         </p>
@@ -101,7 +101,7 @@ const { openForm } = useContactForm()
         <!-- Stat -->
         <div class="bg-white/[0.03] border border-white/[0.06] rounded-xl p-5 my-6 flex items-center gap-5">
           <div class="text-3xl font-bold text-green-400 flex-shrink-0">67 %</div>
-          <div class="text-sm text-white/50">des clients qui ne reçoivent pas de réponse dans l'heure passent à la concurrence (données 2025).</div>
+          <div class="text-sm text-white/70">des clients qui ne reçoivent pas de réponse dans l'heure passent à la concurrence (données 2025).</div>
         </div>
 
         <p class="text-white/70 leading-relaxed text-[15px]">
@@ -140,14 +140,14 @@ const { openForm } = useContactForm()
             <span class="text-green-400 font-bold text-lg flex-shrink-0 w-8">01</span>
             <div>
               <div class="text-white font-medium text-sm">Sur votre site web</div>
-              <div class="text-white/50 text-sm mt-1">Une bulle de conversation discrète apparaît en bas de page. Personnalisée à votre image (couleurs, nom de l'assistant, photo), elle engage le visiteur sans être intrusive. Disponible sur mobile comme sur desktop.</div>
+              <div class="text-white/70 text-sm mt-1">Une bulle de conversation discrète apparaît en bas de page. Personnalisée à votre image (couleurs, nom de l'assistant, photo), elle engage le visiteur sans être intrusive. Disponible sur mobile comme sur desktop.</div>
             </div>
           </div>
           <div class="flex items-start gap-4 bg-white/[0.02] rounded-xl p-4 border border-white/[0.06]">
             <span class="text-green-400 font-bold text-lg flex-shrink-0 w-8">02</span>
             <div>
               <div class="text-white font-medium text-sm">Sur WhatsApp Business</div>
-              <div class="text-white/50 text-sm mt-1">C'est le canal qui monte fortement dans le commerce local. Vos clients vous envoient déjà des messages WhatsApp. L'agent IA répond automatiquement, filtre les demandes, et vous transmet uniquement celles qui nécessitent votre intervention personnelle.</div>
+              <div class="text-white/70 text-sm mt-1">C'est le canal qui monte fortement dans le commerce local. Vos clients vous envoient déjà des messages WhatsApp. L'agent IA répond automatiquement, filtre les demandes, et vous transmet uniquement celles qui nécessitent votre intervention personnelle.</div>
             </div>
           </div>
         </div>
@@ -203,7 +203,7 @@ const { openForm } = useContactForm()
         <!-- Stat -->
         <div class="bg-white/[0.03] border border-white/[0.06] rounded-xl p-5 my-6 flex items-center gap-5">
           <div class="text-3xl font-bold text-green-400 flex-shrink-0">+18</div>
-          <div class="text-sm text-white/50">ventes supplémentaires par mois directement attribuables aux conversations automatisées en dehors des heures d'ouverture — grâce à l'agent IA connecté à l'inventaire.</div>
+          <div class="text-sm text-white/70">ventes supplémentaires par mois directement attribuables aux conversations automatisées en dehors des heures d'ouverture — grâce à l'agent IA connecté à l'inventaire.</div>
         </div>
 
         <!-- H2 -->
@@ -271,7 +271,7 @@ const { openForm } = useContactForm()
       <!-- CTA -->
       <div class="max-w-3xl mx-auto mt-16 p-8 rounded-2xl bg-green-500/[0.06] border border-green-500/20 text-center">
         <h3 class="text-2xl font-bold mb-3">Votre commerce mérite de répondre à toute heure.</h3>
-        <p class="text-white/50 mb-6">Diagnostic gratuit, déploiement en moins de 15 jours. Aucune compétence technique requise.</p>
+        <p class="text-white/70 mb-6">Diagnostic gratuit, déploiement en moins de 15 jours. Aucune compétence technique requise.</p>
         <button
           class="px-8 py-4 bg-green-500 hover:bg-green-600 text-white rounded-xl font-semibold
                  transition-all duration-300 shadow-[0_0_30px_-5px_rgba(0,139,69,0.4)]

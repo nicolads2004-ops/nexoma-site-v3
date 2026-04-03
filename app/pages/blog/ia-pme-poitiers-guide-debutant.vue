@@ -60,7 +60,7 @@ const { openForm } = useContactForm()
           Agent IA pour PME : par où commencer en 2026 ?
         </h1>
 
-        <p class="text-xl text-white/50 leading-relaxed">
+        <p class="text-xl text-white/70 leading-relaxed">
           L'intelligence artificielle n'est plus réservée aux grands groupes. Voici comment une PME de la Vienne
           peut l'adopter concrètement, sans budget astronomique ni compétences techniques.
         </p>
@@ -114,7 +114,7 @@ const { openForm } = useContactForm()
         <!-- Stat -->
         <div class="bg-white/[0.03] border border-white/[0.06] rounded-xl p-5 my-6 flex items-center gap-5">
           <div class="text-3xl font-bold text-green-400 flex-shrink-0">+35 %</div>
-          <div class="text-sm text-white/50">de taux de recouvrement en moyenne chez nos clients de la Vienne dans les trois premiers mois, grâce aux relances IA automatisées.</div>
+          <div class="text-sm text-white/70">de taux de recouvrement en moyenne chez nos clients de la Vienne dans les trois premiers mois, grâce aux relances IA automatisées.</div>
         </div>
 
         <!-- H3 -->
@@ -140,7 +140,7 @@ const { openForm } = useContactForm()
         <!-- Stat -->
         <div class="bg-white/[0.03] border border-white/[0.06] rounded-xl p-5 my-6 flex items-center gap-5">
           <div class="text-3xl font-bold text-green-400 flex-shrink-0">4–6h</div>
-          <div class="text-sm text-white/50">récupérées chaque semaine par certains de nos clients artisans, uniquement sur la gestion et le suivi des devis.</div>
+          <div class="text-sm text-white/70">récupérées chaque semaine par certains de nos clients artisans, uniquement sur la gestion et le suivi des devis.</div>
         </div>
 
         <!-- H2 -->
@@ -168,21 +168,21 @@ const { openForm } = useContactForm()
             <span class="text-green-400 font-bold text-lg flex-shrink-0 w-8">01</span>
             <div>
               <div class="text-white font-medium text-sm">Électricien à Châtellerault</div>
-              <div class="text-white/50 text-sm mt-1">Automatisation de l'envoi et du suivi des devis, relances automatiques à J+7 et J+14. Résultat : +28 % de devis signés, 5h récupérées par semaine.</div>
+              <div class="text-white/70 text-sm mt-1">Automatisation de l'envoi et du suivi des devis, relances automatiques à J+7 et J+14. Résultat : +28 % de devis signés, 5h récupérées par semaine.</div>
             </div>
           </div>
           <div class="flex items-start gap-4 bg-white/[0.02] rounded-xl p-4 border border-white/[0.06]">
             <span class="text-green-400 font-bold text-lg flex-shrink-0 w-8">02</span>
             <div>
               <div class="text-white font-medium text-sm">Agence immobilière à Poitiers</div>
-              <div class="text-white/50 text-sm mt-1">Chatbot qualifiant les leads entrants sur le site, prise de rendez-vous automatisée. Résultat : 40 % des appels entrants redirigés vers le bot, équipe commerciale recentrée sur les visites.</div>
+              <div class="text-white/70 text-sm mt-1">Chatbot qualifiant les leads entrants sur le site, prise de rendez-vous automatisée. Résultat : 40 % des appels entrants redirigés vers le bot, équipe commerciale recentrée sur les visites.</div>
             </div>
           </div>
           <div class="flex items-start gap-4 bg-white/[0.02] rounded-xl p-4 border border-white/[0.06]">
             <span class="text-green-400 font-bold text-lg flex-shrink-0 w-8">03</span>
             <div>
               <div class="text-white font-medium text-sm">Cabinet d'ostéopathie à Loudun</div>
-              <div class="text-white/50 text-sm mt-1">Rappels de rendez-vous automatisés par SMS, gestion des annulations et remplacements. Résultat : taux d'annulation réduit de 22 %, agenda optimisé.</div>
+              <div class="text-white/70 text-sm mt-1">Rappels de rendez-vous automatisés par SMS, gestion des annulations et remplacements. Résultat : taux d'annulation réduit de 22 %, agenda optimisé.</div>
             </div>
           </div>
         </div>
@@ -201,21 +201,21 @@ const { openForm } = useContactForm()
             <span class="text-green-400 font-bold text-lg flex-shrink-0 w-8">01</span>
             <div>
               <div class="text-white font-medium text-sm">Cartographie de vos tâches chronophages</div>
-              <div class="text-white/50 text-sm mt-1">On identifie ensemble les deux ou trois automatisations à fort impact sur votre activité.</div>
+              <div class="text-white/70 text-sm mt-1">On identifie ensemble les deux ou trois automatisations à fort impact sur votre activité.</div>
             </div>
           </div>
           <div class="flex items-start gap-4 bg-white/[0.02] rounded-xl p-4 border border-white/[0.06]">
             <span class="text-green-400 font-bold text-lg flex-shrink-0 w-8">02</span>
             <div>
               <div class="text-white font-medium text-sm">Estimation claire des coûts et gains</div>
-              <div class="text-white/50 text-sm mt-1">Un chiffrage précis, sans jargon technique ni engagement de votre côté.</div>
+              <div class="text-white/70 text-sm mt-1">Un chiffrage précis, sans jargon technique ni engagement de votre côté.</div>
             </div>
           </div>
           <div class="flex items-start gap-4 bg-white/[0.02] rounded-xl p-4 border border-white/[0.06]">
             <span class="text-green-400 font-bold text-lg flex-shrink-0 w-8">03</span>
             <div>
               <div class="text-white font-medium text-sm">Déploiement sur mesure</div>
-              <div class="text-white/50 text-sm mt-1">Si notre proposition vous convient, on déploie rapidement. Sinon, vous repartez avec une meilleure vision de votre organisation.</div>
+              <div class="text-white/70 text-sm mt-1">Si notre proposition vous convient, on déploie rapidement. Sinon, vous repartez avec une meilleure vision de votre organisation.</div>
             </div>
           </div>
         </div>
@@ -244,7 +244,7 @@ const { openForm } = useContactForm()
       <!-- CTA -->
       <div class="max-w-3xl mx-auto mt-16 p-8 rounded-2xl bg-green-500/[0.06] border border-green-500/20 text-center">
         <h3 class="text-2xl font-bold mb-3">Prêt à faire votre diagnostic ?</h3>
-        <p class="text-white/50 mb-6">30 minutes, gratuit, sans engagement. On identifie vos gains rapides ensemble.</p>
+        <p class="text-white/70 mb-6">30 minutes, gratuit, sans engagement. On identifie vos gains rapides ensemble.</p>
         <button
           class="px-8 py-4 bg-green-500 hover:bg-green-600 text-white rounded-xl font-semibold
                  transition-all duration-300 shadow-[0_0_30px_-5px_rgba(0,139,69,0.4)]

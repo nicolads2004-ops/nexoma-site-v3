@@ -60,7 +60,7 @@ const { openForm } = useContactForm()
           Agent IA relance client : récupérez 5h par semaine
         </h1>
 
-        <p class="text-xl text-white/50 leading-relaxed">
+        <p class="text-xl text-white/70 leading-relaxed">
           Les relances manuelles sont chronophages et souvent oubliées. Un agent IA peut s'en charger
           à votre place, 24h/24, avec le bon ton et le bon timing.
         </p>
@@ -99,7 +99,7 @@ const { openForm } = useContactForm()
         <!-- Stat -->
         <div class="bg-white/[0.03] border border-white/[0.06] rounded-xl p-5 my-6 flex items-center gap-5">
           <div class="text-3xl font-bold text-green-400 flex-shrink-0">1 280 €</div>
-          <div class="text-sm text-white/50">de coût salarial mensuel maximum sur des tâches de relance pures dans une PME de 5 à 20 personnes — à 40 €/h de coût salarial, sur 8h/semaine.</div>
+          <div class="text-sm text-white/70">de coût salarial mensuel maximum sur des tâches de relance pures dans une PME de 5 à 20 personnes — à 40 €/h de coût salarial, sur 8h/semaine.</div>
         </div>
 
         <p class="text-white/70 leading-relaxed text-[15px]">
@@ -175,21 +175,21 @@ const { openForm } = useContactForm()
             <span class="text-green-400 font-bold text-lg flex-shrink-0 w-8">J+5</span>
             <div>
               <div class="text-white font-medium text-sm">Email de relance douce</div>
-              <div class="text-white/50 text-sm mt-1">Proposant de répondre à d'éventuelles questions sur le devis.</div>
+              <div class="text-white/70 text-sm mt-1">Proposant de répondre à d'éventuelles questions sur le devis.</div>
             </div>
           </div>
           <div class="flex items-start gap-4 bg-white/[0.02] rounded-xl p-4 border border-white/[0.06]">
             <span class="text-green-400 font-bold text-lg flex-shrink-0 w-8">J+10</span>
             <div>
               <div class="text-white font-medium text-sm">SMS court et personnel</div>
-              <div class="text-white/50 text-sm mt-1">Rappelant la validité du devis, ton direct et non intrusif.</div>
+              <div class="text-white/70 text-sm mt-1">Rappelant la validité du devis, ton direct et non intrusif.</div>
             </div>
           </div>
           <div class="flex items-start gap-4 bg-white/[0.02] rounded-xl p-4 border border-white/[0.06]">
             <span class="text-green-400 font-bold text-lg flex-shrink-0 w-8">J+18</span>
             <div>
               <div class="text-white font-medium text-sm">Email de dernière chance</div>
-              <div class="text-white/50 text-sm mt-1">Avec une légère urgence sur la disponibilité et la validité du devis.</div>
+              <div class="text-white/70 text-sm mt-1">Avec une légère urgence sur la disponibilité et la validité du devis.</div>
             </div>
           </div>
         </div>
@@ -197,7 +197,7 @@ const { openForm } = useContactForm()
         <!-- Résultat en stats -->
         <div class="bg-white/[0.03] border border-white/[0.06] rounded-xl p-5 my-6 flex items-center gap-5">
           <div class="text-3xl font-bold text-green-400 flex-shrink-0">38 → 52 %</div>
-          <div class="text-sm text-white/50">Taux de transformation après trois mois. Temps de suivi commercial récupéré : 4h30 par semaine. ROI atteint dès le deuxième mois.</div>
+          <div class="text-sm text-white/70">Taux de transformation après trois mois. Temps de suivi commercial récupéré : 4h30 par semaine. ROI atteint dès le deuxième mois.</div>
         </div>
 
         <!-- H2 -->
@@ -279,7 +279,7 @@ const { openForm } = useContactForm()
       <!-- CTA -->
       <div class="max-w-3xl mx-auto mt-16 p-8 rounded-2xl bg-green-500/[0.06] border border-green-500/20 text-center">
         <h3 class="text-2xl font-bold mb-3">Combien d'heures perdez-vous chaque semaine en relances ?</h3>
-        <p class="text-white/50 mb-6">Diagnostic gratuit en 30 minutes. On chiffre vos gains ensemble, sans engagement.</p>
+        <p class="text-white/70 mb-6">Diagnostic gratuit en 30 minutes. On chiffre vos gains ensemble, sans engagement.</p>
         <button
           class="px-8 py-4 bg-green-500 hover:bg-green-600 text-white rounded-xl font-semibold
                  transition-all duration-300 shadow-[0_0_30px_-5px_rgba(0,139,69,0.4)]

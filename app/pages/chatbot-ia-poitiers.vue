@@ -197,7 +197,7 @@ const { openForm } = useContactForm()
           <span class="text-green-400">qui répond à vos clients 24h/24</span>
         </h1>
 
-        <p class="text-lg sm:text-xl text-white/50 leading-relaxed max-w-2xl mx-auto mb-10">
+        <p class="text-lg sm:text-xl text-white/70 leading-relaxed max-w-2xl mx-auto mb-10">
           Vos clients posent des questions à toute heure. Un chatbot IA en français, connecté à vos outils,
           répond en moins de 30 secondes sur votre site web, WhatsApp ou Instagram.
         </p>
@@ -226,7 +226,7 @@ const { openForm } = useContactForm()
             class="p-6 rounded-2xl bg-white/[0.03] border border-white/[0.06] text-center"
           >
             <div class="text-3xl sm:text-4xl font-black text-green-400 mb-2">{{ stat.value }}</div>
-            <div class="text-sm text-white/40">{{ stat.label }}</div>
+            <div class="text-sm text-white/50">{{ stat.label }}</div>
           </div>
         </div>
       </div>
@@ -250,7 +250,7 @@ const { openForm } = useContactForm()
               <UIcon :name="channel.icon" class="text-green-400 text-xl" />
             </div>
             <h3 class="text-lg font-semibold mb-3">{{ channel.title }}</h3>
-            <p class="text-white/40 text-sm leading-relaxed">{{ channel.description }}</p>
+            <p class="text-white/60 text-sm leading-relaxed">{{ channel.description }}</p>
           </div>
         </div>
       </div>
@@ -276,7 +276,7 @@ const { openForm } = useContactForm()
               </div>
               <h3 class="text-base font-semibold">{{ example.sector }}</h3>
             </div>
-            <p class="text-white/40 text-sm leading-relaxed mb-4">{{ example.useCase }}</p>
+            <p class="text-white/60 text-sm leading-relaxed mb-4">{{ example.useCase }}</p>
             <div class="inline-flex items-center px-3 py-1.5 rounded-lg bg-green-500/10 border border-green-500/20 text-green-400 text-xs font-medium">
               {{ example.result }}
             </div>
@@ -301,7 +301,7 @@ const { openForm } = useContactForm()
           >
             <div class="text-5xl font-black text-white/[0.06] mb-4">{{ step.number }}</div>
             <h3 class="text-lg font-semibold mb-3 text-green-400">{{ step.title }}</h3>
-            <p class="text-white/40 text-sm leading-relaxed">{{ step.description }}</p>
+            <p class="text-white/60 text-sm leading-relaxed">{{ step.description }}</p>
           </div>
         </div>
       </div>
@@ -316,7 +316,7 @@ const { openForm } = useContactForm()
             <h2 class="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
               Chatbot IA vs chatbot classique : ce qui change pour votre entreprise
             </h2>
-            <div class="space-y-4 text-white/50 leading-relaxed">
+            <div class="space-y-4 text-white/70 leading-relaxed">
               <p>
                 Un chatbot classique suit un script. Si le client formule sa question autrement que prévu,
                 le chatbot est bloqué. Résultat : frustration, abandon, appel téléphonique.
@@ -339,7 +339,7 @@ const { openForm } = useContactForm()
                 <div class="w-3 h-3 rounded-full bg-red-400/60" />
                 <span class="text-sm font-medium text-white/60">Chatbot classique</span>
               </div>
-              <ul class="space-y-2 text-white/40 text-sm">
+              <ul class="space-y-2 text-white/60 text-sm">
                 <li>Réponses uniquement sur des scénarios prévus</li>
                 <li>Bloqué par les reformulations</li>
                 <li>Maintenance manuelle pour chaque nouvelle question</li>
@@ -351,7 +351,7 @@ const { openForm } = useContactForm()
                 <div class="w-3 h-3 rounded-full bg-green-400" />
                 <span class="text-sm font-medium text-green-400">Chatbot IA Nexoma</span>
               </div>
-              <ul class="space-y-2 text-white/50 text-sm">
+              <ul class="space-y-2 text-white/70 text-sm">
                 <li>Comprend le langage naturel et les variantes</li>
                 <li>S'adapte aux nouvelles questions automatiquement</li>
                 <li>Connecté à vos outils métier en temps réel</li>
@@ -378,7 +378,7 @@ const { openForm } = useContactForm()
             class="p-6 rounded-2xl bg-[#030303] border border-white/[0.06]"
           >
             <h3 class="text-base font-semibold mb-3">{{ faq.question }}</h3>
-            <p class="text-white/40 text-sm leading-relaxed">{{ faq.answer }}</p>
+            <p class="text-white/60 text-sm leading-relaxed">{{ faq.answer }}</p>
           </div>
         </div>
       </div>
@@ -387,7 +387,7 @@ const { openForm } = useContactForm()
     <!-- Liens internes -->
     <section class="py-12 px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl mx-auto text-center">
-        <p class="text-white/40 text-sm mb-4">Nos autres services IA à Poitiers</p>
+        <p class="text-white/60 text-sm mb-4">Nos autres services IA à Poitiers</p>
         <p class="text-white/30 text-xs mb-6">
           Amplifiez votre visibilité avec du <a href="https://rankeo.poitiers.digital" target="_blank" rel="noopener" class="text-green-400/70 hover:text-green-400 underline underline-offset-2">référencement SEO</a> ou combinez avec la <a href="https://adscale.poitiers.digital" target="_blank" rel="noopener" class="text-green-400/70 hover:text-green-400 underline underline-offset-2">publicité Google Ads</a>.
         </p>
@@ -426,7 +426,7 @@ const { openForm } = useContactForm()
         <h2 class="text-3xl sm:text-4xl font-bold mb-6">
           Vos clients méritent une réponse immédiate, même à 23h
         </h2>
-        <p class="text-white/50 text-lg mb-10">
+        <p class="text-white/70 text-lg mb-10">
           Démo gratuite de 30 minutes. On vous montre un chatbot IA en action sur votre site
           et on estime le nombre de demandes qu'il peut traiter à votre place.
         </p>

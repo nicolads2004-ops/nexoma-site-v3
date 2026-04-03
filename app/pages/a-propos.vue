@@ -96,7 +96,7 @@ const { openForm } = useContactForm()
           <span class="text-green-400">à Poitiers — Nexoma</span>
         </h1>
 
-        <p class="text-lg sm:text-xl text-white/50 leading-relaxed max-w-2xl mx-auto mb-10">
+        <p class="text-lg sm:text-xl text-white/70 leading-relaxed max-w-2xl mx-auto mb-10">
           Nous aidons les PME et artisans de la Vienne à gagner du temps grâce à l'intelligence artificielle.
           Pas de jargon, pas de promesses vides — des résultats mesurables en moins d'un mois.
         </p>
@@ -121,7 +121,7 @@ const { openForm } = useContactForm()
             <h2 class="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
               L'IA accessible à toutes les PME de la Vienne, sans jargon technique
             </h2>
-            <div class="space-y-4 text-white/50 leading-relaxed">
+            <div class="space-y-4 text-white/70 leading-relaxed">
               <p>
                 L'intelligence artificielle n'est plus réservée aux grands groupes avec des budgets IT en millions d'euros.
                 En 2026, une PME de 5 salariés à Poitiers peut automatiser ses relances clients, ses devis et son accueil téléphonique
@@ -144,7 +144,7 @@ const { openForm } = useContactForm()
               class="p-6 rounded-2xl bg-white/[0.03] border border-white/[0.06] text-center"
             >
               <div class="text-4xl font-black text-green-400 mb-2">{{ stat.value }}</div>
-              <div class="text-sm text-white/40">{{ stat.label }}</div>
+              <div class="text-sm text-white/50">{{ stat.label }}</div>
             </div>
           </div>
         </div>
@@ -169,7 +169,7 @@ const { openForm } = useContactForm()
               <UIcon :name="service.icon" class="text-green-400 text-xl" />
             </div>
             <h3 class="text-lg font-semibold mb-3">{{ service.title }}</h3>
-            <p class="text-white/40 text-sm leading-relaxed">{{ service.description }}</p>
+            <p class="text-white/60 text-sm leading-relaxed">{{ service.description }}</p>
           </div>
         </div>
       </div>
@@ -191,7 +191,7 @@ const { openForm } = useContactForm()
           >
             <div class="text-5xl font-black text-white/[0.06] mb-4">{{ step.number }}</div>
             <h3 class="text-lg font-semibold mb-3 text-green-400">{{ step.title }}</h3>
-            <p class="text-white/40 text-sm leading-relaxed">{{ step.description }}</p>
+            <p class="text-white/60 text-sm leading-relaxed">{{ step.description }}</p>
           </div>
         </div>
       </div>
@@ -219,7 +219,7 @@ const { openForm } = useContactForm()
           <div>
             <p class="text-xs font-semibold uppercase tracking-widest text-green-400 mb-4">Zone d'intervention</p>
             <h2 class="text-3xl sm:text-4xl font-bold mb-8">Tout le département de la Vienne</h2>
-            <p class="text-white/50 leading-relaxed mb-6">
+            <p class="text-white/70 leading-relaxed mb-6">
               Basés à Poitiers, nous intervenons dans tout le 86. Nos missions sont principalement à distance,
               ce qui nous permet d'accompagner les PME de tout le territoire sans frais de déplacement.
             </p>
@@ -243,7 +243,7 @@ const { openForm } = useContactForm()
         <h2 class="text-3xl sm:text-4xl font-bold mb-6">
           Prêt à libérer votre équipe des tâches répétitives ?
         </h2>
-        <p class="text-white/50 text-lg mb-10">
+        <p class="text-white/70 text-lg mb-10">
           Un diagnostic gratuit de 30 minutes suffit pour identifier vos gains rapides.
           Sans engagement, sans jargon.
         </p>

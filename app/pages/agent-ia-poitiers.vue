@@ -179,7 +179,7 @@ const { openForm } = useContactForm()
           <span class="text-green-400">qui travaille pendant que vous dormez</span>
         </h1>
 
-        <p class="text-lg sm:text-xl text-white/50 leading-relaxed max-w-2xl mx-auto mb-10">
+        <p class="text-lg sm:text-xl text-white/70 leading-relaxed max-w-2xl mx-auto mb-10">
           Un agent IA conçu pour votre entreprise, branché sur vos outils, opérationnel en 21 jours.
           Il relance vos clients, trie vos emails et met à jour votre CRM — sans intervention de votre part.
         </p>
@@ -207,7 +207,7 @@ const { openForm } = useContactForm()
             <h2 class="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
               Un agent IA, c'est un collaborateur numérique qui exécute vos tâches répétitives
             </h2>
-            <div class="space-y-4 text-white/50 leading-relaxed">
+            <div class="space-y-4 text-white/70 leading-relaxed">
               <p>
                 Un agent IA n'est pas un gadget. C'est un programme autonome, entraîné sur vos règles métier,
                 qui exécute des tâches concrètes : répondre à un email, relancer un devis, qualifier un appel entrant,
@@ -232,7 +232,7 @@ const { openForm } = useContactForm()
               class="p-6 rounded-2xl bg-white/[0.03] border border-white/[0.06] text-center"
             >
               <div class="text-4xl font-black text-green-400 mb-2">{{ advantage.value }}</div>
-              <div class="text-sm text-white/40">{{ advantage.label }}</div>
+              <div class="text-sm text-white/50">{{ advantage.label }}</div>
             </div>
           </div>
         </div>
@@ -257,7 +257,7 @@ const { openForm } = useContactForm()
               <UIcon :name="useCase.icon" class="text-green-400 text-xl" />
             </div>
             <h3 class="text-lg font-semibold mb-3">{{ useCase.title }}</h3>
-            <p class="text-white/40 text-sm leading-relaxed">{{ useCase.description }}</p>
+            <p class="text-white/60 text-sm leading-relaxed">{{ useCase.description }}</p>
           </div>
         </div>
       </div>
@@ -279,7 +279,7 @@ const { openForm } = useContactForm()
           >
             <div class="text-5xl font-black text-white/[0.06] mb-4">{{ step.number }}</div>
             <h3 class="text-lg font-semibold mb-3 text-green-400">{{ step.title }}</h3>
-            <p class="text-white/40 text-sm leading-relaxed">{{ step.description }}</p>
+            <p class="text-white/60 text-sm leading-relaxed">{{ step.description }}</p>
           </div>
         </div>
       </div>
@@ -305,7 +305,7 @@ const { openForm } = useContactForm()
               </div>
               <h3 class="text-base font-semibold">{{ sector.label }}</h3>
             </div>
-            <p class="text-white/40 text-sm">{{ sector.example }}</p>
+            <p class="text-white/60 text-sm">{{ sector.example }}</p>
           </div>
         </div>
       </div>
@@ -326,7 +326,7 @@ const { openForm } = useContactForm()
             class="p-6 rounded-2xl bg-white/[0.03] border border-white/[0.06]"
           >
             <h3 class="text-base font-semibold mb-3">{{ faq.question }}</h3>
-            <p class="text-white/40 text-sm leading-relaxed">{{ faq.answer }}</p>
+            <p class="text-white/60 text-sm leading-relaxed">{{ faq.answer }}</p>
           </div>
         </div>
       </div>
@@ -335,7 +335,7 @@ const { openForm } = useContactForm()
     <!-- Liens internes -->
     <section class="py-12 px-4 sm:px-6 lg:px-8 bg-white/[0.015]">
       <div class="max-w-3xl mx-auto text-center">
-        <p class="text-white/40 text-sm mb-4">Nos autres services IA à Poitiers</p>
+        <p class="text-white/60 text-sm mb-4">Nos autres services IA à Poitiers</p>
         <p class="text-white/30 text-xs mb-6">
           Boostez votre acquisition avec le <a href="https://rankeo.poitiers.digital" target="_blank" rel="noopener" class="text-green-400/70 hover:text-green-400 underline underline-offset-2">référencement naturel</a> ou la <a href="https://adscale.poitiers.digital" target="_blank" rel="noopener" class="text-green-400/70 hover:text-green-400 underline underline-offset-2">publicité Google Ads</a>.
         </p>
@@ -374,7 +374,7 @@ const { openForm } = useContactForm()
         <h2 class="text-3xl sm:text-4xl font-bold mb-6">
           Libérez 10 heures par semaine grâce à un agent IA sur mesure
         </h2>
-        <p class="text-white/50 text-lg mb-10">
+        <p class="text-white/70 text-lg mb-10">
           Diagnostic gratuit de 30 minutes. On identifie les tâches qui vous coûtent du temps
           et on vous montre ce qu'un agent IA peut prendre en charge dans votre activité.
         </p>

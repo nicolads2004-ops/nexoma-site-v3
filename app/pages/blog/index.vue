@@ -71,7 +71,7 @@ const { openForm } = useContactForm()
           IA & Automatisation<br>
           <span class="text-green-400">pour les PME de Poitiers</span>
         </h1>
-        <p class="text-lg text-white/50 max-w-2xl mx-auto">
+        <p class="text-lg text-white/70 max-w-2xl mx-auto">
           Guides pratiques, cas d'usage concrets et conseils terrain pour les entreprises de la Vienne
           qui veulent adopter l'intelligence artificielle sans se perdre dans le jargon.
         </p>
@@ -115,7 +115,7 @@ const { openForm } = useContactForm()
                 <h2 class="text-lg font-bold mb-3 leading-snug group-hover:text-green-400 transition-colors duration-300">
                   {{ article.title }}
                 </h2>
-                <p class="text-sm text-white/40 leading-relaxed">{{ article.excerpt }}</p>
+                <p class="text-sm text-white/60 leading-relaxed">{{ article.excerpt }}</p>
               </NuxtLink>
 
               <NuxtLink
@@ -138,7 +138,7 @@ const { openForm } = useContactForm()
         <h2 class="text-2xl sm:text-3xl font-bold mb-4">
           Vous voulez savoir ce que l'IA peut faire pour votre PME ?
         </h2>
-        <p class="text-white/50 mb-8">
+        <p class="text-white/70 mb-8">
           Diagnostic gratuit en 30 minutes. On identifie vos gains rapides, sans jargon.
         </p>
         <button
