@@ -321,6 +321,7 @@ async function submitForm() {
             <a href="#" class="text-xs text-white/30 hover:text-white/50 transition-colors">Mentions légales</a>
             <a href="#" class="text-xs text-white/30 hover:text-white/50 transition-colors">Politique de confidentialité</a>
             <a href="#" class="text-xs text-white/30 hover:text-white/50 transition-colors">CGV</a>
+            <a href="/sitemap.xml" class="text-white/20 hover:text-white/40 text-xs transition-colors">Plan du site</a>
           </div>
         </div>
       </div>
