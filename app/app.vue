@@ -27,7 +27,7 @@ const servicePages = [
 
 // Multi-step form state
 const currentStep = ref(1)
-const totalSteps = 4
+const totalSteps = 5
 const mobileOpen = ref(false)
 const formLoading = ref(false)
 const formError = ref('')
@@ -36,6 +36,7 @@ const form = reactive({
   painPoint: '' as string,
   teamSize: '' as string,
   aiExperience: '' as string,
+  timing: '' as string,
   company: '',
   fullName: '',
   email: '',
@@ -46,7 +47,14 @@ const stepTitles = [
   'Où perdez-vous le plus de temps ?',
   'Combien de personnes dans votre équipe ?',
   'Avez-vous déjà utilisé des outils IA ?',
+  'Quand en avez-vous besoin ?',
   'On vous rappelle sous 24h'
+]
+
+const timings = [
+  { value: 'immediat', label: 'Immédiat', desc: "J'en ai besoin maintenant", icon: 'i-lucide-zap', color: '#EF4444' },
+  { value: '3-6mois', label: 'Dans 3 à 6 mois', desc: 'Je prépare mon projet', icon: 'i-lucide-calendar', color: '#F59E0B' },
+  { value: '+1an', label: 'Dans plus d\'un an', desc: 'Je me renseigne', icon: 'i-lucide-hourglass', color: '#9CA3AF' }
 ]
 
 const painPoints = [
@@ -76,6 +84,7 @@ function canContinue(): boolean {
   if (currentStep.value === 1) return !!form.painPoint
   if (currentStep.value === 2) return !!form.teamSize
   if (currentStep.value === 3) return !!form.aiExperience
+  if (currentStep.value === 4) return !!form.timing
   return false
 }
 
@@ -96,6 +105,7 @@ function resetForm() {
   form.painPoint = ''
   form.teamSize = ''
   form.aiExperience = ''
+  form.timing = ''
   form.company = ''
   form.fullName = ''
   form.email = ''
@@ -108,6 +118,10 @@ function handleClose() {
 }
 
 async function submitForm() {
+  if (!form.fullName || !form.email || !form.phone || !form.timing) {
+    formError.value = 'Merci de remplir tous les champs obligatoires.'
+    return
+  }
   formLoading.value = true
   formError.value = ''
 
@@ -117,10 +131,12 @@ async function submitForm() {
       body: {
         name: form.fullName,
         email: form.email,
+        phone: form.phone,
+        timing: form.timing,
         company: form.company,
         sector: form.teamSize,
         task: form.painPoint,
-        message: `Perte de temps : ${form.painPoint}\nTaille équipe : ${form.teamSize}\nExpérience IA : ${form.aiExperience}\nTéléphone : ${form.phone}`
+        message: `Perte de temps : ${form.painPoint}\nTaille équipe : ${form.teamSize}\nExpérience IA : ${form.aiExperience}`
       }
     })
     markSubmitted()
@@ -483,8 +499,32 @@ async function submitForm() {
               </label>
             </div>
 
-            <!-- Step 4 — Contact info -->
-            <form v-if="currentStep === 4" class="space-y-4" @submit.prevent="submitForm">
+            <!-- Step 4 — Timing -->
+            <div v-if="currentStep === 4" class="space-y-3">
+              <label
+                v-for="opt in timings"
+                :key="opt.value"
+                class="flex items-center gap-4 px-4 py-4 rounded-xl cursor-pointer transition-all duration-300"
+                :class="form.timing === opt.value
+                  ? 'bg-green-500/10 border border-green-500/40 text-white shadow-[0_0_20px_-8px_rgba(0,139,69,0.3)]'
+                  : 'bg-white/[0.03] border border-white/[0.08] text-white/60 hover:border-white/[0.15] hover:text-white/80 hover:bg-white/[0.05]'"
+                @click="form.timing = opt.value"
+              >
+                <input type="radio" name="timing" :value="opt.value" v-model="form.timing" class="sr-only">
+                <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
+                  :class="form.timing === opt.value ? 'bg-green-500/20' : 'bg-white/[0.05]'"
+                >
+                  <UIcon :name="opt.icon" class="text-lg" :style="{ color: form.timing === opt.value ? opt.color : undefined }" />
+                </div>
+                <div class="flex-1">
+                  <div class="text-sm font-semibold">{{ opt.label }}</div>
+                  <div class="text-xs opacity-70">{{ opt.desc }}</div>
+                </div>
+              </label>
+            </div>
+
+            <!-- Step 5 — Contact info -->
+            <form v-if="currentStep === 5" class="space-y-4" @submit.prevent="submitForm">
               <div>
                 <label class="block text-xs text-white/50 uppercase tracking-wider mb-2 font-medium">Nom de l'entreprise</label>
                 <input
@@ -563,8 +603,8 @@ async function submitForm() {
               </p>
             </form>
 
-            <!-- Navigation buttons (steps 1-3) -->
-            <div v-if="currentStep < 4" class="flex items-center justify-between mt-8">
+            <!-- Navigation buttons (steps 1-4) -->
+            <div v-if="currentStep < 5" class="flex items-center justify-between mt-8">
               <button
                 v-if="currentStep > 1"
                 class="flex items-center gap-1 text-sm text-white/40 hover:text-white/70 transition-colors cursor-pointer"
@@ -588,8 +628,8 @@ async function submitForm() {
               </button>
             </div>
 
-            <!-- Back button on step 4 -->
-            <div v-if="currentStep === 4" class="mt-4">
+            <!-- Back button on step 5 -->
+            <div v-if="currentStep === 5" class="mt-4">
               <button
                 class="flex items-center gap-1 text-sm text-white/40 hover:text-white/70 transition-colors cursor-pointer"
                 @click="prevStep"
