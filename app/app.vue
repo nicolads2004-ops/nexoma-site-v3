@@ -124,10 +124,9 @@ async function submitForm() {
       }
     })
     markSubmitted()
-  } catch {
-    const body = `Nom: ${form.fullName}%0AEntreprise: ${form.company}%0ATéléphone: ${form.phone}%0AEmail: ${form.email}%0APerte de temps: ${form.painPoint}%0AEquipe: ${form.teamSize}%0AExpérience IA: ${form.aiExperience}`
-    window.location.href = `mailto:contact@poitiers.digital?subject=Demande de diagnostic — ${form.company}&body=${body}`
-    markSubmitted()
+  } catch (err) {
+    console.error('Form submission error:', err)
+    alert('Erreur lors de l\'envoi. Merci de reessayer dans un instant ou de nous contacter directement a contact@poitiers.digital')
   } finally {
     formLoading.value = false
   }
@@ -328,7 +327,7 @@ async function submitForm() {
             <ul class="space-y-3">
               <li class="text-sm text-white/40">Poitiers, Vienne (86)</li>
               <li><a href="tel:+33769801190" class="text-sm text-white/40 hover:text-green-400 transition-colors">07 69 80 11 90</a></li>
-              <li><a href="mailto:contact@poitiers.digital" class="text-sm text-white/40 hover:text-green-400 transition-colors">contact@poitiers.digital</a></li>
+              <li><button type="button" @click="openForm" class="text-sm text-white/40 hover:text-green-400 transition-colors cursor-pointer">contact@poitiers.digital</button></li>
               <li>
                 <button
                   class="text-sm text-green-400 hover:text-green-300 transition-colors cursor-pointer"
@@ -346,6 +345,7 @@ async function submitForm() {
           <p class="text-xs font-semibold uppercase tracking-widest text-white/25 mb-4">Studio Digital Poitiers — nos divisions</p>
           <div class="flex flex-wrap gap-x-6 gap-y-2">
             <a href="https://poitiers.digital" target="_blank" rel="noopener" class="text-sm text-white/35 hover:text-white transition-colors">← Studio Digital Poitiers</a>
+            <a href="https://poitiers.digital/agence-web-poitiers" target="_blank" rel="noopener" class="text-sm text-white/35 hover:text-[#0047AB] transition-colors">Agence web Poitiers</a>
             <a href="https://adscale.poitiers.digital" target="_blank" rel="noopener" class="text-sm text-white/35 hover:text-[#4285f4] transition-colors">ADSCALE — Google Ads</a>
             <a href="https://rankeo.poitiers.digital" target="_blank" rel="noopener" class="text-sm text-white/35 hover:text-[#34a853] transition-colors">RANKEO — SEO</a>
             <a href="https://nexoma.poitiers.digital" class="text-sm text-green-400/70">NEXOMA — IA & Automatisation</a>
