@@ -26,6 +26,7 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
+    '/api/**': { swr: false, cache: false },
     '/**': { swr: 60 }
   },
 
